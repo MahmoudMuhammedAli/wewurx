@@ -1,0 +1,44 @@
+.sidebar{
+    height: 100vh;
+    width: 7vw;
+    background-color:rgba(199,198,198,.5);
+    position: relative;
+    z-index: 10;
+    &__we{
+        font-size: 2rem;
+        margin: .5rem ;
+        width: 6vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__links{
+
+        background-color: rgb(77,77,77);
+        height: 93vh;
+
+        li{
+            width: 100%; 
+            
+        }
+    }
+    &__link{
+        color: #fff;
+        text-decoration: none;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 5rem;
+        text-align: center;
+       
+    }
+
+    &__icon{
+        font-size: 2rem;
+    }
+}
+

@@ -1,24 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {BrowserRouter as Router,Route} from 'react-router-dom';
+import './App.scss';
+import 'font-awesome/css/font-awesome.min.css'
+import Jobs from './pages/jobs';
+import Contacts from './pages/documents';
+import Settings from './pages/settings';
+import Documents from './pages/documents';
+import SideBar from './components/sidebar';
+import InfoBar from './components/infobar';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+   
+       <Router>
+        <SideBar />
+        <InfoBar />
+         <Route path = '/' exact component = {Jobs} />
+         <Route path = '/contacts' component = {Contacts} />
+         <Route path = '/settings' component = {Settings} />
+         <Route path = '/documents' component = {Documents} />
+
+       </Router>
     </div>
   );
 }

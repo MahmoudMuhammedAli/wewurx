@@ -1,0 +1,24 @@
+.infobar{
+    background-color: rgb(242,242,242);
+    width: 93vw;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 0;
+
+    &__name{
+        width: 10vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    &__info{
+        width: 70vw;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+}
