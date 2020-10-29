@@ -1,0 +1,52 @@
+.contactitem{
+    display: flex;
+    padding-top: .7rem;
+    position: relative;
+
+    &__check{
+        position: absolute;
+        top: .5rem ;
+        left: 4px;
+    }
+
+    &__info{
+        position: relative;
+        margin-left: 1rem;
+
+        &__info{
+            margin-left: 4rem;
+        }
+        &__image{
+            position: absolute;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+        }
+    }
+
+    &__address{
+        width: 4rem;
+        margin-left: 1rem;
+    }
+    &__phone{
+        width: 15rem;
+        padding-left: 10%;
+    }
+    &__email{
+        width: 15rem;
+    }
+    &__balance{
+        width: 7rem;
+        margin-left: 6rem;
+    }
+    &__button{
+        padding: .5rem;
+        width: 4rem;
+        height: 2rem;
+        cursor: pointer;
+        background-color: #F46F22;
+        border: none;
+        color: #fff;
+        border-radius: 5px;
+    }
+}

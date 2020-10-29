@@ -1,0 +1,30 @@
+.filterbar{
+    color: #808080;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    height: 50px;
+    font-weight: 300;
+    position: relative;
+    padding: 0 2rem;
+
+    &__check{
+        position: absolute;
+        left: 5px;
+
+    }
+
+    &__item{
+        cursor: pointer;
+
+        &__icon{
+            margin-left: .5rem;
+        }
+        &Email{
+            width: 7rem;
+            text-align: center;
+        }
+    }
+
+}

@@ -1,0 +1,20 @@
+.contacts{
+    .bar{
+        width: 93vw;
+        background-color: #F46F22;
+        height: 35px;
+        position: relative;
+
+        &__link{
+            margin-left: 4rem;
+            background-color: #fff;
+            position: absolute;
+            bottom: 0;
+            text-decoration: none;
+            color: #F46F22;
+            padding: 4px ;
+            width: 7rem;
+            text-align: center;
+        }
+    }
+}

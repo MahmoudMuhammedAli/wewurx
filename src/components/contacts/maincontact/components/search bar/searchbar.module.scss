@@ -1,0 +1,92 @@
+.searchbar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #E6E6E6;
+    padding: 8px 1% 8px 1%;
+
+    .actions{
+       .select{
+        width: 8rem;
+        height: 1.7rem;
+        outline: none;
+        border-radius: 3px;
+        color: #848484;
+       }
+       .apply{
+           margin:0 1rem;
+           width: 6rem;
+           height: 2rem;
+           background-color: #999999;
+           outline: none;
+           border-radius: 4px;
+           border: none;
+           color: #fff;
+           font-weight: 400;
+           cursor: pointer;
+       }
+       .add{
+           margin: 0 2rem;
+           width: 8rem;
+           height: 2rem;
+           background-color: #F46F22;
+           color: #fff;
+           border: none;
+           outline: none;
+           position: relative;
+           font-weight: 400;
+           border-radius: 4px;
+           cursor: pointer;
+
+           &__icon{
+               font-size: 1.5rem;
+               position: absolute;
+               left: 5px;
+               top: 50%;
+               transform: translateY(-50%);
+           }
+       }
+    }
+
+
+    .search{
+        display: flex;
+        align-items: center;
+        &__reset{
+            font-size: .9rem;
+            border: none;
+            background-color: transparent;
+            color: #F46F22;
+        }
+        &__searchbox{
+            position: relative;
+            padding-left: .2rem;
+            margin-left: .4rem;
+            height: 2rem;
+            background-color: #fff;
+            width: 14rem;
+             border-radius: 5px;
+             border: 1px solid #cccccc;
+             padding-left: .2rem;
+
+            &__icon{
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+                color: #F46F22;
+
+            }
+            &__input{
+                width: 100%;
+                border: none;
+                outline: none;
+                display: flex;
+                align-items: center;
+                height: 100%;         
+                  border-radius: 5px;
+            }
+        }
+    }
+}
