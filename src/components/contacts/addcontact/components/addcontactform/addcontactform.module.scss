@@ -1,0 +1,92 @@
+.form{
+    margin-left: 2rem;
+
+    &__select{
+
+            border: 1.5px solid #D9D9D9;
+            width: 15rem;
+            height: 2rem;
+            padding: .2rem;
+            border-radius: .2rem;
+            margin-bottom: .4rem;
+            outline: none;
+            color: #8B8B8B;
+            font-size: 1rem;
+            line-height: 1.5rem;
+    }
+
+    &__label{
+
+        width: 8rem;
+        text-align: right;
+        margin-right: 1rem;
+        display: inline-block;
+        color: #F46F22;
+    }
+    &__input{
+        display: inline-block;
+
+        input{
+            border: 1.5px solid #D9D9D9;
+            width: 14rem;
+            height: 1.5rem;
+            border-radius: .2rem;
+            margin-bottom: .4rem;
+            outline: none;
+            padding: .4rem ;
+            font-size: 1rem;
+            line-height: 1.5rem;
+            font-weight: 400;
+
+        }
+        &Half{
+            input{
+                width: 7rem;
+            }
+            
+        }
+    }
+
+    &__mainbilling{
+
+        h4{
+            margin-bottom: 1rem;
+            font-weight: normal;
+            color: #8B8B8B;
+        }
+        margin: 1rem auto;
+        border-top: 1.5px solid #f2f2f2;
+        border-bottom: 1.5px solid #f2f2f2;
+        padding: 1rem 0;
+        width: 40rem;
+    }
+    &__button{
+        margin: 1rem 0;
+        width: 156px;
+        border-radius: .2rem;
+        display: block;
+        outline: none;
+        border: none;
+        background-color: #F46F22;
+        color: #FFFEFE;
+        padding: .5rem;
+        font-size: 1rem;
+        cursor: pointer;
+        margin-left: auto;
+    }
+    &__checkbox{
+        
+        div{
+            width: 8rem;
+            margin-right: 1rem;
+            display: inline-block;
+
+        } 
+        span{
+         width: 8rem;
+         color: #F46F22;
+         margin-right: .5rem;
+         
+        }
+    }
+}

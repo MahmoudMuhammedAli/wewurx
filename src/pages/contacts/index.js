@@ -15,7 +15,7 @@ const Contacts = props => {
 
     const renderComponents = () => {
         if(shouldShowAddContact){
-            return <AddContact />
+            return <AddContact setShouldShowAddContact = {setShouldShowAddContact} />
         }
         if(shouldShowEditContact){
             return <EditContact />

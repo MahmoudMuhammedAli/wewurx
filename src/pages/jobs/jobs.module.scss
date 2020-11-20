@@ -1,0 +1,28 @@
+.jobs {
+  .bar {
+    width: 93vw;
+    background-color: #f46f22;
+    height: 35px;
+    position: relative;
+    padding-left: 4rem;
+    display: flex;
+
+    &__link {
+      text-decoration: none;
+
+      padding: 4px;
+      height: 90%;
+      margin-top: 0.2rem;
+      width: 7rem;
+      text-align: center;
+      margin-left: 1rem;
+      color: #fff;
+
+      &:hover,
+      &Active {
+        color: #f46f22;
+        background-color: #fff;
+      }
+    }
+  }
+}

@@ -1,6 +1,4 @@
-import React, { useState } from 'react';
-import EditContact from '../editcontact';
-import Styles from './viewcontact.module.scss';
+import React from 'react';
 
 const ViewContact = props => {
     return (

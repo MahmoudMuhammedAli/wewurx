@@ -1,0 +1,62 @@
+.sidebar{
+    width: 12rem;
+    color: #474747;
+    
+
+    a{
+        text-decoration: none;
+    }
+
+    &__heading{
+        margin-bottom: 1rem;
+        display: inline-block;
+        text-decoration: none;
+        color: #474747;
+        font-size: 1.5rem;
+        padding-left: .7rem;
+        display: flex;
+        align-items: center;
+
+
+        span{
+            margin-right: .7rem;
+            font-size: 1rem;
+        }
+    }
+    &__list{
+
+        &__item{
+            padding: .7rem;
+            border-bottom: 1px solid #E6E6E6;
+            
+            a{
+                color: #474747;
+                width: 100%;
+                display: block;
+
+            }
+            &:hover{
+                background-color: #F2F2F2;
+            }
+
+            &Active{
+                background-color: #F2F2F2;
+            }
+
+        }
+    }
+    &__button{
+        margin: 1rem auto;
+        width: 90%;
+        border-radius: .2rem;
+        display: block;
+        outline: none;
+        border: none;
+        background-color: #F46F22;
+        color: #FFFEFE;
+        padding: .5rem;
+        font-size: 1rem;
+        cursor: pointer;
+
+    }
+}

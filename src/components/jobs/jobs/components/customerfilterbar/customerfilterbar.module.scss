@@ -1,0 +1,41 @@
+.bar {
+  display: flex;
+  margin-left: 2rem;
+  margin-top: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #dcdede;
+  color: #808080;
+  align-items: center;
+  width: 80vw;
+
+  i {
+    font-size: 1rem;
+    margin-left: 0.3rem;
+  }
+
+  &__job {
+    width: 10rem;
+    padding-left: 0.5rem;
+  }
+  &__invoice {
+    width: 5rem;
+  }
+  &__amount {
+    width: 7rem;
+  }
+  &__customer {
+    width: 10rem;
+  }
+  &__site {
+    width: 10rem;
+  }
+  &__due {
+    width: 10rem;
+  }
+  &__schedule {
+    width: 10rem;
+  }
+  &__assign {
+    width: 7rem;
+  }
+}

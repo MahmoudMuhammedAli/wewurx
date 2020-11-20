@@ -6,7 +6,7 @@ const Letters = props => {
         const letters = [];
         for(let i = 65; i < 65+26; i++){
             letters.push(
-            <button className = {`${Styles.letters__button} ${Styles.letters__buttonLetter}`}>
+            <button className = {`${Styles.letters__button} ${Styles.letters__buttonLetter}`} key = {i}>
                 {String.fromCharCode(i)}
             </button>
             );
