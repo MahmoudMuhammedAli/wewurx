@@ -9,8 +9,8 @@
   width: 80vw;
 
   i {
-    font-size: 1rem;
-    margin-left: 0.3rem;
+    font-size: 0.7rem;
+    margin-left: 0.1rem;
   }
 
   &__job {
@@ -21,21 +21,26 @@
     width: 5rem;
   }
   &__amount {
-    width: 7rem;
+    width: 6rem;
   }
   &__customer {
-    width: 10rem;
+    width: 12rem;
   }
   &__site {
-    width: 10rem;
+    width: 13rem;
   }
   &__due {
-    width: 10rem;
+    width: 7rem;
   }
   &__schedule {
     width: 10rem;
   }
   &__assign {
     width: 7rem;
+  }
+  &__reset {
+    color: #f46f22;
+    text-align: center;
+    width: 5rem;
   }
 }

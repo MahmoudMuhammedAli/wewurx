@@ -33,6 +33,7 @@ const CustomerFilterBar = (props) => {
       <div className={Styles.bar__assign}>
         Assigned to <i className="fa fa-arrow-down fa-lg"></i>
       </div>
+      <div className={Styles.bar__reset}>Reset</div>
     </div>
   );
 };

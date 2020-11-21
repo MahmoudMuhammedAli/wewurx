@@ -4,6 +4,7 @@ import FilterBar from "../../shared/filterbar";
 import StatusBar from "./components/statusfilterbar";
 import ControllBar from "./components/controllebar";
 import CustomerFilterBar from "./components/customerfilterbar";
+import Customer from "./components/customer";
 
 const Jobs = (props) => {
   const filters = [
@@ -62,6 +63,8 @@ const Jobs = (props) => {
       <StatusBar />
       <ControllBar />
       <CustomerFilterBar />
+      <Customer status="scheduled" />
+      <Customer status="pending" />
     </div>
   );
 };
