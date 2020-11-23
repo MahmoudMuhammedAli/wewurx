@@ -1,4 +1,10 @@
-export const SHOW_QUOTES = 'SHOW_QUOTES';
-export const SHOW_JOBS = 'SHOW_JOBS';
-export const SHOW_INVOICES = 'SHOW_INVOICES';
-export const SHOW_PURCHASES = 'SHOW_PURCHASES';
+export const SHOW_QUOTES = "SHOW_QUOTES";
+export const SHOW_JOBS = "SHOW_JOBS";
+export const SHOW_INVOICES = "SHOW_INVOICES";
+export const SHOW_PURCHASES = "SHOW_PURCHASES";
+export const SHOW_ADD_FORMS = "SHOW_ADD_FORMS";
+export const SHOW_ADD_JOBS = "SHOW_ADD_JOB";
+export const SHOW_ADD_COST_ITMES = "SHOW_ADD_COST_ITEMS";
+export const SHOW_ADD_JOB_PROJECTS = "SHOW_ADD_JOB_PROJECTS";
+export const SHOW_FILES_AND_NOTES = "SHOW_FILES_AND_NOTES";
+export const SHOW_FORMS = "SHOW_FORMS";

@@ -1,6 +1,8 @@
 import React from "react";
 import Styles from "./controllebar.module.scss";
 import { reduxForm, Field } from "redux-form";
+import { connect } from "react-redux";
+import { showAddJobs } from "../../../../../../../actions";
 
 const renderField = ({
   input,
@@ -38,6 +40,9 @@ const renderJobsActions = ({ input, meta: { touched, error } }) => (
 );
 
 const ControllBar = (props) => {
+  const handleAddJobclick = (e) => {
+    props.showAddJobs();
+  };
   const handleSubmit = (values) => {};
   return (
     <form
@@ -49,7 +54,10 @@ const ControllBar = (props) => {
         <button className={`${Styles.controlbar__actions__apply}`}>
           Apply
         </button>
-        <button className={`${Styles.controlbar__actions__addjob}`}>
+        <button
+          className={`${Styles.controlbar__actions__addjob}`}
+          onClick={handleAddJobclick}
+        >
           <i className="fa fa-plus fa-lg"></i>Add Job
         </button>
       </div>
@@ -58,6 +66,14 @@ const ControllBar = (props) => {
   );
 };
 
-export default reduxForm({
-  form: "mainJobPageController",
-})(ControllBar);
+const mapStateToProps = (state) => {
+  return {};
+};
+
+export default connect(mapStateToProps, {
+  showAddJobs,
+})(
+  reduxForm({
+    form: "mainJobPageController",
+  })(ControllBar)
+);
