@@ -26,7 +26,7 @@ const SecondaryJobPage = (props) => {
     return <AddJob />;
   };
   return (
-    <div>
+    <div className = {Styles.secondaryJobPage}>
       <SideBar />
       {renderPage()}
     </div>

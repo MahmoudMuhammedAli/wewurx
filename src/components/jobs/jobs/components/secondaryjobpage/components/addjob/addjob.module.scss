@@ -1,0 +1,28 @@
+.addjob {
+  margin-left: 2rem;
+  position: relative;
+  margin-top: 3rem;
+  &__customerseletor {
+    border: 1.5px solid var(--border-color-gray);
+    border-radius: 5px;
+    position: relative;
+    height: 1.5rem;
+    width: 15rem;
+    padding-left: 0.5rem;
+    cursor: pointer;
+
+    i {
+      position: absolute;
+      right: 1%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      color: var(--text-color-gray);
+      font-size: 0.7rem;
+    }
+    &__label {
+      position: absolute;
+      top: -100%;
+      color: var(--color-red);
+    }
+  }
+}
