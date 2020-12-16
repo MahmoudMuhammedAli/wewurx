@@ -9,7 +9,12 @@
     height: 1.5rem;
     width: 15rem;
     padding-left: 0.5rem;
-    cursor: pointer;
+    cursor: text;
+    z-index: 1000;
+
+    &__box {
+      height: 1.5rem;
+    }
 
     i {
       position: absolute;
@@ -23,6 +28,166 @@
       position: absolute;
       top: -100%;
       color: var(--color-red);
+    }
+
+    &__select {
+      border: 1px solid var(--border-color-gray);
+      margin-left: -0.6rem;
+      width: 115%;
+      border-radius: 5px;
+      margin-top: 0.5rem;
+      padding-left: 0.5rem;
+      transform-origin: top;
+      transform: scaleY(0);
+      transition: transform 0.2s linear;
+
+      background-color: #fff;
+
+      &__alert {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 40px;
+        color: var(--text-color-gray);
+        font-weight: 250;
+      }
+
+      &__customers {
+        color: var(--color-red);
+
+        &:hover {
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  &__form {
+    &__input {
+      margin-top: 1rem;
+      border: 1px solid var(--border-color-gray);
+      outline: none;
+      height: 2rem;
+      width: 15rem;
+      border-radius: 5px;
+      padding-left: 0.5rem;
+      font-size: 1.2rem;
+      font-weight: 250;
+    }
+    &__jobDescription {
+      border-top: 1px solid var(--border-color-gray);
+      border-bottom: 1px solid var(--border-color-gray);
+      margin: 2rem auto;
+      padding: 1rem 0;
+      width: 25vw;
+      &__label {
+        color: var(--text-color-gray);
+        font-weight: 200;
+        margin: 0 0 0.5rem 0.5rem;
+      }
+
+      textarea {
+        border: 1px solid var(--border-color-gray);
+        outline: none;
+        width: 25rem;
+        padding: 0.5rem;
+        border-radius: 4px;
+        height: 3rem;
+      }
+    }
+    &__addforms {
+      border-top: 1px solid var(--border-color-gray);
+      border-bottom: 1px solid var(--border-color-gray);
+      margin: 1rem auto;
+      padding: 2rem 0;
+      width: 25vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      color: var(--text-color-gray);
+      font-weight: 200;
+
+      span {
+        position: absolute;
+        left: 0.5rem;
+        top: 1.5rem;
+      }
+      &__center {
+        transform: translateY(25%);
+      }
+      &__button {
+        background-color: var(--color-red);
+        color: #fff;
+        border-radius: 5px;
+        padding: 0.5rem;
+        position: relative;
+        text-align: center;
+        cursor: pointer;
+        margin-top: 0.5rem;
+
+        i {
+          position: absolute;
+          left: 0.5rem;
+        }
+      }
+    }
+    &__locations {
+      border-bottom: 1px solid var(--border-color-gray);
+      padding-bottom: 1rem;
+      font-weight: 200;
+
+      &__heading {
+        color: var(--text-color-gray);
+        display: block;
+        margin-bottom: 1rem;
+      }
+      &__input {
+        margin-left: 1rem;
+        display: flex;
+        &__label {
+          margin-right: 0.5rem;
+          width: 6.5rem;
+          text-align: right;
+          color: var(--color-red);
+        }
+        &__input {
+          input {
+            border: 1.5px solid var(--border-color-gray);
+            outline: none;
+            border-radius: 3px;
+            padding: 0.2rem;
+            margin-bottom: 0.2rem;
+            width: 14rem;
+          }
+          input[type="checkbox"] {
+            width: auto;
+            margin-bottom: 0.5rem;
+          }
+          &Half {
+            input {
+              width: 7rem;
+            }
+          }
+          &Check {
+            input {
+              margin-left: 1rem;
+            }
+            label {
+              color: var(--color-red);
+            }
+          }
+        }
+      }
+    }
+    &__maincontacts {
+      border-bottom: 1px solid var(--border-color-gray);
+      padding: 1rem 0;
+      font-weight: 200;
+      &__heading {
+        margin-bottom: 1rem;
+      }
     }
   }
 }

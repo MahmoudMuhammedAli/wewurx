@@ -1,11 +1,11 @@
 .jobs {
   .bar {
-    width: 93vw;
     background-color: #f46f22;
     height: 35px;
     position: relative;
     padding-left: 4rem;
     display: flex;
+    margin-top: -1.4rem;
 
     &__link {
       text-decoration: none;

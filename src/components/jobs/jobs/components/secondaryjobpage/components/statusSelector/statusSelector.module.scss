@@ -1,0 +1,50 @@
+.select {
+  margin-top: 1.5rem;
+  cursor: pointer;
+  display: inline-block;
+  margin-bottom: 1rem;
+
+  span {
+    display: inline-block;
+  }
+
+  &__selected {
+    display: flex;
+    align-items: center;
+    &__circle {
+      width: 0.8rem;
+      height: 0.8rem;
+      border-radius: 50%;
+      margin-right: 1rem;
+    }
+    &__text {
+      width: 6rem;
+      color: var(--text-color-gray);
+      font-weight: 400;
+    }
+
+    &__icon {
+      font-size: 0.8rem;
+      color: var(--text-color-gray);
+    }
+  }
+
+  &__statusselect {
+    border: none;
+    height: 0rem;
+    overflow: hidden;
+    display: block;
+    border-radius: 5px;
+    width: 9rem;
+    position: absolute;
+    z-index: 1000;
+    background-color: #fff;
+    margin-top: 1rem;
+    transition: height 0.3s linear, border-width 0.3s linear;
+
+    &__item {
+      margin-bottom: 0.7rem;
+      cursor: pointer;
+    }
+  }
+}

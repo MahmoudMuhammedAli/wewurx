@@ -1,0 +1,45 @@
+.priority {
+  margin-top: 1.5rem;
+  cursor: pointer;
+  display: inline-block;
+  margin-left: 1rem;
+  position: absolute;
+  width: 10rem;
+  padding-bottom: 1rem;
+
+  &__selected {
+    &__label {
+      color: var(--text-color-gray);
+      font-weight: 250;
+    }
+    &__value {
+      margin: 0 0.5rem;
+      display: inline-block;
+      width: 3rem;
+      color: var(--text-color-gray-2);
+      font-weight: 400;
+    }
+
+    &__arrow {
+      font-size: 1rem;
+      color: var(--text-color-gray-2);
+      margin-left: 0.8rem;
+    }
+  }
+  &__list {
+    border: 1px solid var(--border-color-gray);
+    border-radius: 5px;
+    color: var(--text-color-gray-2);
+    margin-top: 1rem;
+    height: 0;
+    border: 0;
+    background: #fff;
+    position: absolute;
+    transition: height 0.2s linear, border-width 0.2s linear;
+    overflow: hidden;
+
+    &__item {
+      margin: 0.5rem;
+    }
+  }
+}

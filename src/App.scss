@@ -1,6 +1,5 @@
-.App{
-  display: flex;
-  flex-wrap:wrap;
-  overflow: hidden;
-  position: relative;
+.App {
+  display: grid;
+  grid-template-columns: 7% 93%;
+  grid-template-rows: 4.1% 97%;
 }
