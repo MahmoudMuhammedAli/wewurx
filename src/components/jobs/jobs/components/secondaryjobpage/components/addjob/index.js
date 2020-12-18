@@ -4,6 +4,7 @@ import AddCustomer from "../addcustomer";
 import { reduxForm, Field } from "redux-form";
 import StatusSelector from "../statusSelector";
 import Priority from "../priority";
+import WorkForceSelector from "./components/workforceselector";
 
 const renderLocationInfoFields = ({
   input,
@@ -121,13 +122,17 @@ const AddJob = (props) => {
         />
         <StatusSelector setStatus={setJobStatus} />
         <Priority />
-        <div className={Styles.addjob__form__jobDescription}>
+        <div
+          className={`${Styles.addjob__form__jobDescription} ${Styles.addjob__form__section}`}
+        >
           <div className={Styles.addjob__form__jobDescription__label}>
             Job Description
           </div>
           <Field name='jobDescription' component='textarea' />
         </div>
-        <div className={Styles.addjob__form__addforms}>
+        <div
+          className={`${Styles.addjob__form__addforms} ${Styles.addjob__form__section}`}
+        >
           <span>Forms</span>
           <div className={Styles.addjob__form__addforms__center}>
             <div>select form(s) to add to the job</div>
@@ -136,7 +141,9 @@ const AddJob = (props) => {
             </div>
           </div>
         </div>
-        <div className={Styles.addjob__form__locations}>
+        <div
+          className={`${Styles.addjob__form__locations} ${Styles.addjob__form__section}`}
+        >
           <span className={Styles.addjob__form__locations__heading}>
             Site address
           </span>
@@ -172,9 +179,11 @@ const AddJob = (props) => {
             className={Styles.addjob__form__locations__input__inputHalf}
           />
         </div>
-        <div className={Styles.addjob__form__maincontacts}>
+        <div
+          className={`${Styles.addjob__form__maincontacts} ${Styles.addjob__form__section}`}
+        >
           <div className={Styles.addjob__form__maincontacts__heading}>
-            <input type='radio' id='' name='' value='' checked /> Main contact
+            <input type='radio' checked readOnly /> Main contact
           </div>
           <Field
             component={renderLocationInfoFields}
@@ -206,6 +215,73 @@ const AddJob = (props) => {
             label='Email'
             type='email'
           />
+        </div>
+        <div
+          className={`${Styles.addjob__form__assets} ${Styles.addjob__form__section}`}
+        >
+          <div className={Styles.addjob__form__assets__heading}>
+            Assets/Services
+          </div>
+
+          <div>
+            <label className={Styles.addjob__form__assets__option}>
+              <Field
+                name='assets'
+                component='input'
+                type='radio'
+                value='none'
+              />{" "}
+              None
+            </label>
+            <label className={Styles.addjob__form__assets__option}>
+              <Field
+                name='assets'
+                component='input'
+                type='radio'
+                value='reactiveWork'
+              />{" "}
+              Reactive work for asset(s)
+            </label>
+            <label className={Styles.addjob__form__assets__option}>
+              <Field
+                name='assets'
+                component='input'
+                type='radio'
+                value='serviceContract'
+              />{" "}
+              Service contract visit
+            </label>
+          </div>
+        </div>
+        <div
+          className={`${Styles.addjob__form__assignedTo} ${Styles.addjob__form__section}`}
+        >
+          <div className={Styles.addjob__form__assignedTo__heading}>
+            Assigned to
+          </div>
+          <div className={Styles.addjob__form__assignedTo__checks}>
+            <label className={Styles.addjob__form__assets__option}>
+              <Field
+                name='isContractor'
+                component='input'
+                type='radio'
+                value='internalWorkforce'
+              />{" "}
+              Internal workforce
+            </label>
+            <label className={Styles.addjob__form__assets__option}>
+              <Field
+                name='isContractor'
+                component='input'
+                type='radio'
+                value='contractor'
+              />{" "}
+              Contractor
+            </label>
+          </div>
+          {/* End the Checks div */}
+          {/* Starting Work Selector  */}
+          <WorkForceSelector />
         </div>
       </form>
     </div>

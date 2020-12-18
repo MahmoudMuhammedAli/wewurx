@@ -78,9 +78,9 @@
     &__jobDescription {
       border-top: 1px solid var(--border-color-gray);
       border-bottom: 1px solid var(--border-color-gray);
-      margin: 2rem auto;
+      margin: 2rem 0;
       padding: 1rem 0;
-      width: 25vw;
+      width: 50rem;
       &__label {
         color: var(--text-color-gray);
         font-weight: 200;
@@ -99,9 +99,9 @@
     &__addforms {
       border-top: 1px solid var(--border-color-gray);
       border-bottom: 1px solid var(--border-color-gray);
-      margin: 1rem auto;
+      margin: 1rem 0;
       padding: 2rem 0;
-      width: 25vw;
+      width: 50rem;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -148,7 +148,7 @@
         display: flex;
         &__label {
           margin-right: 0.5rem;
-          width: 6.5rem;
+          width: 8rem;
           text-align: right;
           color: var(--color-red);
         }
@@ -188,6 +188,35 @@
       &__heading {
         margin-bottom: 1rem;
       }
+    }
+    &__assets {
+      border-bottom: 1px solid var(--border-color-gray);
+      padding: 2rem 0;
+      color: var(--text-color-gray);
+      font-weight: 300;
+
+      &__heading {
+        font-weight: 200;
+        margin-bottom: 1rem;
+      }
+      &__option {
+        margin-right: 2rem;
+      }
+    }
+    &__assignedTo {
+      padding: 2rem 0;
+      border-bottom: 1px solid var(--border-color-gray);
+      font-weight: 250;
+      color: var(--text-color-gray);
+      font-size: 0.9rem;
+
+      &__heading {
+        font-weight: 250;
+        margin-bottom: 1rem;
+      }
+    }
+    &__section {
+      width: 45rem;
     }
   }
 }
