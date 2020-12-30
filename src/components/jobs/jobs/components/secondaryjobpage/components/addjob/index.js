@@ -5,6 +5,7 @@ import { reduxForm, Field } from "redux-form";
 import StatusSelector from "../statusSelector";
 import Priority from "../priority";
 import WorkForceSelector from "./components/workforceselector";
+import Dates from "./components/dates";
 
 const renderLocationInfoFields = ({
   input,
@@ -283,6 +284,10 @@ const AddJob = (props) => {
           {/* Starting Work Selector  */}
           <WorkForceSelector />
         </div>
+        <Dates />
+        <button type='submit' className={Styles.addjob__form__submitbutton}>
+          Save
+        </button>
       </form>
     </div>
   );

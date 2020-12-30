@@ -27,6 +27,31 @@ body {
   --color-cancelled: #f04d31;
   --color-external: #903162;
 }
+/* hide the arrows from the number input button */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* end the hide process of the arrows from the number input */
+/* Start Styling date picker */
+.react-datepicker__input-container {
+  border: 1.5px solid var(--border-color-gray);
+  padding: 0.5rem;
+  border-radius: 3px;
+  cursor: text;
+}
+.react-datepicker__input-container input {
+  outline: none;
+  border: none;
+}
+/* End Styling date picker */
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",

@@ -8,6 +8,7 @@ import {
   SHOW_ADD_JOB_PROJECTS,
   SHOW_FILES_AND_NOTES,
   SHOW_FORMS,
+  SELECT_JOB_DUE_DATE,
 } from "./actionsTypes";
 
 // ============= Starting Job Page Action Creators ==============
@@ -62,4 +63,14 @@ export const showPurchases = () => {
   };
 };
 // ============= Ending  Job  Page Action Creators ==============
+// --------------------------------------------------------------
+// ============= Start   addCustomer  form Action Creators ==============
+// --------------------------------------------------------------
+export const selectJobDueDate = (date) => (dispatch) => {
+  dispatch({
+    type: SELECT_JOB_DUE_DATE,
+    payload: date,
+  });
+};
+// ============= End   addCustomer  form Action Creators ==============
 // --------------------------------------------------------------

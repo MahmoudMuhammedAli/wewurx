@@ -1,0 +1,17 @@
+recurrence {
+  margin-top: 1rem;
+  &__label {
+    display: inline-block;
+    margin: 0 1rem;
+    color: var(--color-red);
+    font-weight: 100;
+  }
+  &__select {
+    cursor: pointer;
+    border: 1px solid var(--border-color-gray);
+    background-color: #fff;
+    padding: 0.3rem;
+    outline: none;
+    color: var(--text-color-gray);
+  }
+}

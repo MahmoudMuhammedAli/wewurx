@@ -1,0 +1,65 @@
+.dates {
+  border-bottom: 1px solid var(--border-color-gray);
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  font-weight: 100;
+  color: var(--text-color-gray);
+
+  &__heading {
+    margin-bottom: 1rem;
+    font-weight: 200;
+    font-size: 0.9rem;
+  }
+
+  &__checkbox {
+    margin-right: 1rem;
+  }
+  &__jobduration {
+    margin: 1.5rem 0;
+    &__heading {
+      font-weight: 200;
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+
+    input,
+    &__jobweights {
+      width: 3rem;
+      height: 2rem;
+      border-radius: 3px;
+      outline: none;
+      border: 1.5px solid var(--border-color-gray);
+      font-size: 0.9rem;
+    }
+
+    &__jobvalue {
+      padding: 0.5rem;
+    }
+    &__jobweights {
+      width: auto;
+      margin-left: 1rem;
+      background-color: #fff;
+    }
+  }
+  &__duedate {
+    margin-bottom: 1rem;
+
+    &__heading {
+      font-size: 0.9rem;
+      font-weight: 200;
+      margin-bottom: 0.5rem;
+    }
+  }
+  &__scheduledate {
+    &__heading {
+      font-size: 0.9rem;
+      font-weight: 200;
+      margin-bottom: 0.5rem;
+    }
+    &__until {
+      display: inline-block;
+      margin: 0 1rem;
+      font-style: italic;
+    }
+  }
+}

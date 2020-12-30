@@ -37,78 +37,10 @@
     padding: 1rem;
     background-color: #fff;
     transition: height 0.3s linear;
+    z-index: 10;
 
-    &__stuffskills {
-      border: 1.5px solid var(--border-color-gray);
-
-      position: relative;
-      width: 15rem;
-      padding: 0.4rem;
-      border-radius: 4px;
-      color: #000;
-      > i {
-        position: absolute;
-        color: var(--text-color-gray);
-        right: 5%;
-        font-size: 0.7rem;
-        top: 50%;
-        transform: translateY(-50%);
-      }
-      &__container {
-        border: 1.5px solid var(--border-color-gray);
-        position: absolute;
-        top: 2rem;
-        width: 25rem;
-        border-radius: 4px;
-        min-height: 3rem;
-        left: 0;
-        font-size: 0.9rem;
-        font-weight: 250;
-        color: var(--text-color-gray);
-      }
-      &__noskills {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        a {
-          color: var(--color-red);
-        }
-      }
-      &__skillscontainer {
-        &__search {
-          margin: 1rem;
-          width: 80%;
-          border-width: 1.5px;
-
-          i {
-            font-size: 1.3rem;
-            color: var(--color-red);
-            right: 3%;
-          }
-        }
-        &__item {
-          margin-top: 0.5rem;
-          padding: 0.3rem;
-          font-weight: 700;
-          input {
-            margin-left: 1rem;
-            margin-right: 5px;
-            font-size: 0.7rem;
-          }
-          &:hover {
-            background-color: var(--text-color-gray);
-            color: #fff;
-          }
-          &All {
-            color: var(--color-red);
-
-            &:hover {
-              color: var(--color-red);
-            }
-          }
-        }
-      }
+    &__skills {
+      z-index: 5;
     }
   }
 }

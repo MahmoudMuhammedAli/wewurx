@@ -1,8 +1,8 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import Styles from "./workforceselector.module.scss";
 import { Field } from "redux-form";
-import { Link } from "react-router-dom";
 import { connect } from "react-redux";
+import Selector from "../selector";
 
 const renderField = ({
   placeholder,
@@ -25,75 +25,22 @@ const renderField = ({
     </div>
   );
 };
+const loadSkillsData = () => {
+  return Promise.resolve([
+    { name: "playing", value: "playing" },
+    { name: "Another playing", value: "anotherPlaying" },
+    { name: "chessing", value: "chess" },
+  ]);
+};
+
+const loadTeamsData = () => {
+  return Promise.resolve([{ name: "Egyptian Team", value: "egyptianTeam" }]);
+};
 
 const WorkForceSelector = (props) => {
   const inputRef = useRef(null);
   const workDetailsRef = useRef(null);
-  const [skills, setSkills] = useState(null);
-  let selectedSkills = [];
-  if (props.formValues) {
-    if (props.formValues.all) {
-      selectedSkills = [...skills];
-    } else {
-      for (let skill of skills) {
-        if (props.formValues[skill.value]) {
-          selectedSkills.push(skill);
-        }
-      }
-    }
-  }
-
-  const renderStuffSkills = () => {
-    if (!skills) {
-      return (
-        <div
-          className={`${Styles.workforceselector__workerdetails__stuffskills__noskills} ${Styles.workforceselector__workerdetails__stuffskills__container} `}
-        >
-          <span>
-            No <Link to='#'>Skills</Link> available
-          </span>
-        </div>
-      );
-    }
-    return (
-      <div
-        className={`${Styles.workforceselector__workerdetails__stuffskills__skillscontainer} ${Styles.workforceselector__workerdetails__stuffskills__container} `}
-      >
-        <Field
-          component={renderField}
-          icon='fa fa-search fa-lg'
-          name='skillSearch'
-          className={
-            Styles.workforceselector__workerdetails__stuffskills__skillscontainer__search
-          }
-        />
-
-        <div
-          className={`${Styles.workforceselector__workerdetails__stuffskills__skillscontainer__item} ${Styles.workforceselector__workerdetails__stuffskills__skillscontainer__itemAll}`}
-        >
-          <label>
-            {" "}
-            <Field name='all' component='input' type='checkbox' />
-            All
-          </label>{" "}
-        </div>
-        {skills.map((skill) => (
-          <div
-            key={skill.value}
-            className={
-              Styles.workforceselector__workerdetails__stuffskills__skillscontainer__item
-            }
-          >
-            <label>
-              {" "}
-              <Field name={skill.value} component='input' type='checkbox' />
-              {skill.name}{" "}
-            </label>{" "}
-          </div>
-        ))}
-      </div>
-    );
-  };
+  const skillContainerRef = useRef(null);
 
   useEffect(() => {
     let isWorkDetailsOpened = false;
@@ -120,17 +67,8 @@ const WorkForceSelector = (props) => {
       }
       openWorkDetails();
     });
-    setTimeout(() => {
-      setSkills([
-        { name: "playing", value: "playing" },
-        { name: "another playing", value: "anotherPlaying" },
-      ]);
-    }, 2000);
-    // setTimeout(() => {
-    //   const selectedSkills = ["playing", "another playing"];
-    //   setSelectedSkills(selectedSkills);
-    // }, 3000);
   }, []);
+
   return (
     <div className={Styles.workforceselector}>
       <Field
@@ -144,15 +82,19 @@ const WorkForceSelector = (props) => {
         className={Styles.workforceselector__workerdetails}
         ref={workDetailsRef}
       >
-        <div className={Styles.workforceselector__workerdetails__stuffskills}>
-          {selectedSkills.length === 0
-            ? "Staff skills"
-            : selectedSkills.map(({ name, value }) => {
-                return <span key={value}>{name},</span>;
-              })}
-          {renderStuffSkills()}
-          <i className='fa fa-arrow-down fa-lg'></i>
-        </div>
+        <Selector
+          name='skills'
+          linkOfTheNotAvailble='#'
+          loadData={loadSkillsData}
+          heading='Stuff skills'
+          className={Styles.workforceselector__workerdetails__skills}
+        />
+        <Selector
+          name='teams'
+          linkOfTheNotAvailble='#'
+          loadData={loadTeamsData}
+          heading='teams'
+        />
       </div>
     </div>
   );

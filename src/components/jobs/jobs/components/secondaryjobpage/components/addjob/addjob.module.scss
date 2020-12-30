@@ -218,5 +218,18 @@
     &__section {
       width: 45rem;
     }
+    &__submitbutton {
+      border: none;
+      outline: none;
+      background-color: var(--color-red);
+      color: #fff;
+      padding: 0.5rem;
+      display: block;
+      margin: 2rem 0 2rem auto;
+      cursor: pointer;
+      border-radius: 5px;
+      width: 5rem;
+      font-size: 1rem;
+    }
   }
 }
