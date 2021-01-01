@@ -1,4 +1,4 @@
-recurrence {
+.recurrence {
   margin-top: 1rem;
   &__label {
     display: inline-block;
@@ -13,5 +13,8 @@ recurrence {
     padding: 0.3rem;
     outline: none;
     color: var(--text-color-gray);
+    border-radius: 3px;
+    width: 7rem;
+    margin-left: 0.75rem;
   }
 }

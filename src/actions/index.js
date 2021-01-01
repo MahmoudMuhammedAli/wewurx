@@ -9,6 +9,8 @@ import {
   SHOW_FILES_AND_NOTES,
   SHOW_FORMS,
   SELECT_JOB_DUE_DATE,
+  SELECT_JOB_START_DATE,
+  SELECT_JOB_End_DATE,
 } from "./actionsTypes";
 
 // ============= Starting Job Page Action Creators ==============
@@ -71,6 +73,19 @@ export const selectJobDueDate = (date) => (dispatch) => {
     type: SELECT_JOB_DUE_DATE,
     payload: date,
   });
+};
+
+export const selectJobStartDate = (date) => {
+  return {
+    type: SELECT_JOB_START_DATE,
+    payload: date,
+  };
+};
+export const selectJobEndDate = (date) => {
+  return {
+    type: SELECT_JOB_End_DATE,
+    payload: date,
+  };
 };
 // ============= End   addCustomer  form Action Creators ==============
 // --------------------------------------------------------------

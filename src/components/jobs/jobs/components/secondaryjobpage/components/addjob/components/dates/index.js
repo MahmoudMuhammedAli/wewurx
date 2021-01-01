@@ -3,7 +3,11 @@ import { Field, reduxForm } from "redux-form";
 import Styles from "./dates.module.scss";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { selectJobDueDate } from "../../../../../../../../../actions";
+import {
+  selectJobDueDate,
+  selectJobStartDate,
+  selectJobEndDate,
+} from "../../../../../../../../../actions";
 
 import { connect } from "react-redux";
 import Recurrence from "../recurrence";
@@ -36,9 +40,11 @@ const Dates = (props) => {
   };
   const handleScheduleStartDateChange = (date) => {
     setScheduleStartDate(date);
+    props.selectJobStartDate(date);
   };
   const handleScheduleEndDateChange = (date) => {
     setScheduleEndDate(date);
+    props.selectJobEndDate(date);
   };
   return (
     <div className={Styles.dates}>
@@ -105,6 +111,8 @@ const Dates = (props) => {
   );
 };
 
-export default connect(null, { selectJobDueDate })(
-  reduxForm({ form: "addCustomer" })(Dates)
-);
+export default connect(null, {
+  selectJobDueDate,
+  selectJobStartDate,
+  selectJobEndDate,
+})(reduxForm({ form: "addJob" })(Dates));

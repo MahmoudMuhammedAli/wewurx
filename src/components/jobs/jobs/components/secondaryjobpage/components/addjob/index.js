@@ -294,5 +294,5 @@ const AddJob = (props) => {
 };
 
 export default reduxForm({
-  form: "addCustomer",
+  form: "addJob",
 })(AddJob);

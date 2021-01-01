@@ -1,0 +1,67 @@
+.options {
+  &__customsetup {
+    margin-left: 8.2rem;
+    &__select {
+      padding: 0.3rem;
+      border: 1px solid var(--border-color-gray);
+      background-color: #fff;
+      margin: 0.5rem 0 0.5rem;
+      color: var(--color-black);
+      outline: none;
+      font-size: 1rem;
+      width: 7rem;
+      border-radius: 3px;
+    }
+    &__everyInput {
+      width: 2rem;
+      border-radius: 4px;
+      height: 1.5rem;
+      border: 1px solid var(--border-color-gray);
+      outline: none;
+      margin: 0.5rem 0;
+      padding: 0.3rem;
+      font-size: 1rem;
+    }
+  }
+  &__endrecurrencebox {
+    margin-top: 2rem;
+    span {
+      color: var(--color-red);
+    }
+
+    &__select {
+      padding: 0.3rem;
+      border: 1px solid var(--border-color-gray);
+      background-color: #fff;
+      margin-left: 0.5rem;
+      color: var(--color-gray);
+      outline: none;
+      font-size: 1rem;
+      width: 7rem;
+      border-radius: 3px;
+    }
+  }
+  &__currentsetup {
+    margin-top: 1rem;
+
+    > span {
+      display: inline-block;
+      margin-bottom: 0.5rem;
+    }
+
+    &__setup {
+      background-color: #eeeeee;
+      padding: 1rem;
+      display: flex;
+      align-items: flex-start;
+      i {
+        color: var(--color-black);
+      }
+
+      > div {
+        margin-left: 1rem;
+        color: var(--color-black);
+      }
+    }
+  }
+}

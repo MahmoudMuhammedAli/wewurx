@@ -1,0 +1,12 @@
+.weekdayselector {
+  width: 16rem;
+  margin-top: 1rem;
+  label {
+    margin: 0 1rem 1rem 0;
+    display: inline-block;
+
+    input {
+      margin-left: 0.3rem;
+    }
+  }
+}
