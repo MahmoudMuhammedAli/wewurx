@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Styles from "./customer.module.scss";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 const Customer = ({
   jobName,
@@ -17,7 +18,7 @@ const Customer = ({
   return (
     <div className={Styles.customer}>
       <input
-        type="checkbox"
+        type='checkbox'
         checked={isChecked}
         onChange={() => setIsChecked((checked) => !checked)}
         className={Styles.customer__checkbox}
@@ -43,7 +44,9 @@ const Customer = ({
       <div className={Styles.customer__due}>{dueDate}</div>
       <div className={Styles.customer__schedule}>{scheduled}</div>
       <div className={Styles.customer__assign}>{assignedTo}</div>
-      <button className={Styles.customer__button}>View</button>
+      <Link className={Styles.customer__button} to='/job/view/230238982'>
+        View
+      </Link>
     </div>
   );
 };

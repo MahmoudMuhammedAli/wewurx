@@ -11,6 +11,12 @@ import {
   SELECT_JOB_DUE_DATE,
   SELECT_JOB_START_DATE,
   SELECT_JOB_End_DATE,
+  SHOW_VIEW_JOB_COST_ITEMS,
+  SHOW_VIEW_JOB_FORMS,
+  SHOW_VIEW_JOB_PROJECT_JOBS,
+  SHOW_VIEW_JOB_JOB_ACTIVITY,
+  SHOW_VIEW_JOB,
+  SHOW_VIEW_JOB_FILES_AND_NOTES,
 } from "./actionsTypes";
 
 // ============= Starting Job Page Action Creators ==============
@@ -89,3 +95,34 @@ export const selectJobEndDate = (date) => {
 };
 // ============= End   addCustomer  form Action Creators ==============
 // --------------------------------------------------------------
+
+// ============= Starting ViewJob action Creators =====================
+// --------------------------------------------------------------------
+
+export const showViewJobCostItems = () => {
+  return { type: SHOW_VIEW_JOB_COST_ITEMS };
+};
+export const showViewJobForms = () => {
+  return { type: SHOW_VIEW_JOB_FORMS };
+};
+export const showViewJobFilesAndNotes = () => {
+  return {
+    type: SHOW_VIEW_JOB_FILES_AND_NOTES,
+  };
+};
+export const showViewJobProjectJobs = () => {
+  return {
+    type: SHOW_VIEW_JOB_PROJECT_JOBS,
+  };
+};
+export const showViewJobJobActivity = () => {
+  return {
+    type: SHOW_VIEW_JOB_JOB_ACTIVITY,
+  };
+};
+export const showViewJob = () => {
+  return { type: SHOW_VIEW_JOB };
+};
+
+// ============= Ending ViewJob action Creators =====================
+// --------------------------------------------------------------------
