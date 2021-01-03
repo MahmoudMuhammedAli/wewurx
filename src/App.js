@@ -9,6 +9,9 @@ import Documents from "./pages/documents";
 import SideBar from "./components/shared/sidebar";
 import InfoBar from "./components/shared/infobar";
 import ViewJob from "./components/jobs/jobview";
+import Quotes from "./pages/quotes";
+import Invoices from "./pages/invoices";
+import Purchases from "./pages/purchases";
 
 function App() {
   return (
@@ -21,6 +24,9 @@ function App() {
         <Route path='/contacts' component={Contacts} />
         <Route path='/settings' component={Settings} />
         <Route path='/documents' component={Documents} />
+        <Route path='/qutoes' component={Quotes} />
+        <Route path='/invoices' component={Invoices} />
+        <Route path='/purchases' component={Purchases} />
       </Router>
     </div>
   );

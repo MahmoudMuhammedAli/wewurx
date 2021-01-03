@@ -51,15 +51,37 @@ const SideBar = (props) => {
         onClick={() => props.showViewJobFilesAndNotes()}
         className={`${Styles.sidebar__button}`}
       >
-        FilesAndNotes
+        Files and notes
       </button>
       <button
         onClick={() => props.showViewJobJobActivity()}
         className={`${Styles.sidebar__button}`}
       >
-        JobActivity
+        Job activity
       </button>
-      <Link to='/invoices'>Go to invoices</Link>
+      <Link
+        to='/invoices'
+        className={`${Styles.sidebar__buttonBottom} ${CustomStyles.sidebar__link}`}
+      >
+        Go to Invoices
+      </Link>
+      <Link
+        className={`${Styles.sidebar__buttonBottom} ${CustomStyles.sidebar__link}`}
+        to='/job/view/2983'
+      >
+        Job Report
+      </Link>
+      <Link
+        className={`${Styles.sidebar__buttonBottom} ${CustomStyles.sidebar__link}`}
+        to='/job/view/2983'
+      >
+        Convert to Quote
+      </Link>
+      <button
+        className={`${Styles.sidebar__buttonBottom} ${CustomStyles.sidebar__link}`}
+      >
+        Delete
+      </button>
     </div>
   );
 };

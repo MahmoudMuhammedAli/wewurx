@@ -1,5 +1,7 @@
 .sidebar {
+  margin-left: 0;
   &__link {
     text-decoration: none;
+    display: block;
   }
 }
