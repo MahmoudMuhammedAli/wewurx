@@ -1,0 +1,50 @@
+.contacts {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border-color-gray);
+
+  &__heading,
+  &__phone,
+  &__mobile,
+  &__assignedto,
+  &__scheduleddate {
+    color: var(--text-color-gray);
+    font-size: 0.9rem;
+    margin: 0.4rem 0;
+  }
+  &__heading {
+    margin-bottom: 1rem;
+    font-weight: 300;
+    font-size: 0.9rem;
+  }
+
+  &__mainname {
+    color: var(--color-black);
+    font-weight: bold;
+  }
+
+  &__assignedto {
+    margin: 1.5rem 0;
+
+    span {
+      color: var(--color-black);
+      font-weight: bold;
+    }
+  }
+
+  &__email {
+    color: var(--color-red);
+  }
+
+  &__scheduleddate {
+    &__heading {
+      font-size: 0.9rem;
+      font-weight: 300;
+      margin-bottom: 0.3rem;
+    }
+
+    &__untill {
+      margin: 0 0.3rem;
+      font-style: italic;
+    }
+  }
+}

@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import Styles from "./statusSelector.module.scss";
 
-const StatusSelector = (props) => {
+const StatusSelector = ({ onStatusChange }) => {
   console.log("rerendered");
   const statusList = [
     { name: "Pending", value: "pending" },
@@ -43,7 +43,7 @@ const StatusSelector = (props) => {
 
   const handleItemSelect = (item) => {
     setSelectedStatus(item);
-    props.setStatus(item);
+    onStatusChange(item);
     closeStatusSelect();
   };
 

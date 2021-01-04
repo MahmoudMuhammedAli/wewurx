@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import Styles from "./addjob.module.scss";
 import AddCustomer from "../addcustomer";
 import { reduxForm, Field } from "redux-form";
-import StatusSelector from "../statusSelector";
+import StatusSelector from "../../../../../../shared/statusSelector";
 import Priority from "../priority";
 import WorkForceSelector from "./components/workforceselector";
 import Dates from "./components/dates";
@@ -121,7 +121,7 @@ const AddJob = (props) => {
           name='jobName'
           placeholder='Enter job name'
         />
-        <StatusSelector setStatus={setJobStatus} />
+        <StatusSelector onStatusChange={setJobStatus} />
         <Priority />
         <div
           className={`${Styles.addjob__form__jobDescription} ${Styles.addjob__form__section}`}

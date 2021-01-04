@@ -1,0 +1,66 @@
+.maininfo {
+  &__jobinfocontainer {
+    border-bottom: 1px solid var(--border-color-gray);
+    padding-bottom: 2rem;
+  }
+  &__jobinfo {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+
+    &__naminginfo {
+      &__name {
+        color: var(--text-color-gray-2);
+        font-size: 1.5rem;
+        font-weight: 300;
+        margin-bottom: 0.5rem;
+      }
+      &__id {
+        font-size: 1rem;
+        margin: 1rem 0;
+        &__label {
+          color: var(--text-color-gray);
+
+          font-weight: 100;
+          display: inline-block;
+          margin-right: 0.7rem;
+        }
+      }
+      &__customername {
+        color: var(--color-black);
+      }
+    }
+    &__priceinfo {
+      &__price {
+        background-color: var(--text-color-gray);
+        padding: 0.5rem;
+        font-size: 2rem;
+        color: #fff;
+        font-weight: 300;
+      }
+      &__label {
+        text-align: center;
+        color: var(--color-red);
+        font-weight: bold;
+        margin-top: 0.3rem;
+      }
+    }
+  }
+  &__priority {
+    text-transform: capitalize;
+    display: inline-block;
+    margin-left: 4rem;
+
+    &__label {
+      font-weight: 200;
+      display: inline-block;
+      margin-right: 1rem;
+      color: var(--text-color-gray);
+    }
+    &__priority {
+      font-size: 0.9rem;
+      font-weight: bold;
+      color: var(--color-black);
+    }
+  }
+}

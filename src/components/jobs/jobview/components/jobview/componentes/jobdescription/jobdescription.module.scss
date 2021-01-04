@@ -1,0 +1,11 @@
+.description {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border-color-gray);
+  color: var(--color-black);
+
+  &__heading {
+    font-weight: 100;
+    font-size: 1.5rem;
+    margin-bottom: 0.7rem;
+  }
+}

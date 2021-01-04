@@ -1,0 +1,16 @@
+.siteaddress {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border-color-gray);
+  font-size: 0.9rem;
+  color: var(--color-black);
+
+  * {
+    margin-bottom: 0.3rem;
+    font-weight: 600;
+  }
+
+  &__heading {
+    color: var(--text-color-gray);
+    font-weight: 300;
+  }
+}

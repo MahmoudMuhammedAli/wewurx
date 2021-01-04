@@ -6,9 +6,7 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Monospace", "Segoe UI",
-    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-    "Helvetica Neue", sans-serif;
+  font-family: "proxima-nova", helvetica;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -17,6 +15,8 @@ body {
   --color-red: #e66b22;
   --text-color-gray: #808080;
   --text-color-gray-2: #505050;
+  --text-color-gray-3: #575757;
+
   --color-black: #4d4d4d;
   --color-pending: #864f18;
   --color-scheduled: #f8a225;

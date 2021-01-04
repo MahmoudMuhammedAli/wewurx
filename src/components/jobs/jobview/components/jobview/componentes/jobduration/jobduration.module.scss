@@ -1,0 +1,18 @@
+.jobduration {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border-color-gray);
+  color: var(--color-black);
+  font-size: 0.9rem;
+  > div {
+    margin-bottom: 0.3rem;
+  }
+
+  &__jobdurationlabel,
+  &__duedatelabel {
+    color: var(--text-color-gray);
+  }
+  &__duration,
+  &__duedate {
+    font-weight: 600;
+  }
+}
