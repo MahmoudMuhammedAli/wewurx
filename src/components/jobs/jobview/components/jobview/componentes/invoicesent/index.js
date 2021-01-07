@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import Modal from "../../../../../../shared/modal";
+import InvoiceModal from "../../../../../../shared/sendinvoicemodal";
 import Styles from "./invoicesent.module.scss";
 
 const InvoiceSent = (props) => {
+  const [isModalOpened, setIsModalOpened] = useState(false);
+
   return (
     <div className={Styles.invoicesent}>
       <h3 className={Styles.invoicesent__heading}>
@@ -14,7 +18,13 @@ const InvoiceSent = (props) => {
         </span>
         <span> by FirstName LastName</span>
       </div>
-      <button className={Styles.invoicesent__send}>Resend</button>
+      <button
+        className={Styles.invoicesent__send}
+        onClick={() => setIsModalOpened(true)}
+      >
+        Resend
+      </button>
+      <InvoiceModal isOpened={isModalOpened} setIsOpened={setIsModalOpened} />
     </div>
   );
 };

@@ -1,0 +1,58 @@
+.costitems {
+  &__item {
+    border-bottom: 1px solid var(--border-color-gray);
+    padding: 1rem 0;
+    color: var(--text-color-gray);
+    font-size: 0.9rem;
+    width: 35rem;
+    &--header {
+      padding-bottom: 0.3rem;
+      padding-top: 0;
+      border-color: var(--border-color-gray2);
+    }
+
+    &__item {
+      margin-left: 1rem;
+      width: 15rem;
+      display: inline-block;
+      padding-right: 0.5rem;
+
+      &__phone {
+        color: var(--color-black);
+        font-weight: bold;
+      }
+    }
+    &__qty {
+      width: 5rem;
+      display: inline-block;
+      vertical-align: top;
+      > div {
+        font-weight: bold;
+        color: var(--color-black);
+      }
+    }
+    &__tax {
+      width: 3rem;
+      display: inline-block;
+      vertical-align: top;
+    }
+    &__discount {
+      width: 5rem;
+      display: inline-block;
+    }
+    &__total {
+      width: 3rem;
+      display: inline-block;
+      vertical-align: top;
+
+      &__totalprice {
+        color: var(--color-black);
+        font-weight: bold;
+      }
+      &__profit {
+        color: var(--price-color-profitable);
+        font-weight: bold;
+      }
+    }
+  }
+}

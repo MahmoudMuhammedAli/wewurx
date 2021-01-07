@@ -1,0 +1,80 @@
+.costitems {
+  margin-left: 3rem;
+  &__header {
+    color: var(--color-black);
+    font-size: 0.9rem;
+    &__name {
+      color: var(--color-black);
+      font-size: 1.2rem;
+      font-weight: 200;
+      margin-bottom: 1rem;
+    }
+    &__id {
+      margin-bottom: 0.6rem;
+      font-size: 0.9rem;
+
+      &__label {
+        color: var(--text-color-gray);
+      }
+    }
+    &__customername {
+      margin-bottom: 0.6rem;
+      font-weight: bold;
+    }
+
+    &__invoicestatus {
+      &__color {
+        width: 1.3rem;
+        height: 0.6rem;
+        display: inline-block;
+        margin-left: 1rem;
+        margin-right: 0.3rem;
+      }
+      &__text {
+        font-weight: bold;
+      }
+    }
+  }
+  &__items {
+    margin: 3rem 0;
+
+    &__header {
+      color: var(--color-black);
+      margin-bottom: 1rem;
+    }
+    &Billable {
+      margin-bottom: 4rem;
+    }
+    &NonBillable {
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border-color-gray);
+      margin-bottom: 2rem;
+    }
+  }
+  &__totalpricinginfo {
+    text-align: right;
+    font-size: 0.9rem;
+    color: var(--color-black);
+
+    &__price {
+      width: 8rem;
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+    &__total {
+      border-bottom: 1px solid var(--border-color-gray);
+      width: 17rem;
+      margin-left: auto;
+      margin-bottom: 1rem;
+
+      &__totalincludingtax {
+        font-weight: bold;
+      }
+    }
+    &__expenses {
+      &__profitOrLoss {
+        font-weight: bold;
+      }
+    }
+  }
+}

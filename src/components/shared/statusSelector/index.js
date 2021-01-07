@@ -2,7 +2,6 @@ import React, { useState, useRef, useEffect } from "react";
 import Styles from "./statusSelector.module.scss";
 
 const StatusSelector = ({ onStatusChange }) => {
-  console.log("rerendered");
   const statusList = [
     { name: "Pending", value: "pending" },
     { name: "Scheduled", value: "scheduled" },
@@ -16,30 +15,37 @@ const StatusSelector = ({ onStatusChange }) => {
   ];
   const [selectedStatus, setSelectedStatus] = useState(statusList[0]);
   const statusSelect = useRef(null);
-  let isStatusSelectOpen = false;
+  let [isStatusSelectOpen, setIsStatusSelectOpen] = useState(false);
 
   const openStatusSelect = () => {
-    isStatusSelectOpen = true;
+    setIsStatusSelectOpen(true);
     statusSelect.current.style.cssText =
       "height:17rem; border:1px solid var(--border-color-gray); padding: 0.2rem";
     // after .3s i should remove the border and the padding
   };
   const closeStatusSelect = () => {
-    isStatusSelectOpen = false;
+    setIsStatusSelectOpen(false);
     statusSelect.current.style.cssText = "height:0; border:0; padding: 0";
   };
   // ref for the selected item to attach an event listener on it
   const selectedRef = useRef(null);
   const toggleSelectListStatus = () => {};
+  const listenToSelectClick = () => {
+    if (isStatusSelectOpen) {
+      return closeStatusSelect();
+    }
+    openStatusSelect();
+  };
 
   useEffect(() => {
-    selectedRef.current.addEventListener("click", () => {
-      if (isStatusSelectOpen) {
-        return closeStatusSelect();
+    selectedRef.current.addEventListener("click", listenToSelectClick);
+
+    return () => {
+      if (selectedRef.current) {
+        selectedRef.current.removeEventListener("click", listenToSelectClick);
       }
-      openStatusSelect();
-    });
-  }, []);
+    };
+  });
 
   const handleItemSelect = (item) => {
     setSelectedStatus(item);

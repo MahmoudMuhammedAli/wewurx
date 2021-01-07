@@ -10,7 +10,7 @@ import InvoiceSent from "./componentes/invoicesent";
 
 const JobView = (props) => {
   return (
-    <div className={Styles.jobview}>
+    <div className={` viewjob__page ${Styles.jobview}`}>
       <div className={Styles.jobview__invoicedstatus}>invoiced</div>
 
       <MainInfo />
