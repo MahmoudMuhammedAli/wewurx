@@ -1,0 +1,45 @@
+.settings {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border-color-gray);
+
+  &__heading {
+    color: var(--text-color-gray);
+    font-size: 0.9rem;
+    font-weight: 200;
+    margin-bottom: 1rem;
+  }
+
+  &__selectorwrapper {
+    margin-bottom: 0.8rem;
+    &__label {
+      &__label {
+        width: 8rem;
+        display: inline-block;
+        font-size: 0.9rem;
+        font-weight: 200;
+        color: var(--color-red);
+        text-align: right;
+        margin-right: 0.5rem;
+      }
+      &__select {
+        border: 1px solid var(--border-color-gray);
+        border-radius: 4px;
+        padding: 0.3rem 0.5rem;
+        outline: none;
+        font-weight: bold;
+        width: 15rem;
+        background-color: #fff;
+        font-size: 0.9rem;
+        cursor: pointer;
+      }
+    }
+  }
+  &__timezonewrapper {
+    margin: 2rem 0;
+
+    &__currenttime {
+      font-weight: bold;
+      color: var(--color-black);
+    }
+  }
+}

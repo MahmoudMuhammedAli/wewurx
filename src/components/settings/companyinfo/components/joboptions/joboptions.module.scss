@@ -1,0 +1,29 @@
+.joboptions {
+  border-bottom: 1px solid var(--border-color-gray);
+  padding: 1rem 0;
+
+  &__heading {
+    font-size: 0.9rem;
+    color: var(--text-color-gray);
+    font-weight: 200;
+    margin-bottom: 1rem;
+  }
+
+  &__label {
+    color: var(--color-red);
+    font-size: 0.9rem;
+    font-weight: 200;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+
+    &__input {
+      border: 1px solid var(--border-color-gray);
+      width: 2rem;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      font-weight: bold;
+      outline: none;
+      margin: 0 0.5rem;
+    }
+  }
+}

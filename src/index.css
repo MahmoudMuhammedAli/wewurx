@@ -43,6 +43,7 @@ body {
   --price-color-profitable: #70c006;
   --price-color-lossable: #eb5757;
 }
+
 /* hide the arrows from the number input button */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -83,11 +84,22 @@ code {
   grid-column-start: 2;
   margin-top: 1rem;
 }
-.invoicemodal__datepicker {
-  width: 2rem;
-  height: 2rem;
-}
 .viewjob__page {
   margin-left: 3rem;
   width: 40rem;
+}
+
+.page-ml {
+  margin-left: 2rem;
+}
+
+.page-mt {
+  margin-top: 3rem;
+}
+.settings__active {
+  background-color: #f2f2f2;
+}
+.invoicemodal__datepicker {
+  width: 2rem;
+  height: 2rem;
 }

@@ -1,0 +1,34 @@
+.actionbar {
+  display: flex;
+  align-items: center;
+
+  &__label {
+    margin-left: 2rem;
+    margin-right: 0.3rem;
+
+    input {
+      margin-right: 0.5rem;
+    }
+  }
+
+  &__select {
+    outline: none;
+    border: 1px solid var(--border-color-gray);
+    color: var(--text-color-gray);
+    padding: 0.3rem;
+    width: 12rem;
+    margin: 0 0.3rem 0 0.5rem;
+    border-radius: 3px;
+    background-color: #fff;
+  }
+
+  &__button {
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    background-color: var(--color-red);
+    color: #fff;
+    padding: 0.5rem 1rem;
+  }
+}

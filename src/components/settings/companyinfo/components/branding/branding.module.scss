@@ -1,0 +1,92 @@
+.branding {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-color-gray);
+  &__heading {
+    color: var(--text-color-gray);
+    font-size: 0.9rem;
+    font-weight: 200;
+    margin-bottom: 1rem;
+  }
+
+  &__logoinfo {
+    &__label {
+      display: inline-block;
+      color: var(--color-red);
+      font-weight: 200;
+      font-size: 0.9rem;
+      margin-right: 0.8rem;
+      width: 6rem;
+      text-align: right;
+    }
+    button {
+      cursor: pointer;
+      color: var(--text-color-gray);
+      border: none;
+      outline: none;
+      background-color: #e6e6e6;
+      border-radius: 5px;
+      padding: 1rem 4rem;
+      border: 1px solid #cccccc;
+    }
+    &__addlogowrapper {
+      font-size: 1rem;
+      font-weight: bold;
+      display: flex;
+      align-items: baseline;
+      width: 100%;
+      justify-content: center;
+      margin-bottom: 0.5rem;
+      span {
+        border-radius: 50%;
+        background-color: var(--color-red);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 1.2rem;
+        height: 1.2rem;
+        margin-left: 0.5rem;
+        align-self: top;
+        i {
+          color: #fff;
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+
+  &__colouringinfo {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    &__label {
+      width: 6rem;
+      text-align: right;
+      margin-right: 0.8rem;
+      color: var(--color-red);
+      font-size: 0.9rem;
+      font-weight: 200;
+      display: inline-block;
+    }
+    &__colorshower {
+      background-color: var(--color-red);
+      width: 7rem;
+      height: 1.5rem;
+      display: inline-block;
+      margin-left: 1rem;
+    }
+  }
+  &__accentcolourinputwrapper {
+    display: inline-block;
+
+    &__input {
+      border: 1px solid var(--border-color-gray);
+      border-radius: 4px;
+      padding: 0.3rem 0.5rem;
+      outline: none;
+      font-weight: bold;
+      width: 15rem;
+      background-color: #fff;
+      font-size: 0.9rem;
+    }
+  }
+}

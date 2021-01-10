@@ -1,0 +1,117 @@
+.companyinformation {
+  border-bottom: 1px solid var(--border-color-gray);
+  padding-bottom: 1rem;
+  &__inputcontainer {
+    margin-bottom: 0.3rem;
+
+    &__label {
+      width: 8rem;
+      display: inline-block;
+      color: var(--color-red);
+      font-size: 0.9rem;
+      vertical-align: center;
+      text-align: right;
+      margin-right: 1rem;
+
+      &Header {
+        color: var(--text-color-gray);
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+        font-weight: 200;
+      }
+    }
+
+    &__input {
+      border: 1px solid var(--border-color-gray);
+      border-radius: 4px;
+      padding: 0.3rem 0.5rem;
+      outline: none;
+      font-weight: bold;
+      width: 15rem;
+      background-color: #fff;
+      font-size: 0.9rem;
+
+      &Quarter {
+        width: 3rem;
+        margin-right: 0.5rem;
+      }
+      &Third {
+        width: 11.6rem;
+      }
+      &Half {
+        width: 8rem;
+      }
+    }
+  }
+
+  &__lastinputContainer {
+    position: relative;
+    &__inquieryContainer {
+      position: absolute;
+      right: 15%;
+      top: 13%;
+      color: #fff;
+      border-radius: 50%;
+      background-color: var(--color-red);
+      width: 1.4rem;
+      height: 1.4rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.2rem;
+      cursor: pointer;
+      span {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+      }
+
+      text-align: center;
+      &__box {
+        position: absolute;
+        bottom: -15rem;
+        width: 18rem;
+        height: 14rem;
+        padding: 0.5rem;
+        font-size: 0.9rem;
+        line-height: 150%;
+        text-align: left;
+        color: var(--text-color-gray);
+        background-color: #fff;
+        border: 1px solid var(--border-color-gray);
+        border-radius: 4px;
+        cursor: text;
+
+        &__triangle {
+          width: 1.5rem;
+          height: 1.5rem;
+          background-color: var(--text-color-gray);
+          position: absolute;
+          left: 46%;
+          top: 9px;
+          transform: rotate(45deg) translate(-50%, -50%);
+          z-index: -1;
+        }
+
+        &__heading {
+          margin-bottom: 0.7rem;
+          font-size: 1rem;
+        }
+
+        &__button {
+          margin-top: 2rem;
+          outline: none;
+          border: none;
+          color: var(--text-color-gray);
+          background: #fff;
+          cursor: pointer;
+          font-size: 0.7rem;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}

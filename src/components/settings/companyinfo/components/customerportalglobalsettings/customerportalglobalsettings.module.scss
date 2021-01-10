@@ -1,0 +1,72 @@
+.globalsettings {
+  margin: 1rem 0;
+  border-bottom: 1px solid var(--border-color-gray);
+  padding: 1rem 0 2rem 0;
+
+  &__heading {
+    color: var(--text-color-gray);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    font-weight: 200;
+  }
+
+  &__activebutton {
+    cursor: pointer;
+    width: 4rem;
+    height: 2.5rem;
+    background-color: red;
+    border-radius: 4px;
+    position: relative;
+    transition: all 0.2s linear;
+    margin-bottom: 2rem;
+
+    &__button {
+      background-color: #fff;
+      border-radius: 4px;
+      position: absolute;
+      display: inline-block;
+      width: 2rem;
+      transform: translateX(1.95rem);
+      height: calc(100% - 2px);
+      top: 1px;
+      transition: all 0.2s linear;
+    }
+
+    &Active {
+      background-color: #add361;
+
+      span {
+        transform: translateX(1px);
+      }
+    }
+    &__input {
+      visibility: hidden;
+      width: 100%;
+      height: 100%;
+      display: inline-block;
+    }
+  }
+  &__options {
+    display: flex;
+    justify-content: space-between;
+
+    &__label {
+      color: var(--color-red);
+      font-size: 0.9rem;
+      font-weight: 200;
+    }
+
+    &__options {
+      color: var(--text-color-gray);
+      font-size: 0.9rem;
+      font-weight: 200;
+      &__option {
+        margin-top: 0.5rem;
+
+        span {
+          color: var(--color-red);
+        }
+      }
+    }
+  }
+}

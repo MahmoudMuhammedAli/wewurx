@@ -22,11 +22,11 @@ function App() {
         <Route path='/' exact component={Jobs} />
         <Route path='/job/view/:id' component={ViewJob} />
         <Route path='/contacts' component={Contacts} />
-        <Route path='/settings' component={Settings} />
         <Route path='/documents' component={Documents} />
-        <Route path='/qutoes' component={Quotes} />
+        <Route path='/quotes' component={Quotes} />
         <Route path='/invoices' component={Invoices} />
         <Route path='/purchases' component={Purchases} />
+        <Route path='/settings' component={Settings} />
       </Router>
     </div>
   );

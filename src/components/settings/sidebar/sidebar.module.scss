@@ -1,0 +1,23 @@
+.sidebar {
+  margin-right: 2rem;
+
+  &__heading {
+    width: 11rem;
+    text-align: center;
+    font-weight: normal;
+    margin-bottom: 1rem;
+  }
+  &__link {
+    display: block;
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: black;
+    width: 11rem;
+    padding: 0.7rem 0.5rem;
+    border-top: 1px solid var(--border-color-gray);
+
+    &Last {
+      border-bottom: 1px solid var(--border-color-gray);
+    }
+  }
+}

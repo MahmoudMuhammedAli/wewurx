@@ -1,9 +1,14 @@
 import React from "react";
+import ActionBar from "./components/actionbar";
 
 import Styles from "./projectjobs.module.scss";
 
 const ProjectJobs = (props) => {
-  return <div>ProjectJobs</div>;
+  return (
+    <div>
+      <ActionBar />
+    </div>
+  );
 };
 
 export default ProjectJobs;
