@@ -7,7 +7,7 @@ const SideBar = (props) => {
     <aside className={Styles.sidebar}>
       <h2 className={Styles.sidebar__heading}>Settings</h2>
       <NavLink
-        to='/settings/companyinfo'
+        to='/settings/company/companyinfo'
         className={Styles.sidebar__link}
         activeClassName='settings__active'
       >
@@ -15,21 +15,21 @@ const SideBar = (props) => {
       </NavLink>
       <NavLink
         activeClassName='settings__active'
-        to='/settings/billing'
+        to='/settings/company/billing'
         className={Styles.sidebar__link}
       >
         Billing
       </NavLink>
       <NavLink
         activeClassName='settings__active'
-        to='/settings/quotesandinvoices'
+        to='/settings/company/quotesandinvoices'
         className={Styles.sidebar__link}
       >
         Quotes And Invoices
       </NavLink>
       <NavLink
         activeClassName='settings__active'
-        to='/settings/subscription'
+        to='/settings/company/subscription'
         className={` ${Styles.sidebar__linkLast} ${Styles.sidebar__link}`}
       >
         Subscription

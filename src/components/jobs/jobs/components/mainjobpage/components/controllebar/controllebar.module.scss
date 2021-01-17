@@ -20,7 +20,7 @@
       color: #666666;
     }
 
-    button {
+    &__button {
       border: none;
       padding: 0.3rem;
       outline: none;
@@ -29,6 +29,13 @@
       margin: auto 1rem;
       height: 2.2rem;
       cursor: pointer;
+      text-decoration: none;
+    }
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-right: 0;
     }
 
     &__apply {

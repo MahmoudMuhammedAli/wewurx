@@ -34,7 +34,7 @@ const SideBar = (props) => {
 
         <li>
           <hr />
-          <Link className={`${Styles.sidebar__link}`} to='/settings'>
+          <Link className={`${Styles.sidebar__link}`} to='/settings/company'>
             <i className={`fa fa-cogs fa-lg ${Styles.sidebar__icon}`}></i>
             <span>settings</span>
           </Link>

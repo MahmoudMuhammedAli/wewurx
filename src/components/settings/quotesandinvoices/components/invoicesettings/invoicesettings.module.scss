@@ -1,0 +1,132 @@
+.settings {
+  border-bottom: 1px solid var(--border-color-gray);
+  padding: 1rem 0 2rem;
+
+  &__input {
+    border: 1.5px solid var(--border-color-gray);
+    outline: none;
+    padding: 0.25rem 0.5rem;
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 4px;
+    width: 11rem;
+    margin-right: 0.5rem;
+  }
+
+  &__textarea {
+    width: 16rem;
+    height: 10rem;
+    outline: none;
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid var(--border-color-gray);
+    margin-top: 0.5rem;
+  }
+
+  &__heading {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: var(--color-black);
+    font-weight: 200;
+  }
+  &__invoicenamewrapper {
+    border-bottom: 1px solid var(--border-color-gray);
+    padding-bottom: 1rem;
+  }
+  &__invoicenamecontainer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+
+    &__invoicecollector {
+      &__label {
+        color: var(--color-black);
+        font-size: 0.9rem;
+        font-weight: 100;
+        margin-right: 0.5rem;
+      }
+    }
+    &__previewlink {
+      text-decoration: none;
+      color: var(--color-red);
+      font-size: 0.9rem;
+    }
+  }
+
+  &__showresults {
+    margin-top: 0.7rem;
+    label {
+      color: var(--color-black);
+      font-size: 0.9rem;
+
+      input {
+        margin-left: 0.5rem;
+      }
+    }
+  }
+
+  &__middle {
+    border-bottom: 1px solid var(--border-color-gray);
+    padding: 1rem 0;
+
+    &__invoicenumberinquerier {
+      display: block;
+      margin-left: auto;
+      border: none;
+      background-color: #fff;
+      color: var(--color-red);
+      cursor: pointer;
+      outline: none;
+    }
+
+    &__lastinvoicenumbercontainer {
+      &__label {
+        font-size: 0.9rem;
+        color: var(--color-black);
+        display: inline-block;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+  &__bottomtextarea {
+    margin-top: 2rem;
+    padding-right: 2rem;
+
+    &__heading {
+      font-weight: 200;
+      font-size: 0.9rem;
+      color: var(--text-color-gray);
+      margin-bottom: 1rem;
+    }
+
+    &__textareas {
+      display: flex;
+      justify-content: space-between;
+
+      &__textarea {
+        label {
+          color: var(--color-black);
+          font-size: 0.9rem;
+          font-weight: 100;
+
+          input {
+            margin-left: 0.3rem;
+          }
+        }
+      }
+    }
+  }
+  &__purchaseorder {
+    color: var(--color-black);
+    font-size: 0.9rem;
+    font-weight: 200;
+    &__heading {
+      font-size: 1.5rem;
+      font-weight: normal;
+      margin: 1rem 0;
+    }
+    label {
+      margin-right: 0.7rem;
+    }
+  }
+}

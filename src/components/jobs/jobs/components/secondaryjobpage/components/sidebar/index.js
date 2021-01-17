@@ -9,42 +9,34 @@ import {
   showForms,
   showJobs,
 } from "../../../../../../../actions";
+import { Link } from "react-router-dom";
 
 const SideBar = (props) => {
   return (
     <aside className={Styles.sidebar}>
-      <button onClick={props.showJobs} className={`${Styles.sidebar__link}`}>
+      <Link to='/jobs' className={`${Styles.sidebar__link}`}>
         {" "}
-        <i className="fa fa-arrow-left fa-lg"></i>
+        <i className='fa fa-arrow-left fa-lg'></i>
         <span>Job</span>
-      </button>
-      <button
-        onClick={props.showAddJobs}
-        className={`${Styles.sidebar__button}`}
-      >
+      </Link>
+      <Link to='/jobs/add' className={`${Styles.sidebar__button}`}>
         Jobs
-      </button>
-      <button
-        onClick={props.showCostItems}
-        className={`${Styles.sidebar__button}`}
-      >
+      </Link>
+      <Link to='/jobs/add/costitems' className={`${Styles.sidebar__button}`}>
         Cost Items
-      </button>
-      <button
-        onClick={props.showAddJobProjects}
-        className={`${Styles.sidebar__button}`}
-      >
+      </Link>
+      <Link to='/jobs/add/projectjobs' className={`${Styles.sidebar__button}`}>
         Project Jobs
-      </button>
-      <button
-        onClick={props.showFilesAndNotes}
+      </Link>
+      <Link
+        to='/jobs/add/filesandnotes'
         className={`${Styles.sidebar__button}`}
       >
         Files & Notes
-      </button>
-      <button onClick={props.showForms} className={`${Styles.sidebar__button}`}>
+      </Link>
+      <Link to='/jobs/add/forms' className={`${Styles.sidebar__button}`}>
         Forms
-      </button>
+      </Link>
       <button
         className={`${Styles.sidebar__buttonBottom} ${Styles.sidebar__button}`}
       >

@@ -1,5 +1,7 @@
 .sidebar {
   margin-right: 2rem;
+  display: inline-block;
+  vertical-align: top;
 
   &__heading {
     width: 11rem;

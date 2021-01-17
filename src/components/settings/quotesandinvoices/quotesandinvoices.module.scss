@@ -1,0 +1,18 @@
+.invoices {
+  display: inline-block;
+
+  &__save {
+    background-color: var(--color-red);
+    color: #fff;
+    padding: 0.7rem 2.5rem;
+    size: 1rem;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    display: block;
+    margin-left: auto;
+    margin-top: 2rem;
+    margin-right: 1rem;
+    cursor: pointer;
+  }
+}

@@ -6,20 +6,42 @@ import { Redirect, Route, Switch } from "react-router-dom";
 import Billing from "../../components/settings/billing";
 import QuotesAndInvoices from "../../components/settings/quotesandinvoices";
 import Subscription from "../../components/settings/subscription";
+import TopBar from "../../components/settings/topbar";
+import StaffMembers from "../../components/settings/staffmembers";
+import JobTemplates from "../../components/settings/jobtemplates";
+import ConnectCalender from "../../components/settings/connectcalender";
+import Integrations from "../../components/settings/integrations";
 
 const Settings = (props) => {
   return (
-    <div className={`${Styles.settings} page page-ml page-mt`}>
-      <SideBar />
+    <div className={`${Styles.settings}`}>
+      <TopBar />
       <Switch>
-        <Route path='/settings/companyinfo' exact component={CompanyInfo} />
-        <Route path='/settings/billing' component={Billing} />
-        <Route
-          path='/settings/quotesandinvoices'
-          component={QuotesAndInvoices}
-        />
-        <Route path='/settings/subscription' component={Subscription} />
-        <Redirect to='/settings/companyinfo' />
+        <Route path='/settings/company'>
+          <SideBar />
+          <Switch>
+            <Route
+              path='/settings/company/companyinfo'
+              exact
+              component={CompanyInfo}
+            />
+            <Route path='/settings/company/billing' component={Billing} />
+            <Route
+              path='/settings/company/quotesandinvoices'
+              component={QuotesAndInvoices}
+            />
+            <Route
+              path='/settings/company/subscription'
+              component={Subscription}
+            />
+            <Redirect to='/settings/company/companyinfo' />
+          </Switch>
+        </Route>
+        <Route path='/settings/staffmembers' component={StaffMembers} />
+        <Route path='/settings/jobtemplates' component={JobTemplates} />
+        <Route path='/settings/connectcalender' component={ConnectCalender} />
+        <Route path='/settings/integrations' component={Integrations} />
+        <Redirect to='/settings/company' />
       </Switch>
     </div>
   );

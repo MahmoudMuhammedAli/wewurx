@@ -1,0 +1,80 @@
+.followupemails {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border-color-gray);
+  &__heading {
+    font-size: 0.9rem;
+    color: var(--text-color-gray);
+    font-weight: 200;
+  }
+
+  &__isenabled {
+    margin: 1rem 0;
+    &__label {
+      width: 7rem;
+      display: inline-block;
+      font-size: 0.9rem;
+      vertical-align: bottom;
+      color: var(--color-red);
+      font-weight: 100;
+      text-align: right;
+      margin-right: 0.5rem;
+    }
+  }
+  &__select {
+    display: inline-block;
+    margin: 1rem 0;
+
+    &__label {
+      font-size: 0.9rem;
+      color: var(--text-color-gray);
+    }
+  }
+  &__sendafter {
+    display: inline-block;
+    margin: 1rem 0;
+
+    vertical-align: center;
+
+    &__label {
+      width: 7rem;
+      display: inline-block;
+      font-size: 0.9rem;
+      vertical-align: center;
+      color: var(--color-red);
+      font-weight: 100;
+      text-align: right;
+      margin-right: 0.5rem;
+    }
+    &__input {
+      border: 1px solid var(--border-color-gray);
+      border-radius: 4px;
+      padding: 0.3rem 0.5rem;
+      outline: none;
+      font-weight: bold;
+      width: 5rem;
+      background-color: #fff;
+      font-size: 0.9rem;
+      height: 2rem;
+
+      &Number {
+        margin-right: 0.7rem;
+      }
+
+      &Select {
+        width: 5rem;
+        margin-right: 1rem;
+      }
+    }
+  }
+  &__info {
+    margin-left: 7rem;
+    color: var(--text-color-gray);
+    font-size: 0.9rem;
+    margin-top: 1rem;
+
+    a {
+      color: var(--color-red);
+      text-decoration: none;
+    }
+  }
+}

@@ -2,21 +2,16 @@ import React from "react";
 import Styles from "./jobs.module.scss";
 import MainJobPage from "./components/mainjobpage";
 import SecondaryJobPage from "./components/secondaryjobpage";
-import { connect } from "react-redux";
+import { Route } from "react-router-dom";
 
 const Jobs = (props) => {
-  const renderComponents = () => {
-    if (props.shouldDisplaySecondaryPage) return <SecondaryJobPage />;
-
-    return <MainJobPage />;
-  };
-
-  return <>{renderComponents()}</>;
+  // return <>{renderComponents()}</>;
+  return (
+    <>
+      <Route path='/jobs/add' component={SecondaryJobPage} />
+      <Route path='/jobs' exact component={MainJobPage} />
+    </>
+  );
 };
-const mapStateToProps = (state) => {
-  return {
-    shouldDisplaySecondaryPage:
-      state.jobs.shouldDisplayJobs.shouldDisplaySecondaryPage,
-  };
-};
-export default connect(mapStateToProps)(Jobs);
+
+export default Jobs;

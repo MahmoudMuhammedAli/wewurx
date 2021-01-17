@@ -1,0 +1,81 @@
+.rates {
+  padding: 2rem 0 1rem;
+  border-bottom: 1px solid var(--border-color-gray);
+  &__headingcontainer {
+    justify-content: space-between;
+    display: flex;
+    margin-bottom: 1rem;
+    &__heading {
+      font-size: 0.9rem;
+      color: var(--text-color-gray);
+      font-weight: 200;
+    }
+    span {
+      color: var(--color-red);
+      font-size: 0.9rem;
+      font-weight: 200;
+      cursor: pointer;
+    }
+  }
+  &__rates {
+    color: var(--color-red);
+    font-weight: bold;
+    &__label {
+      display: inline-block;
+      width: 6rem;
+      text-align: right;
+      margin-right: 0.5rem;
+      color: var(--color-red);
+      font-size: 0.9rem;
+      font-weight: 200;
+    }
+    &__defaultrates {
+      display: inline-block;
+
+      &__input {
+        border: 1px solid var(--border-color-gray);
+        border-radius: 4px;
+        padding: 0.3rem 0.5rem;
+        outline: none;
+        font-weight: bold;
+        width: 10rem;
+        background-color: #fff;
+        font-size: 0.9rem;
+      }
+      &__label {
+        display: block;
+        font-size: 0.8rem;
+        font-weight: 200;
+        color: #000;
+      }
+
+      &__ratevalueinput {
+      }
+
+      &__ratenumberinput {
+        width: 5rem;
+      }
+    }
+    &__add {
+      display: inline-block;
+      &__button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 1.2rem;
+        height: 1.2rem;
+        border-radius: 50%;
+        background-color: var(--color-red);
+        color: #fff;
+        margin: 0;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        cursor: pointer;
+
+        i {
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+}

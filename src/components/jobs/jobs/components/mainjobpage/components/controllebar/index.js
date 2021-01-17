@@ -1,8 +1,7 @@
 import React from "react";
 import Styles from "./controllebar.module.scss";
 import { reduxForm, Field } from "redux-form";
-import { connect } from "react-redux";
-import { showAddJobs } from "../../../../../../../actions";
+import { Link } from "react-router-dom";
 
 const renderField = ({
   input,
@@ -14,7 +13,7 @@ const renderField = ({
     <span>Reset</span>
     <div className={`${Styles.controlbar__search__input}`}>
       <input {...input} placeholder={placeholder} type={type} />
-      <i className="fa fa-search fa-lg"></i>
+      <i className='fa fa-search fa-lg'></i>
     </div>
   </div>
 );
@@ -40,9 +39,6 @@ const renderJobsActions = ({ input, meta: { touched, error } }) => (
 );
 
 const ControllBar = (props) => {
-  const handleAddJobclick = (e) => {
-    props.showAddJobs();
-  };
   const handleSubmit = (values) => {};
   return (
     <form
@@ -50,30 +46,24 @@ const ControllBar = (props) => {
       className={`${Styles.controlbar}`}
     >
       <div className={`${Styles.controlbar__actions}`}>
-        <Field component={renderJobsActions} name="action" />
-        <button className={`${Styles.controlbar__actions__apply}`}>
+        <Field component={renderJobsActions} name='action' />
+        <button
+          className={`${Styles.controlbar__actions__apply} ${Styles.controlbar__actions__button}`}
+        >
           Apply
         </button>
-        <button
-          className={`${Styles.controlbar__actions__addjob}`}
-          onClick={handleAddJobclick}
+        <Link
+          className={`${Styles.controlbar__actions__addjob} ${Styles.controlbar__actions__button}`}
+          to='/jobs/add'
         >
-          <i className="fa fa-plus fa-lg"></i>Add Job
-        </button>
+          <i className='fa fa-plus fa-lg'></i> Add Job
+        </Link>
       </div>
-      <Field component={renderField} name="search" placeholder="Keyword" />
+      <Field component={renderField} name='search' placeholder='Keyword' />
     </form>
   );
 };
 
-const mapStateToProps = (state) => {
-  return {};
-};
-
-export default connect(mapStateToProps, {
-  showAddJobs,
-})(
-  reduxForm({
-    form: "mainJobPageController",
-  })(ControllBar)
-);
+export default reduxForm({
+  form: "mainJobPageController",
+})(ControllBar);

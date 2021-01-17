@@ -1,0 +1,22 @@
+.topbar {
+  margin-bottom: 1rem;
+  width: 100%;
+  background-color: var(--color-red);
+  padding-top: 0.2rem;
+  height: 2rem;
+
+  &__link {
+    display: inline-block;
+    margin: 0 1rem;
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 200;
+    padding: 0.3rem 2rem 0.5rem;
+  }
+
+  &__activelink {
+    color: var(--color-red);
+    background-color: #fff;
+  }
+}

@@ -13,7 +13,7 @@ import JobsComponent from "../../components/jobs/jobs";
 const Jobs = (props) => {
   const { jobs } = props;
   return (
-    <div className={`${Styles.jobs} page`}>
+    <div className={`${Styles.jobs}`}>
       <div className={`${Styles.bar}`}>
         <Link to='/quotes' className={`${Styles.bar__link}`}>
           Quotes

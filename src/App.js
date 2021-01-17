@@ -1,5 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Redirect,
+  Route,
+  Switch,
+} from "react-router-dom";
 import "./App.scss";
 import "font-awesome/css/font-awesome.min.css";
 import Jobs from "./pages/jobs";
@@ -19,14 +24,17 @@ function App() {
       <Router>
         <SideBar />
         <InfoBar />
-        <Route path='/' exact component={Jobs} />
-        <Route path='/job/view/:id' component={ViewJob} />
-        <Route path='/contacts' component={Contacts} />
-        <Route path='/documents' component={Documents} />
-        <Route path='/quotes' component={Quotes} />
-        <Route path='/invoices' component={Invoices} />
-        <Route path='/purchases' component={Purchases} />
-        <Route path='/settings' component={Settings} />
+        <Switch>
+          <Route path='/jobs' component={Jobs} />
+          <Route path='/job/view/:id' component={ViewJob} />
+          <Route path='/contacts' component={Contacts} />
+          <Route path='/documents' component={Documents} />
+          <Route path='/quotes' component={Quotes} />
+          <Route path='/invoices' component={Invoices} />
+          <Route path='/purchases' component={Purchases} />
+          <Route path='/settings' component={Settings} />
+          <Redirect to='/jobs' />
+        </Switch>
       </Router>
     </div>
   );

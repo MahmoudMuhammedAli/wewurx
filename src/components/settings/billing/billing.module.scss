@@ -1,0 +1,25 @@
+.billing {
+  display: inline-block;
+  width: 37rem;
+
+  &__heading {
+    font-size: 1.5rem;
+    color: var(--color-black);
+    font-weight: normal;
+    margin-bottom: 1rem;
+  }
+
+  &__save {
+    background-color: var(--color-red);
+    border: none;
+    outline: none;
+    display: block;
+    margin-left: auto;
+    margin-top: 1rem;
+    color: #fff;
+    border-radius: 4px;
+    padding: 0.4rem 2rem;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+}
