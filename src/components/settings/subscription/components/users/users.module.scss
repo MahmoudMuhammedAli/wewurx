@@ -1,0 +1,79 @@
+.users {
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--border-color-gray);
+  &__link {
+    color: var(--color-red);
+    font-size: 0.9rem;
+    text-decoration: none;
+  }
+  &__users {
+    &__staffmemberscollector {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &__input {
+        position: relative;
+        &__heading {
+          font-size: 1.23em;
+          font-weight: normal;
+          position: absolute;
+          top: -57%;
+        }
+
+        &__inputwrapper {
+          display: flex;
+          align-items: center;
+
+          &__input {
+            width: 5rem;
+            outline: none;
+            border: 1px solid var(--border-color-gray);
+            text-align: center;
+            border-radius: 4px;
+            padding: 0.5rem 1rem;
+            font-weight: bold;
+            font-size: 1rem;
+          }
+          &__label {
+            color: var(--color-black);
+            font-size: 0.9rem;
+            margin-left: 0.5rem;
+          }
+        }
+      }
+      &__buttons {
+        display: flex;
+        align-items: center;
+        button {
+          display: flex;
+          justify-content: center;
+          align-items: bottom;
+          font-size: 1.5rem;
+          background-color: var(--color-red);
+          color: #fff;
+          outline: none;
+          border: none;
+          border-radius: 3px;
+          margin-left: 0.5rem;
+          padding: 0.2rem 0.4rem;
+          cursor: pointer;
+          font-weight: normal;
+        }
+      }
+      &__pricesdetails {
+        display: flex;
+        align-items: center;
+
+        &__priceperuser {
+          margin-right: 2rem;
+          color: var(--color-black);
+          font-size: 0.9rem;
+        }
+        &__totalprice {
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+}

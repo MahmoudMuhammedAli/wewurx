@@ -31,12 +31,7 @@ const Jobs = (props) => {
           Purchases
         </Link>
       </div>
-
-      {jobs.shouldDisplayJobs && (
-        <div>
-          <JobsComponent />
-        </div>
-      )}
+      <JobsComponent />
     </div>
   );
 };

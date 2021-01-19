@@ -17,6 +17,9 @@ import {
   SHOW_VIEW_JOB_JOB_ACTIVITY,
   SHOW_VIEW_JOB,
   SHOW_VIEW_JOB_FILES_AND_NOTES,
+  SET_NUMBER_OF_USERS,
+  DECREASE_NUMBER_OF_USERS_BY_ONE,
+  INCREASE_NUMBER_OF_USERS_BY_ONE,
 } from "./actionsTypes";
 
 // ============= Starting Job Page Action Creators ==============
@@ -125,4 +128,24 @@ export const showViewJob = () => {
 };
 
 // ============= Ending ViewJob action Creators =====================
+// --------------------------------------------------------------------
+
+// ============= Starting Subscription  action Creators =====================
+// --------------------------------------------------------------------
+
+export const increaseNumberOfUsersByOne = () => {
+  return { type: INCREASE_NUMBER_OF_USERS_BY_ONE };
+};
+
+export const decreaseNumberOfUsersByOne = () => {
+  return { type: DECREASE_NUMBER_OF_USERS_BY_ONE };
+};
+export const setNumberOfUsers = (number) => (dispatch) => {
+  dispatch({
+    type: SET_NUMBER_OF_USERS,
+    payload: number,
+  });
+};
+
+// ============= Starting Subscription  action Creators =====================
 // --------------------------------------------------------------------

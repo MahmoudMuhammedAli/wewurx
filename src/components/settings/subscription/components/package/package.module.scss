@@ -1,0 +1,58 @@
+.package {
+  border-bottom: 1px solid var(--border-color-gray);
+  padding-bottom: 2rem;
+  &__heading {
+    font-weight: 400;
+    font-size: 1rem;
+    margin: 1rem 0;
+  }
+  &__link {
+    color: var(--color-red);
+    font-size: 0.9rem;
+  }
+  &__package {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__selector {
+      display: flex;
+      align-items: center;
+      &__select {
+        border: 1px solid var(--border-color-gray);
+        outline: none;
+        padding: 0.3rem 0.5rem;
+        border-radius: 3px;
+        background-color: #fff;
+        font-weight: 400;
+        margin-right: 0.5rem;
+        cursor: pointer;
+      }
+
+      &__price {
+        color: var(--color-black);
+        font-size: 0.9rem;
+      }
+      &__currencybox {
+        position: relative;
+
+        &__heading {
+          position: absolute;
+          font-size: 0.9rem;
+          color: var(--color-disabled);
+          font-weight: normal;
+          top: -55%;
+          left: 0.5rem;
+        }
+        &__box {
+          cursor: pointer;
+          border: 1px solid var(--border-color-gray);
+          padding: 0.5rem;
+          border-radius: 4px;
+          color: var(--color-disabled);
+          font-size: 0.9rem;
+          width: 7rem;
+        }
+      }
+    }
+  }
+}

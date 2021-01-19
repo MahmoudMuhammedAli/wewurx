@@ -42,6 +42,8 @@ body {
   /* pricing colors */
   --price-color-profitable: #70c006;
   --price-color-lossable: #eb5757;
+
+  --color-disabled: #999;
 }
 
 /* hide the arrows from the number input button */

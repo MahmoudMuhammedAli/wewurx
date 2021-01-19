@@ -1,14 +1,6 @@
 import React from "react";
-import { connect } from "react-redux";
 import Styles from "./sidebar.module.scss";
-import {
-  showAddJobProjects,
-  showAddJobs,
-  showCostItems,
-  showFilesAndNotes,
-  showForms,
-  showJobs,
-} from "../../../../../../../actions";
+
 import { Link } from "react-router-dom";
 
 const SideBar = (props) => {
@@ -50,11 +42,4 @@ const SideBar = (props) => {
     </aside>
   );
 };
-export default connect(null, {
-  showAddJobProjects,
-  showAddJobs,
-  showCostItems,
-  showFilesAndNotes,
-  showForms,
-  showJobs,
-})(SideBar);
+export default SideBar;

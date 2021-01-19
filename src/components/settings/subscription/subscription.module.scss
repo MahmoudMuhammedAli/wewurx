@@ -1,0 +1,48 @@
+.subscription {
+  display: inline-block;
+  width: 33rem;
+
+  &__heading {
+    color: var(--color-black);
+    font-weight: 200;
+    font-size: 2rem;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+    color: var(--text-color-gray);
+    &__terms {
+      &__link {
+        text-decoration: none;
+        margin-bottom: 0.5rem;
+        display: inline-block;
+        color: var(--color-red);
+      }
+    }
+    &__viewinvoice,
+    &__carddetails {
+      margin-bottom: 0.5rem;
+      display: inline-block;
+      color: var(--color-red);
+    }
+    &__cancelsubscription {
+      text-decoration: none;
+      color: var(--text-color-gray);
+    }
+  }
+
+  &__activate {
+    button {
+      background-color: var(--color-red);
+      color: #fff;
+      width: 10rem;
+      height: 3rem;
+      border-radius: 3px;
+      border: none;
+      font-size: 1.4rem;
+      cursor: pointer;
+    }
+  }
+}
