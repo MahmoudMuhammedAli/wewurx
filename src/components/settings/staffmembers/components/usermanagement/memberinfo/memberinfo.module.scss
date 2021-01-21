@@ -1,0 +1,93 @@
+.bar {
+  border-bottom: 1px solid var(--border-color-gray);
+  padding: 0.5rem;
+  &Hovered {
+    &:hover {
+      background-color: #ebf0ef;
+    }
+  }
+  &:last-of-type {
+    border-bottom: none;
+  }
+
+  > div {
+    display: inline-block;
+    cursor: pointer;
+    vertical-align: top;
+    padding-right: 1rem;
+    font-size: 0.9rem;
+
+    i {
+      font-size: 0.9rem;
+    }
+  }
+
+  &__name {
+    width: 14rem;
+    color: var(--text-color-gray);
+    &__avatar {
+      overflow: hidden;
+      display: inline-block;
+      img {
+        border-radius: 50%;
+        width: 3rem;
+        height: 3rem;
+      }
+    }
+
+    &__names {
+      color: var(--text-color-gray);
+
+      display: inline-block;
+      vertical-align: top;
+      margin-left: 0.5rem;
+      margin-top: 0.5rem;
+
+      p {
+        color: var(--color-black);
+      }
+    }
+  }
+  &__role {
+    color: var(--text-color-gray);
+
+    width: 10rem;
+    &Black {
+      color: var(--color-black);
+    }
+  }
+
+  &__contact {
+    width: 14rem;
+    color: var(--text-color-gray);
+
+    &__link {
+      color: var(--color-red);
+      font-weight: bold;
+    }
+  }
+  &__teams {
+    width: 10rem;
+    color: var(--text-color-gray);
+
+    &Black {
+      color: var(--color-black);
+    }
+  }
+  &__skills {
+    width: 10rem;
+    color: var(--text-color-gray);
+    &Black {
+      color: var(--color-black);
+    }
+  }
+  &__button {
+    background-color: var(--color-red);
+    border-radius: 4px;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: inline-block;
+  }
+}

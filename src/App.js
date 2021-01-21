@@ -17,6 +17,7 @@ import ViewJob from "./components/jobs/jobview";
 import Quotes from "./pages/quotes";
 import Invoices from "./pages/invoices";
 import Purchases from "./pages/purchases";
+import TermsAndConditions from "./pages/consitionsandterms";
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
           <Route path='/invoices' component={Invoices} />
           <Route path='/purchases' component={Purchases} />
           <Route path='/settings' component={Settings} />
+          <Route path='/conditionsandterms' component={TermsAndConditions} />
           <Redirect to='/jobs' />
         </Switch>
       </Router>

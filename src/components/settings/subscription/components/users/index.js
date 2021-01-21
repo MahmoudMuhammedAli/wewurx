@@ -7,6 +7,7 @@ import {
   decreaseNumberOfUsersByOne,
   setNumberOfUsers,
 } from "../../../../../actions";
+import TermsAndConditions from "../termsandconditions";
 const Users = ({
   selectedPackage,
   numberOfUsers,
@@ -106,7 +107,6 @@ const Users = ({
 };
 
 const mapStateToProps = (state) => {
-  console.log(state.form.package.values.packageValue);
   return {
     selectedPackage: state.form.package?.values.packageValue,
     numberOfUsers: state.subscriptions.numberOfUsers,
