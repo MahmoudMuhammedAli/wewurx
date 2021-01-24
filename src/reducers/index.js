@@ -4,6 +4,7 @@ import jobsReducer from "./jobReducer";
 import addJobFormReducer from "./addjobReducer";
 import viewJobReducer from "./viewjobReducer";
 import subscriptionReducer from "./subscriptionsReducers";
+import addStaffMemberReducer from "./addStaffMemberReducer";
 
 export default combineReducers({
   jobs: jobsReducer,
@@ -11,4 +12,5 @@ export default combineReducers({
   addJobForm: addJobFormReducer,
   viewJob: viewJobReducer,
   subscriptions: subscriptionReducer,
+  addStaffMember: addStaffMemberReducer,
 });

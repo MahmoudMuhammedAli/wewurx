@@ -1,0 +1,33 @@
+.sidebar {
+  margin-right: 2rem;
+  width: 12rem;
+  &__heading {
+    color: var(--color-black);
+    font-size: 1.5rem;
+    font-weight: normal;
+    padding-left: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  &__links {
+    list-style-type: none;
+
+    &__link {
+      a {
+        display: inline-block;
+        width: 100%;
+        text-decoration: none;
+        padding: 0.8rem 0.5rem;
+        background-color: var(--color-active);
+        color: #000;
+        font-size: 0.9rem;
+        border-top: 1px solid var(--border-color-gray3);
+        border-left: 3px solid var(--color-red);
+
+        &:last-of-type {
+          border-bottom: 1px solid var(--border-color-gray3);
+        }
+      }
+    }
+  }
+}

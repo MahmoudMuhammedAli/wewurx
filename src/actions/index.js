@@ -20,6 +20,7 @@ import {
   SET_NUMBER_OF_USERS,
   DECREASE_NUMBER_OF_USERS_BY_ONE,
   INCREASE_NUMBER_OF_USERS_BY_ONE,
+  ADD_STAFF_MEMBER_START_DATE,
 } from "./actionsTypes";
 
 // ============= Starting Job Page Action Creators ==============
@@ -147,5 +148,15 @@ export const setNumberOfUsers = (number) => (dispatch) => {
   });
 };
 
-// ============= Starting Subscription  action Creators =====================
+// ============= Starting add staff member  action Creators =====================
+// --------------------------------------------------------------------
+
+export const addStaffMemberStartDate = (date) => (dispatch) => {
+  dispatch({
+    type: ADD_STAFF_MEMBER_START_DATE,
+    payload: date,
+  });
+};
+
+// ============= Starting add staff member  action Creators =====================
 // --------------------------------------------------------------------

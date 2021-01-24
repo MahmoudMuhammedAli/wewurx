@@ -1,0 +1,75 @@
+.basicinfo {
+  margin-top: 0.5rem;
+
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color-gray);
+  padding-right: 4rem;
+
+  &__inputcontainer {
+    margin-bottom: 0.5rem;
+
+    &__input {
+      border: 1.5px solid var(--border-color-gray);
+      outline: none;
+      border-radius: 4px;
+      font-weight: bold;
+      padding: 0.2rem 0.5rem;
+      width: 14rem;
+
+      &Half {
+        width: 7rem;
+      }
+      &Quarter {
+        width: 10.5rem;
+      }
+    }
+
+    &__label {
+      color: var(--color-red);
+      width: 6rem;
+      text-align: right;
+      margin-right: 0.5rem;
+      font-size: 0.9rem;
+      display: inline-block;
+      &Bold {
+        font-weight: bold;
+      }
+    }
+  }
+  &__dateofbirth {
+    margin-bottom: 2rem;
+
+    &__input {
+      outline: none;
+      font-weight: bold;
+      padding: 0.3rem 0.5rem;
+      width: 3rem;
+      border: 1.5px solid var(--border-color-gray);
+      text-align: center;
+      margin-right: 0.3rem;
+      border-radius: 4px;
+
+      &:last-of-type {
+        width: 4rem;
+      }
+    }
+  }
+
+  &__starteddate {
+    margin-bottom: 0.5rem;
+    button {
+      background-color: #fff;
+      text-align: left;
+    }
+    div {
+      padding: 0;
+      div {
+        border: none;
+
+        input {
+          border: 1px solid var(--border-color-gray);
+        }
+      }
+    }
+  }
+}

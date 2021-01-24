@@ -29,3 +29,9 @@ export const INCREASE_NUMBER_OF_USERS_BY_ONE =
 export const DECREASE_NUMBER_OF_USERS_BY_ONE =
   "DECREASE_NUMBER_OF_USERS_BY_ONE";
 export const SET_NUMBER_OF_USERS = "SET_NUMBER_OF_USERS";
+
+/* Starting action for addStaff Member */
+
+export const ADD_STAFF_MEMBER_START_DATE = "ADD_STAFF_MEMBER_START_DATE";
+
+/* End action for addStaff Member */

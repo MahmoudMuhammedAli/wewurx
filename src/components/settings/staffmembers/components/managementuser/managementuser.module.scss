@@ -1,0 +1,38 @@
+.managementuser {
+  display: flex;
+  &__heading {
+    color: var(--color-black);
+    font-weight: normal;
+    font-size: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  &__picture {
+    &__label {
+      margin-right: 0.5rem;
+      color: var(--color-red);
+      font-size: 0.9rem;
+      display: inline-block;
+    }
+    &__picture {
+      display: inline-block;
+      width: 4rem;
+      height: 4rem;
+      cursor: pointer;
+
+      span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--color-red);
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        text-align: center;
+        color: #fff;
+        font-size: 0.9rem;
+        font-weight: 200;
+      }
+    }
+  }
+}

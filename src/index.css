@@ -13,6 +13,7 @@ body {
 :root {
   --border-color-gray: #d9d9d9;
   --border-color-gray2: #999;
+  --border-color-gray3: #e6e6e6;
   --color-red: #e66b22;
   --text-color-gray: #808080;
   --text-color-gray-2: #505050;
@@ -44,6 +45,7 @@ body {
   --price-color-lossable: #eb5757;
 
   --color-disabled: #999;
+  --color-active: #f2f2f2;
 }
 
 /* hide the arrows from the number input button */
