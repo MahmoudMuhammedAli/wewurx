@@ -1,0 +1,38 @@
+.schedularcolor {
+  border-bottom: 1px solid var(--border-color-gray);
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+
+  &__label {
+    font-size: 0.9rem;
+    color: var(--color-red);
+    margin-right: 0.5rem;
+  }
+
+  &__inputs {
+    display: inline-block;
+
+    div {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__input {
+    border: 1px solid var(--border-color-gray);
+    outline: none;
+    width: 9rem;
+    padding: 0.3rem 0.5rem;
+    border-radius: 3px;
+    font-weight: bold;
+
+    &Color {
+      border: none;
+      padding: 0;
+      border-radius: 0;
+      margin-left: 0.5rem;
+      height: 1.7rem;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+.skills {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border-color-gray);
+  &__heading {
+    font-size: 0.9rem;
+    font-weight: normal;
+    color: var(--text-color-gray);
+  }
+
+  &__button {
+    border: none;
+    outline: none;
+    background-color: #fff;
+    color: var(--color-red);
+    margin: 1rem 0 3rem;
+    cursor: pointer;
+  }
+}

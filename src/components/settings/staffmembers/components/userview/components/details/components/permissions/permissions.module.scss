@@ -1,0 +1,47 @@
+.permissions {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border-color-gray);
+  &__heading {
+    color: var(--text-color-gray);
+    font-weight: normal;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+
+  &__main {
+    &__heading {
+      text-align: center;
+      color: var(--color-black);
+      margin-bottom: 1rem;
+      width: calc(100% - 9rem);
+    }
+
+    &__label {
+      color: var(--color-red);
+      width: 8rem;
+      text-align: right;
+      margin-right: 0.5rem;
+      font-size: 0.9rem;
+      display: inline-block;
+    }
+
+    &__select {
+      border: 1px solid var(--border-color-gray);
+      border-radius: 3px;
+      outline: none;
+      cursor: pointer;
+      padding: 0.3rem;
+      background-color: #fff;
+    }
+
+    &__button {
+      background-color: #fff;
+      outline: none;
+      color: var(--color-red);
+      border: none;
+      margin-left: 0.5rem;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+  }
+}

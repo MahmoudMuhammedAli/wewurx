@@ -1,0 +1,11 @@
+.rates {
+  border-bottom: 1px solid var(--border-color-gray);
+  padding: 1rem 0;
+
+  &__heading {
+    color: var(--text-color-gray);
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    font-weight: normal;
+  }
+}

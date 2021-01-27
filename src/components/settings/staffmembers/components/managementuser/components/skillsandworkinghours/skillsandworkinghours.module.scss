@@ -1,0 +1,11 @@
+.skills {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border-color-gray);
+  border-top: 1px solid var(--border-color-gray);
+
+  &__heading {
+    font-size: 0.9rem;
+    color: var(--text-color-gray);
+    font-weight: normal;
+  }
+}

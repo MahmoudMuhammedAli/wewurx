@@ -2,6 +2,10 @@ import React, { useEffect, useRef, useState } from "react";
 import BasicInfo from "./components/basicinfo";
 import Styles from "./managementuser.module.scss";
 import SideBar from "./components/sidebar";
+import Permisions from "./components/permisions";
+import StaffRates from "./components/staffrates";
+import SchedularColor from "./components/schedularcolor";
+import SkillsAndWorkingHours from "./components/skillsandworkinghours";
 
 const ManagementUser = (props) => {
   const pictureRef = useRef(null);
@@ -38,6 +42,14 @@ const ManagementUser = (props) => {
           </div>
         </div>
         <BasicInfo />
+        <Permisions />
+        <StaffRates />
+        <SchedularColor />
+        <SkillsAndWorkingHours />
+        <div className={Styles.managementuser__buttons}>
+          <button className={Styles.managementuser__cancel}>Cancel</button>
+          <button className={Styles.managementuser__save}>Save</button>
+        </div>
       </div>
     </div>
   );

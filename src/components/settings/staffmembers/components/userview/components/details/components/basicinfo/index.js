@@ -3,8 +3,9 @@ import { reduxForm, Field } from "redux-form";
 import Styles from "./basicinfo.module.scss";
 import DatePicker from "react-datepicker";
 import { connect } from "react-redux";
-import { addStaffMemberStartDate } from "../../../../../../../actions";
+import { addStaffMemberStartDate } from "../../../../../../../../../actions";
 import PasswordModal from "../passwordspecificationmodal";
+import CannotRememberModal from "../cannotremembermodal";
 
 const renderField = ({
   input,
@@ -73,6 +74,10 @@ const BasicInfo = ({ startDate, addStaffMemberStartDate }) => {
   const [isSpecificationModalOPened, setIsSpecificationModalOPened] = useState(
     false
   );
+  const [
+    isCannotRememberModalOpened,
+    setIsCannotRememberModalOpened,
+  ] = useState(false);
   return (
     <div className={Styles.basicinfo}>
       <Field
@@ -187,6 +192,26 @@ const BasicInfo = ({ startDate, addStaffMemberStartDate }) => {
       </div>
       <div className={Styles.basicinfo__passwordpolicybuttonContainer}>
         <Field
+          name='oldPassword'
+          component={renderField}
+          type='password'
+          id='staffMemberBasicInfoOldPassword'
+          label='Old password'
+          labelClassName={Styles.basicinfo__inputcontainer__labelBold}
+        />
+        <button
+          onClick={() => setIsCannotRememberModalOpened(true)}
+          className={Styles.basicinfo__passwordpolicybutton}
+        >
+          Can't remember?
+        </button>
+        <CannotRememberModal
+          isCannotRememberModalOpened={isCannotRememberModalOpened}
+          setIsCannotRememberModalOpened={setIsCannotRememberModalOpened}
+        />
+      </div>
+      <div className={Styles.basicinfo__passwordpolicybuttonContainer}>
+        <Field
           name='password'
           component={renderField}
           type='password'
@@ -223,5 +248,5 @@ const mapStateToProps = (state) => {
   };
 };
 export default connect(mapStateToProps, { addStaffMemberStartDate })(
-  reduxForm({ form: "staffMemberBasicInfo" })(BasicInfo)
+  reduxForm({ form: "staffviewBasicInfo" })(BasicInfo)
 );

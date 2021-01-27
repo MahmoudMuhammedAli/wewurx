@@ -1,0 +1,111 @@
+.rates {
+  border-bottom: 1px solid var(--border-color-gray);
+  padding: 1rem 0;
+
+  &__heading {
+    color: var(--text-color-gray);
+    font-size: 0.9rem;
+    font-weight: normal;
+  }
+
+  &__buyrates {
+    &__heading {
+      text-align: left;
+      color: var(--color-black);
+      width: calc(100% - 8.5rem);
+      margin-left: auto;
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+    }
+
+    &__inputs {
+      &__inputcontainer {
+        margin-bottom: 0.5rem;
+      }
+      &__inputwrapper {
+        display: inline-block;
+        border: 1.5px solid var(--border-color-gray);
+        border-radius: 3px;
+        width: 11rem;
+        &__icon {
+          border-right: 1.5px solid var(--border-color-gray);
+          padding: 0.4rem;
+          display: inline-block;
+          font-size: 0.9rem;
+        }
+        &__input {
+          border: none;
+          outline: none;
+          padding: 0.4rem;
+          width: 8rem;
+          padding-left: 0.3rem;
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+  &__label {
+    color: var(--color-red);
+    width: 8rem;
+    text-align: right;
+    margin-right: 0.5rem;
+    font-size: 0.9rem;
+    display: inline-block;
+  }
+
+  &__allowovertime {
+    margin: 1rem 0;
+    &__togglebuttonwrapper {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+
+  &__togglecontainer {
+    width: 2.5rem;
+    height: 0.7rem;
+    border-radius: 10px;
+    background-color: #bdbdbd;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    &Active {
+      background-color: #f1bda4;
+    }
+  }
+  &__toggleinput {
+    border: none;
+    outline: none;
+    visibility: hidden;
+    width: 100%;
+    position: absolute;
+  }
+  &__togglebutton {
+    border-radius: 50%;
+    width: 1.4rem;
+    height: 1.4rem;
+    display: inline-block;
+    transition: transform 0.3s linear;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+      0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    background-color: #fff;
+    &Active {
+      transform: translateX(calc(2.5rem - 1.4rem));
+      background-color: var(--color-red);
+    }
+  }
+
+  &__standardrates {
+    &__select {
+      width: 14rem;
+      border: 1px solid var(--border-color-gray);
+      border-radius: 2px;
+      outline: none;
+      cursor: pointer;
+      background-color: #fff;
+      padding: 0.3rem 0.5rem;
+    }
+  }
+}

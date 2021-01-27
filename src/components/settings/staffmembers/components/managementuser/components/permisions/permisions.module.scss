@@ -1,0 +1,35 @@
+.permissions {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-color-gray);
+  &__heading {
+    color: var(--text-color-gray);
+    font-size: 0.9rem;
+    font-weight: normal;
+    margin-bottom: 1rem;
+  }
+
+  &__selectorwrapper {
+    margin-bottom: 1rem;
+  }
+  label {
+    color: var(--color-red);
+    font-size: 0.9rem;
+  }
+  &__label {
+    margin-right: 0.5rem;
+    width: 8rem;
+    text-align: right;
+    display: inline-block;
+  }
+
+  &__select {
+    outline: none;
+    border: 1px solid var(--border-color-gray);
+    background-color: #fff;
+    padding: 0.5rem;
+    margin-right: 0.5rem;
+    cursor: pointer;
+    border-radius: 3px;
+    width: 9rem;
+  }
+}

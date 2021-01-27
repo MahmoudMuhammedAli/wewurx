@@ -1,0 +1,44 @@
+.teams {
+  border-top: 1px solid var(--border-color-gray);
+  border-bottom: 1px solid var(--border-color-gray);
+  padding: 1rem 0;
+
+  &__heading {
+    color: var(--text-color-gray);
+    font-size: 0.9rem;
+    font-weight: normal;
+  }
+
+  &__main {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+
+    &__heading {
+      width: 8rem;
+      color: var(--color-black);
+      font-size: 1rem;
+    }
+
+    &__select {
+      width: 9rem;
+      border: 1px solid var(--border-color-gray);
+      background-color: #fff;
+      outline: none;
+      padding: 0.3rem 0.5rem;
+      border-radius: 3px;
+      margin-right: 0.5rem;
+    }
+
+    &__button {
+      color: #fff;
+      background-color: var(--color-red);
+      border-radius: 50%;
+      outline: none;
+      border: none;
+      width: 1.3rem;
+      height: 1.3rem;
+      cursor: pointer;
+    }
+  }
+}

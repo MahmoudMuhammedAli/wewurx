@@ -1,0 +1,60 @@
+.sidebar {
+  margin-right: 2rem;
+  width: 12rem;
+  &__heading {
+    color: var(--color-black);
+    font-size: 1.5rem;
+    font-weight: normal;
+    padding-left: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  &__links {
+    list-style-type: none;
+
+    &__link {
+      a {
+        display: inline-block;
+        width: 100%;
+        text-decoration: none;
+        padding: 0.8rem 0.5rem;
+
+        color: #000;
+        font-size: 0.9rem;
+        border-top: 1px solid var(--border-color-gray3);
+
+        &:last-of-type {
+          border-bottom: 1px solid var(--border-color-gray3);
+        }
+        &:hover {
+          background-color: var(--color-active);
+        }
+      }
+    }
+  }
+  &__active {
+    background-color: var(--color-active);
+    border-left: 3px solid var(--color-red);
+  }
+
+  &__button {
+    background-color: var(--color-red);
+    color: #fff;
+    outline: none;
+    border: none;
+    padding: 0.5rem 3rem;
+    display: block;
+    margin: 0.5rem auto;
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+    width: 10rem;
+    i {
+      position: absolute;
+      left: 0.5rem;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.5rem;
+    }
+  }
+}

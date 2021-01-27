@@ -1,0 +1,46 @@
+.modal {
+  background-color: #fff;
+  border-radius: 4px;
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translate(-50%, -20%);
+  width: 34rem;
+  padding: 2rem;
+  padding-bottom: 4rem;
+
+  &__section {
+    line-height: 110%;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border-color-gray);
+    &__heading {
+      margin-bottom: 1rem;
+      color: var(--color-black);
+    }
+
+    &__subheading {
+      color: var(--color-red);
+      font-size: 0.9rem;
+      font-weight: normal;
+    }
+    p {
+      color: var(--text-color-gray);
+      font-size: 0.9rem;
+    }
+    &:last-of-type {
+      border: none;
+    }
+  }
+
+  &__close {
+    background-color: #fff;
+    border: none;
+    outline: none;
+    color: var(--color-red);
+    cursor: pointer;
+    font-size: 1rem;
+    position: absolute;
+    right: 2rem;
+    bottom: 1rem;
+  }
+}
