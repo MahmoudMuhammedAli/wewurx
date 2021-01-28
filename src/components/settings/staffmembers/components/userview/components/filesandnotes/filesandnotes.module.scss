@@ -1,0 +1,46 @@
+.files {
+  &__heading {
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: var(--color-black);
+    padding-bottom: 3rem;
+    border-bottom: 1px solid var(--border-color-gray);
+    width: 34rem;
+    margin-bottom: 1rem;
+  }
+
+  &__notes {
+    &__heading {
+      color: var(--text-color-gray);
+      font-size: 0.9rem;
+      font-weight: normal;
+      padding-top: 1rem;
+      margin-bottom: 6rem;
+    }
+
+    &__notes {
+      display: flex;
+      align-items: center;
+
+      &__textarea {
+        border: 1px solid var(--border-color-gray);
+        outline: none;
+        width: 26rem;
+        border-radius: 4px;
+        height: 5rem;
+        padding: 1rem;
+      }
+
+      &__button {
+        outline: none;
+        cursor: pointer;
+        padding: 0.7rem 2.5rem;
+        background-color: var(--color-red);
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+        margin-left: 2rem;
+      }
+    }
+  }
+}
