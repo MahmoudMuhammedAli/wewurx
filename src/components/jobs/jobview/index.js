@@ -1,6 +1,5 @@
 import React from "react";
 import Styles from "./jobview.module.scss";
-import { connect } from "react-redux";
 import SideBar from "./components/sidebar";
 import CostItems from "./components/costitems";
 import JobProjects from "./components/projectjobs";
@@ -8,44 +7,24 @@ import FilesAndNotes from "./components/filesandnotes";
 import Forms from "./components/forms";
 import JobActivity from "./components/jobactivity";
 import JobView from "./components/jobview";
+import { Switch, Route, Redirect } from "react-router-dom";
 
-const SecondaryJobPage = (props) => {
-  const {
-    showViewJobCostItems,
-    showViewJobForms,
-    showViewJobFilesAndNotes,
-    showViewJobJobActivity,
-    showViewJobProjectJobs,
-  } = props.viewJob;
-  const renderPage = () => {
-    if (showViewJobCostItems) {
-      return <CostItems />;
-    }
-    if (showViewJobProjectJobs) {
-      return <JobProjects />;
-    }
-    if (showViewJobFilesAndNotes) {
-      return <FilesAndNotes />;
-    }
-    if (showViewJobForms) {
-      return <Forms />;
-    }
-    if (showViewJobJobActivity) {
-      return <JobActivity />;
-    }
-    return <JobView />;
-  };
+const JobViewPage = (props) => {
   return (
     <div className={` ${Styles.jobview} page`}>
       <SideBar />
-      {renderPage()}
+
+      <Switch>
+        <Route path='/jobs/view/:id' exact component={JobView} />
+        <Route path='/jobs/view/:id/costitems' component={CostItems} />
+        <Route path='/jobs/view/:id/jobprojects' component={JobProjects} />
+        <Route path='/jobs/view/:id/filesandnotes' component={FilesAndNotes} />
+        <Route path='/jobs/view/:id/forms' component={Forms} />
+        <Route path='/jobs/view/:id/jobactivity' component={JobActivity} />
+        <Redirect to='/jobs/view/:id' />
+      </Switch>
     </div>
   );
 };
-const mapStateToProps = (state) => {
-  const { viewJob } = state;
-  return {
-    viewJob,
-  };
-};
-export default connect(mapStateToProps, {})(SecondaryJobPage);
+
+export default JobViewPage;
