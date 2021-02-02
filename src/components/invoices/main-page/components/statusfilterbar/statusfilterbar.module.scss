@@ -1,0 +1,73 @@
+.statusbar {
+  display: flex;
+  margin: 1rem auto 1rem 2rem;
+  align-items: flex-end;
+
+  &__status {
+    font-weight: 600;
+    font-size: 1rem;
+    margin: auto 0.2rem;
+    border-radius: 5px;
+    height: 4.5rem;
+    padding: 0.5rem;
+    border: 1.5px solid #fff;
+    cursor: pointer;
+
+    &:hover {
+      border-color: #eee;
+    }
+
+    &__number {
+      font-size: 2rem;
+      color: var(--color-black);
+      font-weight: 200;
+    }
+
+    &__name {
+      display: flex;
+      align-items: baseline;
+      &__color {
+        width: 1.3rem;
+        height: 0.6rem;
+        display: inline-block;
+        margin-right: 0.5rem;
+      }
+
+      &__name {
+        font-size: 0.9rem;
+      }
+    }
+    &All {
+      border: 1px solid #eee;
+      border-radius: 5px;
+      display: flex;
+      align-items: flex-end;
+      color: var(--color-red);
+      padding: 0.5rem 1rem;
+    }
+  }
+
+  &__issued {
+    background-color: var(--invoice-color-issued);
+  }
+
+  &__sent {
+    background-color: var(--invoice-color-sent);
+  }
+
+  &__partpaid {
+    background-color: var(--invoice-color-partPaid);
+  }
+
+  &__paid {
+    background-color: var(--invoice-color-paid);
+  }
+
+  &__overdue {
+    background-color: var(--invoice-color-overdued);
+  }
+
+  &__void {
+    background-color: var(--invoice-color-void);
+  }
+}

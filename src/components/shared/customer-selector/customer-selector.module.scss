@@ -1,0 +1,66 @@
+.addjob {
+  margin-left: 2rem;
+  position: relative;
+  margin-top: 3rem;
+  &__customerseletor {
+    border: 1.5px solid var(--border-color-gray);
+    border-radius: 5px;
+    position: relative;
+    height: 1.5rem;
+    width: 15rem;
+    padding-left: 0.5rem;
+    cursor: text;
+    z-index: 1000;
+
+    &__box {
+      height: 1.5rem;
+    }
+
+    i {
+      position: absolute;
+      right: 1%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      color: var(--text-color-gray);
+      font-size: 0.7rem;
+    }
+    &__label {
+      position: absolute;
+      top: -100%;
+      color: var(--color-red);
+    }
+
+    &__select {
+      border: 1px solid var(--border-color-gray);
+      margin-left: -0.6rem;
+      width: 115%;
+      border-radius: 5px;
+      margin-top: 0.5rem;
+      padding-left: 0.5rem;
+      transform-origin: top;
+      transform: scaleY(0);
+      transition: transform 0.2s linear;
+
+      background-color: #fff;
+
+      &__alert {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 40px;
+        color: var(--text-color-gray);
+        font-weight: 250;
+      }
+
+      &__customers {
+        color: var(--color-red);
+
+        &:hover {
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

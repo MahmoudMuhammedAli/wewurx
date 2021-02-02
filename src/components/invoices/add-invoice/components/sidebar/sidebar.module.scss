@@ -1,0 +1,59 @@
+.sidebar {
+  margin-left: 1rem;
+
+  &__link {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 2rem;
+    margin: 0 0 1rem;
+    display: flex;
+    align-items: center;
+    color: #4d4d4d;
+    padding: 12px 0 12px 10px;
+    text-decoration: none;
+
+    i {
+      display: inline-block;
+      margin-right: 0.3rem;
+      font-size: 1.5rem;
+      margin-bottom: 5px;
+    }
+  }
+  &__button {
+    display: block;
+    background: none;
+    border: none;
+    outline: none;
+    width: 12rem;
+    border-top: 1px solid #e6e6e6;
+    padding: 12px 0 12px 10px;
+    cursor: pointer;
+    text-align: left;
+    font-size: 1rem;
+    text-decoration: none;
+    color: #000;
+
+    &:hover {
+      background-color: #f2f2f2;
+    }
+    &Active {
+      background-color: #eee;
+    }
+    &Bottom {
+      border: none;
+      background-color: #f46f22;
+      border-radius: 5px;
+      color: #fff;
+      margin: 0.5rem 1rem;
+      text-align: center;
+      width: 10rem;
+      padding: 9px 0;
+      font-size: 0.9rem;
+      &:hover {
+        background-color: #f46f22;
+      }
+    }
+  }
+}

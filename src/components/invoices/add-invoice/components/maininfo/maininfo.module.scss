@@ -1,0 +1,13 @@
+.info {
+  margin-top: 0.8rem;
+
+  &__input {
+    outline: none;
+    border: 1px solid var(--border-color-gray);
+    border-radius: 4px;
+    width: 15rem;
+    padding: 0.2rem 0.5rem;
+    color: var(--color-black);
+    font-size: 1.2rem;
+  }
+}

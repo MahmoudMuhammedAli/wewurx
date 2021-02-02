@@ -1,11 +1,11 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import Styles from "./addjob.module.scss";
-import AddCustomer from "../addcustomer";
 import { reduxForm, Field } from "redux-form";
 import StatusSelector from "../../../../../../shared/statusSelector";
 import Priority from "../priority";
 import WorkForceSelector from "./components/workforceselector";
 import Dates from "./components/dates";
+import CustomerSelector from "../../../../../../shared/customer-selector";
 
 const renderLocationInfoFields = ({
   input,
@@ -14,16 +14,17 @@ const renderLocationInfoFields = ({
   className,
   type,
   meta: { touched, error },
+  id,
 }) => {
   return (
     <div className={Styles.addjob__form__locations__input}>
       <div className={Styles.addjob__form__locations__input__label}>
-        <label htmlFor={label}>{label}</label>
+        <label htmlFor={id}>{label}</label>
       </div>
       <div
         className={`${Styles.addjob__form__locations__input__input} ${className}`}
       >
-        <input {...input} type={type} placeholder={placeholder} id={label} />
+        <input {...input} type={type} placeholder={placeholder} id={id} />
         {touched && error && <span>{error}</span>}
       </div>
     </div>
@@ -51,77 +52,19 @@ const renderField = ({
 };
 
 const AddJob = (props) => {
-  const [customers, setCustomer] = useState(null);
-  const selectRef = useRef(null);
-  // box selector ref
-  const selectorBoxRef = useRef(null);
-  // flag for the status of the select
-  let isSelectOpen = false;
-  // opening the select
-  const openSelect = () => {
-    selectRef.current.style.transform = "scaleY(1)";
-    isSelectOpen = true;
-  };
-  // closing the select
-  const closeSelect = () => {
-    selectRef.current.style.transform = "scaleY(0)";
-    isSelectOpen = false;
-  };
-
-  // job status state
   const [jobStatus, setJobStatus] = useState(null);
-  // i should have an enum variable from typescript lol
-  useEffect(() => {
-    selectorBoxRef.current.addEventListener("click", (e) => {
-      // we did that to ensure that the click event comes from the box it self not from any other element
-      if (e.target !== selectorBoxRef.current) return;
-      if (isSelectOpen) {
-        return closeSelect();
-      }
-      openSelect();
-    });
-  }, []);
 
   return (
     <div className={Styles.addjob}>
-      <div className={Styles.addjob__customerseletor}>
-        <AddCustomer />
-        <div
-          className={Styles.addjob__customerseletor__box}
-          ref={selectorBoxRef}
-        >
-          <span className={Styles.addjob__customerseletor__label}>
-            customer
-          </span>
-          <i className='fa fa-arrow-down fa-lg'></i>
-          <span className={Styles.addjob__customerselector__selected}>
-            wewurx
-          </span>
-          <div
-            className={Styles.addjob__customerseletor__select}
-            ref={selectRef}
-          >
-            <div className={Styles.addjob__customerseletor__select__alert}>
-              <div>
-                no{" "}
-                <span
-                  className={Styles.addjob__customerseletor__select__customers}
-                >
-                  customers
-                </span>{" "}
-                available
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <CustomerSelector />
+
       <form className={Styles.addjob__form}>
         <Field
           component={renderField}
           name='jobName'
           placeholder='Enter job name'
         />
-        <StatusSelector onStatusChange={setJobStatus} />
+        <StatusSelector onStatusChange={(argument) => setJobStatus(argument)} />
         <Priority />
         <div
           className={`${Styles.addjob__form__jobDescription} ${Styles.addjob__form__section}`}
@@ -153,30 +96,35 @@ const AddJob = (props) => {
             name='address'
             type='text'
             label='Address'
+            id='address'
           />
           <Field
             component={renderLocationInfoFields}
             name='address2'
             type='text'
             label=''
+            id='address2'
           />
           <Field
             component={renderLocationInfoFields}
             name='city'
             type='text'
             label='City'
+            id='city'
           />
           <Field
             component={renderLocationInfoFields}
-            name='country'
-            label='State/Country'
+            name='county'
+            label='State/County'
             type='text'
+            id='county'
           />
           <Field
             component={renderLocationInfoFields}
             name='postCode'
             label='Post/Zip Code'
             type='text'
+            id='postCode'
             className={Styles.addjob__form__locations__input__inputHalf}
           />
         </div>
@@ -191,30 +139,35 @@ const AddJob = (props) => {
             name='contact'
             label='Contact'
             type='text'
+            id='contact'
           />
           <Field
             component={renderLocationInfoFields}
             name='contact2'
             label=''
             type='text'
+            id='contact2'
           />
           <Field
             component={renderLocationInfoFields}
             name='phone'
             label='Phone'
             type='tel'
+            id='phone'
           />
           <Field
             component={renderLocationInfoFields}
             name='mobile'
             label='Mobile'
             type='text'
+            id='mobile'
           />
           <Field
             component={renderLocationInfoFields}
             name='email'
             label='Email'
             type='email'
+            id='email'
           />
         </div>
         <div

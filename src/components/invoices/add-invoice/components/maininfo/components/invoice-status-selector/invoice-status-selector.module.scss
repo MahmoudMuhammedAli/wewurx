@@ -1,0 +1,18 @@
+.selector {
+  margin: 1rem 0;
+
+  &__select {
+    border: none;
+    color: var(--color-black);
+    background-color: #fff;
+    outline: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  &__selectedColor {
+    width: 1rem;
+    height: 0.6rem;
+    background-color: #000;
+    display: inline-block;
+  }
+}
