@@ -1,0 +1,26 @@
+.totalpricinginfo {
+  text-align: right;
+  font-size: 0.9rem;
+  color: var(--color-black);
+
+  &__price {
+    width: 8rem;
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+  &__total {
+    border-bottom: 1px solid var(--border-color-gray);
+    width: 17rem;
+    margin-left: auto;
+    margin-bottom: 1rem;
+
+    &__totalincludingtax {
+      font-weight: bold;
+    }
+  }
+  &__expenses {
+    &__profitOrLoss {
+      font-weight: bold;
+    }
+  }
+}

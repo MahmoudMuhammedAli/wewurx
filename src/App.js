@@ -6,6 +6,7 @@ import {
   Switch,
 } from "react-router-dom";
 import "./App.scss";
+import "./items.scss";
 import "font-awesome/css/font-awesome.min.css";
 import Jobs from "./pages/jobs";
 import Contacts from "./pages/contacts";

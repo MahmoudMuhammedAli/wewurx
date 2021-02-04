@@ -1,0 +1,31 @@
+.costitems {
+  &__items {
+    margin: 3rem 0;
+
+    &__header {
+      color: var(--color-black);
+      margin-bottom: 1rem;
+    }
+    &Billable {
+      margin-bottom: 4rem;
+    }
+    &NonBillable {
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border-color-gray);
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__additembutton {
+    background-color: var(--color-red);
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 0.5rem 2rem;
+    border-radius: 3px;
+    margin-top: 2rem;
+    display: block;
+    margin-left: auto;
+    cursor: pointer;
+  }
+}
