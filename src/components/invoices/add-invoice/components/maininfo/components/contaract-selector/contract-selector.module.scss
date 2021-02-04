@@ -1,0 +1,73 @@
+.selector {
+  width: 34rem;
+  margin-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-color-gray);
+
+  &__label {
+    color: var(--color-red);
+    font-size: 0.9rem;
+    font-weight: normal;
+    margin-bottom: 0.3rem;
+    margin-left: 0.3rem;
+  }
+
+  &__selectbox {
+    border: 1px solid var(--border-color-gray);
+    padding: 0.3rem 0.5rem;
+    position: relative;
+    height: 1.5rem;
+    border-radius: 4px;
+    cursor: text;
+    width: 15rem;
+
+    i {
+      position: absolute;
+      right: 0.5rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-color-gray);
+    }
+  }
+
+  &__dropdown {
+    border: 1px solid var(--border-color-gray);
+    padding-bottom: 1rem;
+    position: absolute;
+    top: 112%;
+    width: 20rem;
+    left: 0;
+    border-radius: 4px;
+    max-height: 0;
+    transform: scaleY(0);
+    overflow: hidden;
+    transform-origin: top;
+    transition: transform 0.1s linear, max-height 0.2s linear;
+    background-color: #fff;
+
+    &__searchbox {
+      border-radius: 4px;
+      border: 1px solid var(--border-color-gray);
+      width: 15rem;
+      padding-right: 2rem;
+      position: relative;
+
+      &__input {
+        border: none;
+        padding: 0.2rem 0.5rem;
+        border-radius: 4px;
+        outline: none;
+        width: 100%;
+      }
+
+      i {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0.5rem;
+        color: var(--color-red);
+        cursor: pointer;
+      }
+    }
+  }
+}

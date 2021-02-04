@@ -1,0 +1,77 @@
+.invoicedates {
+  border-bottom: 1px solid var(--border-color-gray);
+  padding: 1rem 0;
+
+  &__startdates {
+    &__heading {
+      font-size: 0.9rem;
+      font-weight: normal;
+      color: var(--text-color-gray);
+      margin-bottom: 0.3rem;
+    }
+    &__terms {
+      color: var(--text-color-gray);
+      display: inline-block;
+      margin: 0 1rem;
+      font-size: 0.9rem;
+    }
+
+    &__selectwrapper {
+      position: relative;
+      display: inline-block;
+
+      i {
+        color: var(--text-color-gray);
+        position: absolute;
+        right: 3px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #fff;
+      }
+    }
+  }
+  &__datepicker {
+    display: inline-block;
+    position: relative;
+    border: 1px solid var(--border-color-gray);
+    border-radius: 4px;
+    padding: 0.3rem 0.5rem;
+
+    > div {
+      > div {
+        border: none;
+        padding: 0;
+      }
+    }
+
+    i {
+      position: absolute;
+      right: 0.5rem;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1000;
+      color: var(--text-color-gray);
+    }
+  }
+  &__termsSelector {
+    outline: none;
+    border: 1px solid var(--border-color-gray);
+    padding: 0.3rem 0.5rem;
+    background-color: #fff;
+    border-radius: 4px;
+    background-color: #fff;
+    width: 13rem;
+    cursor: pointer;
+  }
+
+  &__enddate {
+    margin-top: 1rem;
+
+    &__heading {
+      font-size: 0.9rem;
+      margin-bottom: 0.3rem;
+      color: var(--text-color-gray);
+      font-weight: normal;
+    }
+  }
+}

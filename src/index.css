@@ -62,6 +62,7 @@ input[type="number"] {
 
 /* end the hide process of the arrows from the number input */
 /* Start Styling date picker */
+
 .react-datepicker__input-container {
   border: 1.5px solid var(--border-color-gray);
   padding: 0.5rem;
@@ -72,6 +73,7 @@ input[type="number"] {
   outline: none;
   border: none;
 }
+
 /* End Styling date picker */
 
 code {

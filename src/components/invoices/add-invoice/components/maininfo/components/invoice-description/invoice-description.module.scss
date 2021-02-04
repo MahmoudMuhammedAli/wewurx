@@ -1,0 +1,25 @@
+.description {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border-color-gray);
+
+  &__heading {
+    color: var(--text-color-gray);
+    font-size: 0.9rem;
+    margin-left: 0.5rem;
+    font-weight: normal;
+    margin-bottom: 0.3rem;
+  }
+
+  &__textarea {
+    outline: none;
+    border: 1px solid var(--border-color-gray);
+    border-radius: 3px;
+    height: 5rem;
+    width: 30rem;
+  }
+
+  &__checkbox {
+    color: var(--text-color-gray);
+    font-size: 0.9rem;
+  }
+}

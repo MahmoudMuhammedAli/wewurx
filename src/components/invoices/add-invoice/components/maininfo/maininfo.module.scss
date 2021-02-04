@@ -10,4 +10,17 @@
     color: var(--color-black);
     font-size: 1.2rem;
   }
+
+  &__save {
+    display: block;
+    margin-left: auto;
+    outline: none;
+    border: none;
+    background-color: var(--color-red);
+    color: #fff;
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+    margin-top: 1rem;
+    cursor: pointer;
+  }
 }
