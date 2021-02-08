@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Field, reduxForm } from "redux-form";
+import InqueryButton from "../../../../shared/inquery-button";
 import Styles from "./companyinformation.module.scss";
 
 const renderInput = ({
@@ -9,10 +10,13 @@ const renderInput = ({
   placeholder = "",
   placeholderAfterVisited,
   className,
+  containerClassName,
   meta: { touched, error, visited },
 }) => {
   return (
-    <div className={Styles.companyinformation__inputcontainer}>
+    <div
+      className={` ${containerClassName} ${Styles.companyinformation__inputcontainer}`}
+    >
       <label>
         <span className={Styles.companyinformation__inputcontainer__label}>
           {label}
@@ -91,31 +95,6 @@ const renderClosestIndustries = ({ input }) => {
 };
 
 const CompanyInformation = (props) => {
-  const [isInqueryBoxOpened, setIsInqueryBoxOpened] = useState(false);
-  const [shouldInquerBoxRemoved, setShouldInqueryBoxRemoved] = useState(false);
-  const inqueryRef = useRef(null);
-  useEffect(() => {
-    const closeInqueryBox = () => {
-      setIsInqueryBoxOpened(false);
-    };
-    const openInqueryBox = () => {
-      setIsInqueryBoxOpened(true);
-    };
-    const toggleInqueryBox = () => {
-      if (isInqueryBoxOpened) {
-        return closeInqueryBox();
-      }
-      openInqueryBox();
-    };
-    inqueryRef.current.addEventListener("click", toggleInqueryBox);
-
-    return () => {
-      if (inqueryRef.current) {
-        inqueryRef.current.removeEventListener("click", toggleInqueryBox);
-      }
-    };
-  }, [isInqueryBoxOpened]);
-
   return (
     <div className={Styles.companyinformation}>
       <div className={Styles.companyinformation__inputcontainer}>
@@ -190,34 +169,24 @@ const CompanyInformation = (props) => {
           className={`${Styles.companyinformation__inputcontainer__input} ${Styles.companyinformation__inputcontainer__inputThird}`}
         />
       </div>
-      <div className={Styles.companyinformation__lastinputContainer}>
+      <div
+        className={` ${Styles.companyinformation__lastraw} ${Styles.companyinformation__lastinputContainer}`}
+      >
         <Field
           component={renderInput}
           name='referencePrefix'
           label='Reference Prefix'
           className={` ${Styles.companyinformation__inputcontainer__inputHalf}`}
+          containerClassName={Styles.companyinformation__lastrawinputcontainer}
         />
         <div
           className={
-            Styles.companyinformation__lastinputContainer__inquieryContainer
+            Styles.companyinformation__lastinputContainer__inquerywrapper
           }
         >
-          <span ref={inqueryRef}>?</span>
-          <div
-            className={
-              Styles.companyinformation__lastinputContainer__inquieryContainer__box
-            }
-            style={{ display: isInqueryBoxOpened ? "block" : "none" }}
-          >
-            <div
-              className={
-                Styles.companyinformation__lastinputContainer__inquieryContainer__box__triangle
-              }
-            ></div>
+          <InqueryButton>
             <h3
-              className={
-                Styles.companyinformation__lastinputContainer__inquieryContainer__box__heading
-              }
+              className={Styles.companyinformation__lastinputContainer__heading}
             >
               REFERENCE PREFIX
             </h3>
@@ -228,14 +197,12 @@ const CompanyInformation = (props) => {
               your references
             </p>
             <button
-              className={
-                Styles.companyinformation__lastinputContainer__inquieryContainer__box__button
-              }
+              className={Styles.companyinformation__lastinputContainer__button}
             >
               {" "}
               <i className='fa fa-ban '></i> Hide these tips
             </button>
-          </div>
+          </InqueryButton>
         </div>
       </div>
     </div>

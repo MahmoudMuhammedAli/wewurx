@@ -1,0 +1,18 @@
+.description {
+  &__heading {
+    color: var(--text-color-gray);
+    font-weight: normal;
+    margin-bottom: 0.2rem;
+    margin-left: 0.5rem;
+    color: var(--color-black);
+  }
+
+  &__textarea {
+    outline: none;
+    border: 1px solid var(--border-color-gray);
+    border-radius: 3px;
+    padding: 0.5rem;
+    width: 35rem;
+    height: 5rem;
+  }
+}

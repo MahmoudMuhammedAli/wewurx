@@ -1,0 +1,58 @@
+.saveditemsselector {
+  border: 1px solid var(--border-color-gray);
+  border-radius: 4px;
+  position: relative;
+  height: 1.7rem;
+  width: 25rem;
+  margin: 2rem 0;
+  cursor: text;
+
+  &__heading {
+    position: absolute;
+    top: -1rem;
+    left: 0.5rem;
+    color: var(--color-black);
+    font-weight: normal;
+  }
+
+  i {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-color-gray-3);
+  }
+
+  &__input {
+    outline: none;
+    border: none;
+    width: 90%;
+    padding: 0.3rem 0.5rem;
+    border-radius: 4px;
+    color: var(--text-color-gray-3);
+    font-weight: bold;
+  }
+
+  &__dropdown {
+    border: 1px solid var(--border-color-gray);
+    position: absolute;
+    top: 112%;
+    border-radius: 4px;
+    min-height: 4rem;
+    background-color: #fff;
+
+    &__noitemsbox {
+      padding: 1.9rem;
+      color: var(--text-color-gray);
+    }
+
+    &__addsaveditemlink {
+      color: var(--color-red);
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

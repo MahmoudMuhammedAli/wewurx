@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import Styles from "./costitems.module.scss";
 import Item from "../../../../shared/cost-item";
 import PricingInfo from "../../../../shared/pricing-info";
+import AddItemModal from "../add-item";
 
 const CostItems = (props) => {
+  const [isModalOpened, setIsModalOpened] = useState(true);
   return (
     <div className={Styles.costitems}>
       {" "}
@@ -34,6 +36,10 @@ const CostItems = (props) => {
         <button className={Styles.costitems__additembutton}>Add Item +</button>
       </div>
       <PricingInfo />
+      <AddItemModal
+        isModalOpened={isModalOpened}
+        setIsModalOpened={setIsModalOpened}
+      />
     </div>
   );
 };
