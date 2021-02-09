@@ -13,4 +13,39 @@
     color: var(--color-black);
     font-weight: normal;
   }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__cancel {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    color: var(--color-black);
+    font-size: 0.9rem;
+    background-color: #fff;
+  }
+
+  &__saveandmore {
+    padding: 0.5rem 2rem;
+    border: none;
+    cursor: pointer;
+    background-color: #828282;
+    color: #fff;
+    border-radius: 4px;
+    outline: none;
+  }
+  &__save {
+    padding: 0.5rem 2rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: var(--color-red);
+    color: #fff;
+    border-radius: 4px;
+    margin-left: 0.5rem;
+  }
 }

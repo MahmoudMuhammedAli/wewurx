@@ -114,7 +114,11 @@ const QuantityCollector = (props) => {
         </div>
       </div>
       <div className={Styles.collector__togglebutton}>
-        <CircledToggleButton name='isBillable' id='notBillable' />
+        <CircledToggleButton
+          name='isBillable'
+          id='notBillable'
+          initialValues={{ isBillable: true }}
+        />
         <label
           htmlFor='notBillable'
           className={Styles.collector__togglebutton__label}

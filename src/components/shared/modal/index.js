@@ -5,7 +5,7 @@ import Styles from "./modal.module.scss";
 // get the element that you want to append your modal into
 const modalRoot = document.getElementById("modal");
 
-const Modal = ({ children, isOpen }) => {
+const Modal = ({ children, isOpen, height }) => {
   // element to which the modal will be rendered
   const el = document.createElement("div");
 
@@ -20,23 +20,14 @@ const Modal = ({ children, isOpen }) => {
       }
     };
   }, [el]);
-  const preventScrolling = (e) => {
-    e.preventDefault();
-  };
-  useEffect(() => {
-    if (isOpen) {
-      el.addEventListener("wheel", preventScrolling);
-      window.scrollTo(0, 0);
-    }
-    return () => {
-      el.removeEventListener("wheel", preventScrolling);
-    };
-  });
+
   return (
     isOpen &&
     createPortal(
       // child element
-      <div className={Styles.modal}>{children}</div>,
+      <div className={Styles.modal} style={height ? { height } : {}}>
+        {children}
+      </div>,
       // target container
       el
     )

@@ -34,11 +34,11 @@ const InqueryButton = ({ children }) => {
         onMouseLeave={handleInqueryMouseOut}
       ></i>
       <div
-        className={Styles.inquieryContainer__box}
+        className={Styles.inquieryContainer__dropdowncontainer}
         style={{ display: isInqueryBoxOpened ? "block" : "none" }}
       >
         <div className={Styles.inquieryContainer__box__triangle}></div>
-        {children}
+        <div className={Styles.inquieryContainer__box}>{children}</div>
       </div>
     </div>
   );

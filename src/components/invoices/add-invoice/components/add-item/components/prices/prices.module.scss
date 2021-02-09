@@ -1,0 +1,115 @@
+.prices {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border-color-gray5);
+
+  &__inputcontainer {
+    display: inline-block;
+    &__label {
+      color: var(--color-black);
+      font-size: 0.9rem;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 1rem;
+      font-weight: 200;
+    }
+  }
+
+  &__inputwrapper {
+    border: 1px solid var(--border-color-gray5);
+    border-radius: 3px;
+    display: inline-block;
+    width: 8rem;
+    position: relative;
+
+    &__symbol {
+      border-right: 1px solid var(--border-color-gray5);
+      display: inline-block;
+      border-top: 1px solid transparent;
+      border-bottom: 1px solid transparent;
+      text-align: center;
+      cursor: pointer;
+      color: var(--color-black);
+      vertical-align: middle;
+      padding: 0.5rem;
+    }
+
+    &__input {
+      outline: none;
+      height: 1rem;
+      padding-left: 0.5rem;
+      border: none;
+      width: 5rem;
+      padding-right: 0.5rem;
+      color: var(--color-black);
+      font-size: 1rem;
+    }
+
+    &__text {
+      position: absolute;
+      right: 0.5rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--color-black);
+    }
+  }
+
+  &__buyprice {
+    margin-bottom: 1rem;
+  }
+
+  &__inquery {
+    display: inline-block;
+    margin-left: 0.5rem;
+
+    &__heading {
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+
+    &__p {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__sellprice {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__togglebutton {
+    cursor: pointer;
+
+    label {
+      font-size: 0.9rem;
+      margin-left: 0.5rem;
+      color: var(--color-black);
+      cursor: pointer;
+    }
+  }
+
+  &__moreoptions {
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color-gray5);
+    margin-top: 1rem;
+
+    &__label {
+      display: block;
+      font-size: 0.9rem;
+      margin-bottom: 0.4rem;
+      margin-left: 0.5rem;
+      color: var(--color-black);
+    }
+
+    &__markup {
+      margin-bottom: 1rem;
+    }
+
+    &__resultprice {
+      font-weight: bold;
+      color: var(--color-black);
+      margin-left: 1rem;
+      font-size: 0.9rem;
+    }
+  }
+}

@@ -5,20 +5,18 @@
   font-size: 1.2rem;
   cursor: pointer;
   display: inline-block;
-
-  span {
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-  }
-
   text-align: center;
+
+  &__dropdowncontainer {
+    position: relative;
+    z-index: 1;
+  }
   &__box {
     position: absolute;
-    bottom: -15rem;
+    top: 1rem;
     left: -8.6rem;
     width: 18rem;
-    height: 14rem;
+    max-height: 14rem;
     padding: 0.5rem;
     font-size: 0.9rem;
     line-height: 150%;
@@ -34,8 +32,9 @@
       height: 1.5rem;
       background-color: var(--text-color-gray);
       position: absolute;
-      left: 46%;
-      top: 9px;
+      left: -20%;
+      top: 21px;
+
       transform: rotate(45deg) translate(-50%, -50%);
       z-index: -1;
     }

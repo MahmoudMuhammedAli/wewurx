@@ -1,0 +1,47 @@
+.taxes {
+  padding: 1rem 0;
+  border-bottom: 3px solid var(--border-color-gray5);
+
+  &__select {
+    border: 1px solid var(--border-color-gray);
+    width: 15rem;
+    outline: none;
+    padding: 0.4rem 0.5rem;
+    border-radius: 3px;
+    margin-right: 0.5rem;
+    cursor: pointer;
+    background-color: #fff;
+    color: var(--color-black);
+    font-weight: bold;
+    font-size: 0.9rem;
+  }
+
+  &__taxrate {
+    display: inline-block;
+    position: relative;
+    margin-top: 1rem;
+    &__heading {
+      position: absolute;
+      top: -1.1rem;
+      left: 0.5rem;
+      color: var(--color-black);
+      font-size: 0.9rem;
+      font-weight: normal;
+    }
+  }
+
+  &__accountcode {
+    display: inline-block;
+    position: relative;
+    margin-top: 1rem;
+
+    &__heading {
+      position: absolute;
+      top: -1.1rem;
+      left: 0.5rem;
+      color: var(--color-black);
+      font-size: 0.9rem;
+      font-weight: normal;
+    }
+  }
+}

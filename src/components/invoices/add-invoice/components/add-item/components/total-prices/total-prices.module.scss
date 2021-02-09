@@ -1,0 +1,66 @@
+.total {
+  margin: 1rem 0 4rem;
+  display: flex;
+  justify-content: space-between;
+
+  &__status {
+    border: 1px solid var(--border-color-gray);
+    border-radius: 4px;
+    text-align: center;
+    padding: 0.5rem;
+    height: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 7rem;
+
+    &__heading {
+      font-weight: normal;
+      color: var(--color-black);
+    }
+
+    &__price {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-top: 0.3rem;
+      color: var(--color-black);
+
+      &Profit {
+        color: var(--price-color-profitable);
+      }
+
+      &Loss {
+        color: var(--price-color-lossable);
+      }
+    }
+  }
+
+  &__details {
+    &__item {
+      margin-bottom: 1rem;
+      display: flex;
+
+      &__heading {
+        width: 10rem;
+        text-align: right;
+        font-size: 0.9rem;
+        font-weight: 200;
+      }
+
+      &__price {
+        width: 10rem;
+        text-align: right;
+        font-size: 0.9rem;
+        font-weight: 200;
+      }
+      &Total {
+        h4 {
+          font-weight: bold;
+        }
+        span {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
