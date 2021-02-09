@@ -5,7 +5,7 @@ import PricingInfo from "../../../../shared/pricing-info";
 import AddItemModal from "../add-item";
 
 const CostItems = (props) => {
-  const [isModalOpened, setIsModalOpened] = useState(true);
+  const [isModalOpened, setIsModalOpened] = useState(false);
   return (
     <div className={Styles.costitems}>
       {" "}
@@ -33,7 +33,12 @@ const CostItems = (props) => {
           <div className='costitems__item__discount'>Discount</div>
           <div className='costitems__item__total'>Total</div>
         </div>
-        <button className={Styles.costitems__additembutton}>Add Item +</button>
+        <button
+          className={Styles.costitems__additembutton}
+          onClick={() => setIsModalOpened(true)}
+        >
+          Add Item +
+        </button>
       </div>
       <PricingInfo />
       <AddItemModal
