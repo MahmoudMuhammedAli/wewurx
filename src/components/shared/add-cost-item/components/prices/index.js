@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { change, Field, reduxForm } from "redux-form";
-import CircledToggleButton from "../../../../../../shared/circled-toggle-button";
-import InqueryButton from "../../../../../../shared/inquery-button";
+import CircledToggleButton from "../../../circled-toggle-button";
+import InqueryButton from "../../../inquery-button";
 import Styles from "./prices.module.scss";
 
 const renderField = ({

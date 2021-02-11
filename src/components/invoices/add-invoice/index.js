@@ -3,7 +3,7 @@ import SideBar from "./components/sidebar";
 import Styles from "./add-invoice.module.scss";
 import { Switch, Route } from "react-router-dom";
 import MainInfo from "./components/maininfo";
-import CostItems from "./components/costitems";
+import CostItems from "../../shared/costitems";
 import FilesAndNotes from "./components/files-and-notes";
 
 const AddInvoice = (props) => {

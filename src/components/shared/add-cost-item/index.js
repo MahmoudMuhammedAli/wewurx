@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Styles from "./add-item.module.scss";
-import Modal from "../../../../shared/modal";
+import Modal from "../modal";
 import SavedItemSelector from "./components/saved-item-selector";
 import ItemDescription from "./components/item-description";
 import QuantityCollector from "./components/quantity-collector";

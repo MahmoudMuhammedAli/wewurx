@@ -2,7 +2,7 @@ import React from "react";
 import { Field, reduxForm } from "redux-form";
 import Styles from "./quantity-collector.module.scss";
 import { useSelector } from "react-redux";
-import CircledToggleButton from "../../../../../../shared/circled-toggle-button";
+import CircledToggleButton from "../../../circled-toggle-button";
 
 const isPositiveNumber = (value) => {
   console.log(value, "from value", "+ value", +value);
