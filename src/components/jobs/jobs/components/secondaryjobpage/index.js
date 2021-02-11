@@ -1,6 +1,5 @@
 import React from "react";
 import Styles from "./secondaryjobpage.module.scss";
-import { connect } from "react-redux";
 import SideBar from "./components/sidebar";
 import CostItems from "./components/costitems";
 import JobProjects from "./components/projectjobs";

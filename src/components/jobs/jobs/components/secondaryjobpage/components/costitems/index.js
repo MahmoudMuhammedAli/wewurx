@@ -1,7 +1,12 @@
 import React from "react";
 import Styles from "./costitems.module.scss";
+import CostItems from "../../../../../../shared/costitems";
 
-const CostItems = (props) => {
-  return <div>Cost Items</div>;
+const JobCostItems = (props) => {
+  return (
+    <div className={Styles.costitems}>
+      <CostItems />
+    </div>
+  );
 };
-export default CostItems;
+export default JobCostItems;
