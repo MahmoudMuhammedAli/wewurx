@@ -5,8 +5,8 @@ import JobDescription from "./componentes/jobdescription";
 import JobDuration from "./componentes/jobduration";
 import SiteAddress from "./componentes/siteaddress";
 import Contacts from "./componentes/jobcontacts";
-import InvoiceCreated from "./componentes/invoicecreated";
-import InvoiceSent from "./componentes/invoicesent";
+import InvoiceActivityBox from "../../../../shared/invoice-activity-box";
+import SendInvoiceModal from "../../../../shared/sendinvoicemodal";
 
 const JobView = (props) => {
   return (
@@ -18,8 +18,16 @@ const JobView = (props) => {
       <JobDuration />
       <SiteAddress />
       <Contacts />
-      <InvoiceCreated />
-      <InvoiceSent />
+      <InvoiceActivityBox
+        heading='New invoice created'
+        buttonText='Send'
+        Modal={SendInvoiceModal}
+      />
+      <InvoiceActivityBox
+        heading='Invoice was sent to test@test.com'
+        buttonText='Resend'
+        Modal={SendInvoiceModal}
+      />
     </div>
   );
 };

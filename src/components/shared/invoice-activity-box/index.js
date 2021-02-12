@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import Styles from "./invoicecreated.module.scss";
-import InvoiceModal from "../../../../../../shared/sendinvoicemodal";
 
-const InvoiceCreated = (props) => {
+const InvoiceCreated = ({ heading, Modal, buttonText }) => {
   const [isModalOpened, setIsModalOpened] = useState(false);
   return (
     <div className={Styles.invoicecreated}>
-      <h3 className={Styles.invoicecreated__heading}>New invoice created</h3>
+      <h3 className={Styles.invoicecreated__heading}>{heading}</h3>
       <div className={Styles.invoicecreated__details}>
         <span className={Styles.invoicecreated__details__dates}>
           {new Date().toLocaleDateString()} -{" "}
@@ -18,9 +17,9 @@ const InvoiceCreated = (props) => {
         className={Styles.invoicecreated__send}
         onClick={() => setIsModalOpened(true)}
       >
-        Send
+        {buttonText}
       </button>
-      <InvoiceModal isOpened={isModalOpened} setIsOpened={setIsModalOpened} />
+      <Modal isOpened={isModalOpened} setIsOpened={setIsModalOpened} />
     </div>
   );
 };
