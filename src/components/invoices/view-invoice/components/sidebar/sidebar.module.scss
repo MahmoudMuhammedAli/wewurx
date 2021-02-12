@@ -1,5 +1,6 @@
 .sidebar {
   margin-left: 1rem;
+  margin-right: 2rem;
 
   &__link {
     background-color: transparent;
@@ -7,7 +8,6 @@
     outline: none;
     cursor: pointer;
     font-size: 2rem;
-    margin: 0 0 1rem;
     display: flex;
     align-items: center;
     color: #4d4d4d;

@@ -1,3 +1,125 @@
 .maininfo {
   display: inline-block;
+  width: 35rem;
+  padding-top: 12px;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    color: var(--color-black);
+    border-bottom: 1px solid var(--border-color-gray);
+    padding-bottom: 0.8rem;
+    width: 100%;
+  }
+
+  &__info {
+    &__id {
+      font-size: 1.3rem;
+      margin-bottom: 0.8rem;
+    }
+
+    &__name {
+      font-weight: bold;
+      margin-bottom: 0.8rem;
+      font-size: 0.9rem;
+    }
+
+    &__clientname {
+      font-weight: bold;
+      margin-bottom: 0.8rem;
+      font-size: 0.9rem;
+    }
+    &__status {
+      &__color {
+        display: inline-block;
+        width: 1rem;
+        height: 0.6rem;
+        background-color: #000;
+        margin-right: 0.5rem;
+      }
+
+      &__text {
+        font-weight: 200;
+      }
+    }
+  }
+
+  &__prices {
+    position: relative;
+    background-color: #808080;
+    color: #fff;
+    font-size: 2rem;
+    height: 2.5rem;
+    width: 7rem;
+    text-align: center;
+
+    &__heading {
+      position: absolute;
+      top: 110%;
+      font-size: 0.9rem;
+      color: var(--color-red);
+      width: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      cursor: pointer;
+    }
+  }
+
+  &__description {
+    border-bottom: 1px solid var(--border-color-gray);
+    padding: 0.8rem 0;
+
+    &__heading {
+      font-size: 1.5rem;
+      font-weight: normal;
+      color: var(--color-black);
+    }
+
+    &__body {
+      font-size: 0.9rem;
+      color: var(--color-black);
+      margin-top: 0.5rem;
+    }
+  }
+
+  &__dates {
+    border-bottom: 1px solid var(--border-color-gray);
+    padding-top: 0.8rem;
+
+    &__heading {
+      font-size: 0.9rem;
+      color: var(--text-color-gray);
+      font-weight: normal;
+      margin-bottom: 0.5rem;
+
+      &Italic {
+        font-style: italic;
+      }
+    }
+
+    p {
+      font-size: 0.9rem;
+      font-weight: bold;
+      color: var(--color-black);
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  &__contract {
+    border-bottom: 1px solid var(--border-color-gray);
+    padding: 0.8rem 0;
+
+    &__heading {
+      font-size: 0.9rem;
+      font-weight: normal;
+      margin-bottom: 0.5rem;
+      color: var(--text-color-gray);
+    }
+
+    &__status {
+      color: var(--color-black);
+      font-size: 0.9rem;
+      font-weight: bold;
+    }
+  }
 }
