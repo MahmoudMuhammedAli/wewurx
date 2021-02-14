@@ -1,5 +1,7 @@
 import React from "react";
 import Styles from "./main-info.module.scss";
+import InvoiceActivityBox from "../../../../shared/invoice-activity-box";
+import SendInvoiceModal from "../send-invoice-modal";
 
 const MainInfo = (props) => {
   return (
@@ -50,6 +52,11 @@ const MainInfo = (props) => {
         <h5 className={Styles.maininfo__contract__heading}>Contract</h5>
         <p className={Styles.maininfo__contract__status}>Non</p>
       </section>
+      <InvoiceActivityBox
+        buttonText='Send'
+        heading='New invoice created'
+        Modal={SendInvoiceModal}
+      />
     </div>
   );
 };

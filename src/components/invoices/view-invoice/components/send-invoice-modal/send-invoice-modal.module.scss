@@ -1,0 +1,62 @@
+.sendinvoice {
+  background-color: #fff;
+  border-radius: 5px;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  padding: 1rem;
+  min-width: 30rem;
+  min-height: 20rem;
+
+  &__closebutton {
+    outline: none;
+    border: none;
+    background-color: #fff;
+    color: var(--text-color-gray);
+    cursor: pointer;
+    font-size: 1.5rem;
+    position: absolute;
+    right: 1.5rem;
+    top: 1rem;
+  }
+
+  &__maininfo {
+    margin-top: 2rem;
+    color: var(--color-black);
+  }
+
+  &__label {
+    width: 7rem;
+    display: inline-block;
+    margin-right: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: normal;
+    color: var(--color-black);
+    margin-bottom: 1rem;
+  }
+
+  &__value {
+    display: inline-block;
+    font-size: 0.9rem;
+    font-weight: bold;
+  }
+
+  &__emails {
+    &__input {
+      border: 1px solid var(--border-color-gray);
+      border-radius: 4px;
+      outline: none;
+      font-weight: bold;
+      padding: 0.3rem 0.5rem;
+      width: 15rem;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+}

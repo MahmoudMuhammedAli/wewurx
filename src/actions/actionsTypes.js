@@ -15,3 +15,10 @@ export const SET_NUMBER_OF_USERS = "SET_NUMBER_OF_USERS";
 export const ADD_STAFF_MEMBER_START_DATE = "ADD_STAFF_MEMBER_START_DATE";
 
 /* End action for addStaff Member */
+
+// Start Send invoice Action Types //
+
+export const INCREASE_NUMBER_OF_INVOICE_INPUT_FILES =
+  "INCREASE_NUMBER_OF_INVOICE_INPUT_FILES";
+export const REMOVE_INVOICE_FILE = "REMOVE_INVOICE_FILE";
+export const ADD_INVOICE_FILE = "ADD_INVOICE_FILE";

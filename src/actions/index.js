@@ -6,6 +6,9 @@ import {
   DECREASE_NUMBER_OF_USERS_BY_ONE,
   INCREASE_NUMBER_OF_USERS_BY_ONE,
   ADD_STAFF_MEMBER_START_DATE,
+  INCREASE_NUMBER_OF_INVOICE_INPUT_FILES,
+  REMOVE_INVOICE_FILE,
+  ADD_INVOICE_FILE,
 } from "./actionsTypes";
 
 // ============= Start   addCustomer  form Action Creators ==============
@@ -57,5 +60,25 @@ export const addStaffMemberStartDate = (date) => (dispatch) => {
   });
 };
 
-// ============= Starting add staff member  action Creators =====================
+// ============= Start Send Invoice   action Creators =====================
 // --------------------------------------------------------------------
+
+export const increaseNumberOfInvoiceInputFiles = () => {
+  return {
+    type: INCREASE_NUMBER_OF_INVOICE_INPUT_FILES,
+  };
+};
+
+export const removeInvoiceFile = (name) => {
+  return {
+    type: REMOVE_INVOICE_FILE,
+    payload: name,
+  };
+};
+
+export const addInvoiceFile = (name, file) => {
+  return {
+    type: ADD_INVOICE_FILE,
+    payload: { name, file },
+  };
+};
