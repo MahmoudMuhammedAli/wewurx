@@ -18,17 +18,21 @@ const AddFiles = (props) => {
     state.sendInvoiceFiles.numberOfInvoiceInputFiles;
 
   const { invoiceInputFilesValues } = state.sendInvoiceFiles;
-  console.log(imagesSources, "from image sources");
-  const readFile = (e, name) => {
+
+  const readFile = (event, name) => {
     var reader = new FileReader();
 
     reader.onload = function (e) {
-      setImageSources((srcs) => [...srcs, { name, src: e.target.result }]);
+      setImageSources((srcs) => [
+        ...srcs,
+        { name, src: e.target.result, fileName: event.target.files[0].name },
+      ]);
     };
 
-    reader.readAsDataURL(e.target.files[0]);
+    reader.readAsDataURL(event.target.files[0]);
   };
-  const mapInputFiles = (e) => {
+
+  const mapInputFiles = () => {
     for (let i = 1; i <= numberOfInvoiceInputFiles; i++) {
       const handleInputChange = (e) => {
         props.addInvoiceFile(`file${i}`, e.target.files[0]);
@@ -49,6 +53,7 @@ const AddFiles = (props) => {
   };
 
   mapInputFiles();
+
   const handleButtonClick = () => {
     document.getElementById(`inputFile${currentInput}`).click();
     props.increaseNumberOfInvoiceInputFiles();
@@ -59,28 +64,34 @@ const AddFiles = (props) => {
     props.removeInvoiceFile(fileName);
 
     const filteredSrcs = imagesSources.filter(({ name }) => {
-      console.log(name, fileName, "from name and file name");
       return name !== fileName.name;
     });
     setImageSources(filteredSrcs);
   };
-  console.log(invoiceInputFilesValues, "from invoiceINputFiles");
 
   const renderImages = () => {
-    return imagesSources.map(({ name, src }) => {
+    return imagesSources.map(({ name, src, fileName }) => {
       return (
-        <div className={Styles.addfiles__imagesContainer}>
-          <img
-            src={src}
-            alt='uploaded File'
-            data-name={name}
-            key={name}
-            width='100'
-            height='100'
-          />
+        <div className={Styles.addfiles__imagesContainer} key={name}>
+          <div className={Styles.addfiles__imagesContainer__image}>
+            <img
+              src={src}
+              alt='uploaded File'
+              data-name={name}
+              key={name}
+              width='30'
+              height='30'
+            />
+            <span className={Styles.addfiles__imagesContainer__image__name}>
+              {fileName}
+            </span>
+          </div>
 
-          <button onClick={() => handleImageClick({ name })}>
-            <i className='fa fa-close'></i>
+          <button
+            onClick={() => handleImageClick({ name })}
+            className={Styles.addfiles__removefilebutton}
+          >
+            <i className='fa fa-times-circle-o'></i>
           </button>
         </div>
       );
@@ -90,10 +101,10 @@ const AddFiles = (props) => {
   return (
     <div className={Styles.addfiles}>
       {InputFilesArray}
+      {renderImages()}
       <button className={Styles.addfiles__btn} onClick={handleButtonClick}>
         + Add files{" "}
       </button>
-      {renderImages()}
     </div>
   );
 };
