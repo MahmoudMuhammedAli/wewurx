@@ -23,6 +23,7 @@ const CostItems = (props) => {
       </header>
       <SharedCostItems />
     </div>
+    // this comment to change the prev commit message
   );
 };
 
