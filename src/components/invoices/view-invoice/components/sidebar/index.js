@@ -20,7 +20,7 @@ const SideBar = (props) => {
         <span>Invoices</span>
       </Link>
       <Link
-        to='/jobs/invoices/add'
+        to={`/jobs/invoices/view/${id}/`}
         className={`${Styles.sidebar__button}`}
         activeClassName={Styles.sidebar__buttonActive}
         exact

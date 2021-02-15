@@ -1,0 +1,53 @@
+.costitems {
+  padding-top: 1.5rem;
+
+  &__header {
+    margin-bottom: 5rem;
+    &__heading {
+      margin-bottom: 1rem;
+      color: var(--color-black);
+      font-size: 1.5rem;
+      font-weight: normal;
+    }
+    &__invoicenumber {
+      margin-bottom: 1rem;
+      &__heading {
+        font-weight: normal;
+        font-size: 0.9rem;
+        color: var(--text-color-gray);
+        display: inline-block;
+        margin-right: 0.5rem;
+      }
+
+      &__number {
+        color: var(--color-black);
+        font-weight: bold;
+        font-size: 0.9rem;
+      }
+    }
+
+    &__customerinfo {
+      font-size: 0.9rem;
+      color: var(--color-black);
+      font-weight: bold;
+    }
+  }
+
+  &__billablecostitems {
+    color: var(--color-black);
+    &__heading {
+      font-size: 1rem;
+      font-weight: 200;
+      margin-bottom: 1rem;
+    }
+  }
+  &__notbillablecostitems {
+    margin-top: 4rem;
+    color: var(--color-black);
+    &__heading {
+      font-size: 1rem;
+      font-weight: 200;
+      margin-bottom: 1rem;
+    }
+  }
+}
