@@ -1,0 +1,30 @@
+.btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+
+  &__button {
+    border: 1px solid #b3b3b3;
+    outline: none;
+    color: #b3b3b3;
+    background-color: #fff;
+    border-radius: 3px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    margin-left: 0.5rem;
+    &:hover {
+      background-color: #b3b3b3;
+      color: #fff;
+    }
+
+    &:first-of-type {
+      margin-right: 2rem;
+    }
+
+    &Active {
+      background-color: #b3b3b3;
+      color: #fff;
+    }
+  }
+}

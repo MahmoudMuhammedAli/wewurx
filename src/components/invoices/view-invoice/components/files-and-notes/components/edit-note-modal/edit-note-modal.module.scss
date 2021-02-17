@@ -1,0 +1,53 @@
+.editnote {
+  background-color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translate(-50%, -20%);
+  padding: 2rem;
+  border-radius: 5px;
+  min-width: 30rem;
+  &__close {
+    position: absolute;
+    right: 2rem;
+    top: 1rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: var(--text-color-gray);
+    font-size: 2rem;
+  }
+
+  &__heading {
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: var(--color-black);
+    margin-bottom: 2rem;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    button {
+      cursor: pointer;
+      border: none;
+      outline: none;
+      font-size: 0.9rem;
+    }
+  }
+
+  &__cancel {
+    color: var(--color-red);
+    background-color: transparent;
+  }
+
+  &__update {
+    background-color: var(--color-red);
+    color: #fff;
+    padding: 0.6rem 2rem;
+    border-radius: 3px;
+  }
+}

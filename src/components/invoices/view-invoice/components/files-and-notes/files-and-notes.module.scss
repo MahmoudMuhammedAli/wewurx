@@ -1,0 +1,33 @@
+.files {
+  margin-top: 2rem;
+
+  &__files {
+    width: 35rem;
+    border-bottom: 1px solid var(--border-color-gray5);
+    padding-bottom: 0.5rem;
+
+    &__heading {
+      font-weight: normal;
+      font-size: 1.5rem;
+      color: var(--color-black);
+      margin-bottom: 1rem;
+    }
+
+    &__text {
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+      color: var(--text-color-gray);
+    }
+  }
+
+  &__notes {
+    padding-top: 1rem;
+
+    &__heading {
+      font-size: 0.9rem;
+      color: var(--text-color-gray);
+      font-weight: normal;
+      margin-bottom: 1rem;
+    }
+  }
+}
