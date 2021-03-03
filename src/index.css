@@ -49,6 +49,14 @@ body {
 
   --color-disabled: #999;
   --color-active: #f2f2f2;
+
+  /* Started Quotes coloring */
+  --quote-color-draft: #ec930f;
+  --quote-color-draft-completed: #5ba046;
+  --quote-color-sent: #469ada;
+  --quote-color-onHold: #df6de7;
+  --quote-color-rejected: #e3501c;
+  --quote-color-accepted: #70c234;
 }
 
 /* hide the arrows from the number input button */

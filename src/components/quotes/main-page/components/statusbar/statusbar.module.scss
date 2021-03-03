@@ -1,0 +1,74 @@
+.statusbar {
+  display: flex;
+  margin: 1rem auto 1rem 0;
+  align-items: flex-end;
+
+  &__status {
+    font-weight: 600;
+    font-size: 1rem;
+    margin: auto 0.2rem;
+    border-radius: 5px;
+    height: 4.5rem;
+    padding: 0.5rem;
+    border: 1.5px solid #fff;
+    cursor: pointer;
+
+    &:hover {
+      border-color: #eee;
+    }
+
+    &__number {
+      font-size: 2rem;
+      color: var(--color-black);
+      font-weight: 200;
+    }
+
+    &__name {
+      display: flex;
+      align-items: baseline;
+      &__color {
+        width: 0.7rem;
+        height: 0.7rem;
+        display: inline-block;
+        margin-right: 0.5rem;
+        transform: rotate(45deg);
+      }
+
+      &__name {
+        font-size: 0.9rem;
+      }
+    }
+    &All {
+      border: 1px solid #eee;
+      border-radius: 5px;
+      display: flex;
+      align-items: flex-end;
+      color: var(--color-red);
+      padding: 0.5rem 1rem;
+    }
+  }
+
+  &__draft {
+    background-color: var(--quote-color-draft);
+  }
+
+  &__draftCompleted {
+    background-color: var(--quote-color-draft-completed);
+  }
+
+  &__sent {
+    background-color: var(--quote-color-sent);
+  }
+
+  &__onHold {
+    background-color: var(--quote-color-onHold);
+  }
+
+  &__rejected {
+    background-color: var(--quote-color-rejected);
+  }
+
+  &__accepted {
+    background-color: var(--quote-color-accepted);
+  }
+}
