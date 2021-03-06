@@ -36,7 +36,6 @@ const ControleBar = (props) => {
           <Field
             name='searchKeyWord'
             component='input'
-            autoComplete
             type='text'
             name='q'
             className={Styles.bar__search__input}

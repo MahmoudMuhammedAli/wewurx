@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
+import FilterDropDown from "../filter-drop-down";
 import Styles from "./filterbar.module.scss";
 const FilterBar = (props) => {
+  const [isDropDownOpened, setIsDropDownOpened] = useState(true);
   return (
     <div className={`${Styles.filterbar}`}>
+      {isDropDownOpened ? (
+        <FilterDropDown setIsDropDownOpened={setIsDropDownOpened} />
+      ) : (
+        ""
+      )}
       <span
+        onClick={() => setIsDropDownOpened(true)}
         className={`${Styles.filterbar__item} ${Styles.filterbar__itemActive}`}
       >
         Filter{" "}
