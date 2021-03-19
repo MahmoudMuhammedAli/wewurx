@@ -50,7 +50,7 @@ const Bar = ({ setPage }) => {
             Due Date
           </button>
         </li>
-        <li
+        {/* <li
           className={Styles.bar__navs__navitem}
           onClick={(e) => handleNavLink(e, "asset")}
         >
@@ -63,7 +63,7 @@ const Bar = ({ setPage }) => {
           <button className={Styles.bar__navs__navitem__button}>
             Custom field
           </button>
-        </li>
+        </li> */}
       </ul>
     </aside>
   );

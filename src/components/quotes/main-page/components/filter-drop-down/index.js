@@ -28,6 +28,9 @@ const FilterDropDown = ({ setIsDropDownOpened }) => {
   // state for routing inside the dropdown
 
   const [page, setPage] = useState({ status: true });
+  const [shouldShowSavePresetInput, setShouldShowSavePresetInput] = useState(
+    false
+  );
 
   const renderComponent = () => {
     if (page.status) return <Status />;
@@ -65,6 +68,31 @@ const FilterDropDown = ({ setIsDropDownOpened }) => {
         <Bar setPage={setPage} />
         {renderComponent()}
       </main>
+      <footer className={Styles.dropdown__footer}>
+        <div className={Styles.dropdown__footer__savepreset}>
+          <button
+            className={Styles.dropdown__footer__savepreset__button}
+            onClick={() => setShouldShowSavePresetInput((status) => !status)}
+          >
+            Save as new Preset
+          </button>
+          <br />
+          <Field
+            name='newPreset'
+            component='input'
+            type='text'
+            className={Styles.dropdown__footer__savepreset__input}
+            style={{
+              display: `${shouldShowSavePresetInput ? "block" : "none"}`,
+            }}
+          />
+        </div>
+        <footer className={Styles.dropdown__footer__footer}>
+          <button>Cancel</button>
+          <button>Delete this preset</button>
+          <button>Apply</button>
+        </footer>
+      </footer>
     </div>
   );
 };

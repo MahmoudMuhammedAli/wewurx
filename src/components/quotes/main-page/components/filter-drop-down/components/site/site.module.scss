@@ -1,0 +1,17 @@
+.site {
+  &__sites {
+    margin-top: 1rem;
+    &__inputcontainer {
+      display: flex;
+      margin-bottom: 0.7rem;
+      padding-right: 0.5rem;
+      font-weight: bold;
+      color: var(--color-black);
+      font-size: 0.9rem;
+    }
+
+    &__inputwrapper {
+      width: 1.3rem;
+    }
+  }
+}

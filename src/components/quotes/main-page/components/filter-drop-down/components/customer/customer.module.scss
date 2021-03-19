@@ -1,0 +1,26 @@
+.customer {
+  &__searchinput {
+    &__inputcontainer {
+      border: 1px solid var(--border-color-gray);
+      border-radius: 3px;
+      padding: 0.2rem 0.2rem;
+    }
+  }
+
+  &__customers {
+    margin-top: 1rem;
+
+    &__inputcontainer {
+      display: flex;
+      margin-bottom: 0.7rem;
+      padding-right: 0.5rem;
+      font-weight: bold;
+      color: var(--color-black);
+      font-size: 0.9rem;
+    }
+
+    &__inputwrapper {
+      width: 1.3rem;
+    }
+  }
+}

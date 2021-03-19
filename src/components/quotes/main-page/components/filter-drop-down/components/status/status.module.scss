@@ -1,0 +1,35 @@
+.status {
+  &__heading {
+    font-weight: normal;
+    font-size: 0.9rem;
+    color: var(--color-black);
+    margin-bottom: 0.7rem;
+  }
+  &__checkboxrow {
+    margin-top: 0.7rem;
+  }
+  &__labelwrapper {
+    display: inline-block;
+    width: 1.5rem;
+    display: inline-flex;
+    justify-content: center;
+    label {
+      width: 0.6rem;
+      height: 0.6rem;
+      transform: rotate(45deg) translateY(-4px);
+      display: inline-block;
+      margin-right: 0.5rem;
+    }
+  }
+
+  &__inputwrapper {
+    display: inline-block;
+    color: var(--color-black);
+    font-weight: 500;
+
+    &__input {
+      margin-right: 0.5rem;
+      display: inline-block;
+    }
+  }
+}

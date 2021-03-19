@@ -1,0 +1,17 @@
+.duedate {
+  &__heading {
+    color: var(--text-color-gray);
+    font-size: 0.9rem;
+    font-weight: normal;
+    margin-bottom: 0.2rem;
+  }
+  &__select {
+    border: 1px solid var(--border-color-gray);
+    outline: none;
+    cursor: pointer;
+    padding: 0.2rem;
+    width: 12rem;
+    background-color: #fff;
+    border-radius: 3px;
+  }
+}
