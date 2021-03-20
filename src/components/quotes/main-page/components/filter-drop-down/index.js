@@ -88,7 +88,7 @@ const FilterDropDown = ({ setIsDropDownOpened }) => {
           />
         </div>
         <footer className={Styles.dropdown__footer__footer}>
-          <button>Cancel</button>
+          <button onClick={() => setIsDropDownOpened(false)}>Cancel</button>
           <button>Delete this preset</button>
           <button>Apply</button>
         </footer>

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import FilterDropDown from "../filter-drop-down";
 import Styles from "./filterbar.module.scss";
 const FilterBar = (props) => {
-  const [isDropDownOpened, setIsDropDownOpened] = useState(true);
+  const [isDropDownOpened, setIsDropDownOpened] = useState(false);
   return (
     <div className={`${Styles.filterbar}`}>
       {isDropDownOpened ? (
