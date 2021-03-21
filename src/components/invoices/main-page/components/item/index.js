@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 
 const Item = (props) => {
   return (
-    <div className='item'>
-      <div className='item__invoicenom'>
+    <div className='item item--invoice'>
+      <div className='item__nom'>
         <Field
           name='checkAll'
           component='input'

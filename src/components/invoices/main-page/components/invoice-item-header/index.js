@@ -4,8 +4,8 @@ import "../../../../shared/item.scss";
 
 const Header = (props) => {
   return (
-    <div className='itemHeader item'>
-      <div className='item__invoicenom'>
+    <div className='itemHeader item item--invoice'>
+      <div className='item__nom'>
         <Field
           name='checkAll'
           component='input'
@@ -49,7 +49,7 @@ const Header = (props) => {
       </div>
       <div className='item__reset'>
         <button className='item__buttonHeader  item__button'>
-          <span>Rest</span>
+          <span>Reset</span>
         </button>
       </div>
     </div>

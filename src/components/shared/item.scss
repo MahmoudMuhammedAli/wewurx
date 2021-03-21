@@ -1,11 +1,14 @@
 .item {
   padding: 0.5rem 1rem 0.5rem 0.5rem;
-  margin-left: 2rem;
   display: flex;
   align-items: center;
   border-bottom: 1px solid var(--border-color-gray);
   width: 60vw;
   min-width: 70rem;
+
+  &--invoice {
+    margin-left: 2rem;
+  }
   &:hover {
     background-color: #eee;
   }
@@ -44,10 +47,11 @@
     }
   }
 
-  &__invoicenom {
+  &__nom {
     width: 14rem;
     color: var(--color-black);
     font-weight: bold;
+    min-width: 11rem;
   }
 
   &__status {
@@ -65,19 +69,34 @@
   &__date {
     width: 10rem;
     color: var(--text-color-gray);
+    min-width: 8rem;
   }
 
   &__duedate {
     width: 10rem;
     color: var(--text-color-gray);
+    min-width: 8rem;
+  }
+
+  &__name {
+    width: 12rem;
+    color: var(--text-color-gray);
+    min-width: 10rem;
   }
 
   &__customer {
     width: 14rem;
     color: var(--text-color-gray);
+    min-width: 10rem;
+  }
+
+  &__address {
+    width: 14rem;
+    min-width: 10rem;
   }
   &__amount {
-    width: 14rem;
+    width: 7;
+    min-width: 7rem;
   }
   &__reset {
     width: 7rem;
