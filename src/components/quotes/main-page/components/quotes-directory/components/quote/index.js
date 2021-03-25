@@ -31,6 +31,10 @@ const QuoteItem = (props) => {
         <span>
           <div>Address</div>
           <div>Second Address</div>
+          <div>Second Address</div>
+          <div>Second Address</div>
+          <div>Second Address</div>
+          <div>Second Address</div>
         </span>
       </div>
       <div className='item__amount'>
