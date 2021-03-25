@@ -27,9 +27,7 @@ const SideBar = (props) => {
         Forms
       </Link>
       <button className='sidebar__buttonBottom sidebar__button'>Save</button>
-      <button className='sidebar__buttonBottom Styles.sidebar__button'>
-        Cancel
-      </button>
+      <button className='sidebar__buttonBottom sidebar__button'>Cancel</button>
     </aside>
   );
 };
