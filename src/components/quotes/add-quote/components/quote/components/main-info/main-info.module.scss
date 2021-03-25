@@ -1,0 +1,16 @@
+.maininfo {
+  border-bottom: 1px solid var(--border-color-gray);
+  padding: 1rem 0;
+
+  &__quotename {
+    width: 15rem;
+    margin: 1rem 0;
+    border: 1px solid var(--border-color-gray);
+    outline: none;
+    height: 2rem;
+    border-radius: 3px;
+    color: var(--color-black);
+    font-size: 1.3rem;
+    padding: 0.2rem 0.5rem;
+  }
+}

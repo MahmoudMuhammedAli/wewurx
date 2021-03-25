@@ -1,14 +1,15 @@
 import React from "react";
 import "../../../../../../shared/pages-sidebar/page-sidebar.scss";
+import Styles from "./sidebar.module.scss";
 
 import { Link } from "react-router-dom";
 
 const SideBar = (props) => {
   return (
-    <aside className='sidebar'>
+    <aside className={`${Styles.sidebar} sidebar`}>
       <Link to='/jobs' className='sidebar__link'>
         {" "}
-        <i className='fa fa-arrow-left fa-lg'></i>
+        <i className='fa fa-angle-left fa-lg'></i>
         <span>Job</span>
       </Link>
       <Link to='/jobs/add' className='sidebar__button'>

@@ -38,7 +38,7 @@ const CustomerSelector = (props) => {
             customer
           </span>
           <i className='fa fa-arrow-down fa-lg'></i>
-          <span className={Styles.addjob__customerselector__selected}>
+          <span className={Styles.addjob__customerseletor__selected}>
             wewurx
           </span>
           <div

@@ -1,0 +1,62 @@
+.select {
+  cursor: pointer;
+  display: inline-block;
+  margin: 1.5 0;
+  position: relative;
+  span {
+    display: inline-block;
+  }
+
+  &__selected {
+    display: flex;
+    align-items: center;
+    &__rhombus {
+      width: 0.6rem;
+      height: 0.6rem;
+      transform: rotate(45deg);
+      margin-right: 1rem;
+    }
+    &__text {
+      width: 9rem;
+      color: var(--text-color-gray);
+      font-weight: 400;
+    }
+
+    &__icon {
+      font-size: 0.8rem;
+      color: var(--text-color-gray);
+      margin-top: 0.5rem;
+    }
+  }
+
+  &__statusselect {
+    padding: 0.5rem;
+    transform: scaleY(0);
+    border: 1px solid var(--border-color-gray);
+    height: 0rem;
+    overflow: hidden;
+    display: block;
+    border-radius: 5px;
+    width: 12rem;
+    position: absolute;
+    left: -9px;
+    top: 1rem;
+    z-index: 1000;
+    background-color: #fff;
+    margin-top: 1rem;
+    transition: height 0.3s linear, border-width 0.3s linear,
+      transform 0.1s linear;
+    transform-origin: top;
+
+    &__item {
+      margin-bottom: 1rem;
+      cursor: pointer;
+    }
+    &Closed {
+      transform: scaleY(0);
+    }
+    &Opened {
+      transform: scaleY(1);
+    }
+  }
+}

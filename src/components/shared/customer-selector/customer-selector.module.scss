@@ -4,9 +4,9 @@
   margin-top: 3rem;
   &__customerseletor {
     border: 1.5px solid var(--border-color-gray);
-    border-radius: 5px;
+    border-radius: 3px;
     position: relative;
-    height: 1.5rem;
+    height: 1.7rem;
     width: 15rem;
     padding-left: 0.5rem;
     cursor: text;
@@ -14,6 +14,11 @@
 
     &__box {
       height: 1.5rem;
+    }
+
+    &__selected {
+      position: relative;
+      top: 2px;
     }
 
     i {
