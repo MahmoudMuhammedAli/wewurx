@@ -1,0 +1,63 @@
+.dateadded {
+  border-bottom: 1px solid var(--border-color-gray);
+  padding-bottom: 2rem;
+
+  &__heading {
+    color: var(--text-color-gray);
+    font-size: 0.9rem;
+    font-weight: normal;
+    margin-bottom: 0.3rem;
+  }
+
+  &__datepickercontainer {
+    position: relative;
+    display: inline-block;
+    i {
+      position: absolute;
+      right: 0.3rem;
+      top: 17%;
+      color: var(--text-color-gray);
+    }
+    > div {
+      > div {
+        border: none;
+        padding: 0;
+
+        input {
+          border: 1px solid var(--border-color-gray);
+          border-radius: 3px;
+          padding: 0.3rem 0.5rem;
+        }
+      }
+    }
+  }
+
+  &__label {
+    margin: 0 1rem;
+    color: var(--text-color-gray);
+    margin: 0 1rem;
+    font-size: 0.9rem;
+    font-style: italic;
+  }
+  &__select {
+    border: 1px solid var(--border-color-gray);
+    border-radius: 3px;
+    padding: 0.3rem 0.5rem;
+    outline: none;
+    cursor: pointer;
+    background-color: #fff;
+
+    &Container {
+      position: relative;
+      display: inline-block;
+
+      i {
+        position: absolute;
+        right: 0.2rem;
+        top: 0.4rem;
+        background-color: #fff;
+        color: var(--text-color-gray);
+      }
+    }
+  }
+}

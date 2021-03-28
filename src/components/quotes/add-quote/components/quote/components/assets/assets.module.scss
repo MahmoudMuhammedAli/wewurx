@@ -1,0 +1,10 @@
+.assets {
+  border-bottom: 1px solid var(--border-color-gray);
+  padding: 3rem 0;
+
+  &__label {
+    margin-right: 3rem;
+    color: var(--text-color-gray);
+    font-size: 0.9rem;
+  }
+}

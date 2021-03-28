@@ -1,0 +1,39 @@
+.description {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border-color-gray);
+
+  &__textarea {
+    outline: none;
+    border: 1px solid var(--border-color-gray);
+    padding: 0.5rem 0.7rem;
+    width: 402px;
+    border-radius: 4px;
+    margin: 0.3rem 0 0.5rem 0;
+    height: 3.7rem;
+    font-size: 1rem;
+  }
+
+  &__inputContainer {
+    display: block;
+  }
+
+  &__label {
+    font-size: 0.9rem;
+    font-weight: normal;
+    color: var(--text-color-gray);
+  }
+
+  &__duedate {
+    margin-top: 2rem;
+    > div {
+      margin-top: 0.3rem;
+      > div {
+        border: 1px solid var(--border-color-gray);
+        border-radius: 3px;
+        padding: 0.2rem 0.5rem;
+        height: 2rem;
+        vertical-align: middle;
+      }
+    }
+  }
+}

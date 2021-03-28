@@ -1,0 +1,46 @@
+.address {
+  border-bottom: 1px solid var(--border-color-gray);
+  padding: 1rem 0;
+
+  &__heading {
+    font-size: 0.9rem;
+    color: var(--text-color-gray);
+    font-weight: normal;
+  }
+
+  &__inputcontainer {
+    margin-bottom: 0.3rem;
+  }
+
+  &__input {
+    border: 1px solid var(--border-color-gray);
+    outline: none;
+    width: 15rem;
+    border-radius: 3px;
+    height: 1.7rem;
+    padding: 0.2rem 0.5rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-left: 1rem;
+
+    &Half {
+      width: 8rem;
+    }
+  }
+
+  &__label {
+    color: var(--color-red);
+    font-size: 0.9rem;
+    width: 7rem;
+    text-align: right;
+    display: inline-block;
+  }
+
+  &__choice {
+    display: inline-block;
+    font-weight: normal;
+    font-size: 0.8rem;
+    margin: 0.3rem 0;
+    color: var(--text-color-gray);
+  }
+}
