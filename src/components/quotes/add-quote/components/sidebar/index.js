@@ -4,7 +4,7 @@ import { Link, NavLink } from "react-router-dom";
 const SideBar = (props) => {
   return (
     <div className='sidebar'>
-      <Link to='jobs/quotes' className='sidebar__link'>
+      <Link to='/jobs/quotes' className='sidebar__link'>
         <i className='fa fa-angle-left '></i> Quotes
       </Link>
       <NavLink to='/jobs/quotes/add' className={`sidebar__button`}>

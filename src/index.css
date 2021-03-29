@@ -57,6 +57,8 @@ body {
   --quote-color-onHold: #df6de7;
   --quote-color-rejected: #e3501c;
   --quote-color-accepted: #70c234;
+  --quote-color-button-accepted: #7ac943;
+  --quote-color-button-rejected: #ff1d25;
 }
 
 /* hide the arrows from the number input button */

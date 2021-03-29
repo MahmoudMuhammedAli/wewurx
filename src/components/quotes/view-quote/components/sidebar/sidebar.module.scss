@@ -1,0 +1,33 @@
+.sidebar {
+  &__discoloredbutton {
+    background-color: #fff;
+
+    &Container {
+      border-top: 1px solid var(--border-color-gray);
+
+      padding: 0.5rem 0;
+    }
+
+    &Accepted {
+      color: var(--quote-color-button-accepted);
+      border: 1px solid var(--quote-color-button-accepted);
+    }
+
+    &Rejected {
+      color: var(--quote-color-button-rejected);
+      border: 1px solid var(--quote-color-button-rejected);
+
+      &__line {
+        display: block;
+        border-bottom: 1px solid #bcbcbc;
+        height: 2px;
+        width: 90%;
+        margin: 1rem auto 0;
+      }
+    }
+
+    &:hover {
+      background-color: #fff;
+    }
+  }
+}

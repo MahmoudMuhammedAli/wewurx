@@ -34,7 +34,7 @@
     padding: 12px 0 12px 10px;
     cursor: pointer;
     text-align: left;
-    font-size: 1rem;
+    font-size: 0.9rem;
     text-decoration: none;
 
     &:hover {
@@ -52,6 +52,14 @@
       font-size: 0.9rem;
       &:hover {
         background-color: #f46f22;
+      }
+
+      &Danger {
+        background-color: #e35024;
+
+        &:hover {
+          background-color: #e35024;
+        }
       }
     }
   }
