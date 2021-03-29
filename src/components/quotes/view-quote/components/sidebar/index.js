@@ -43,9 +43,13 @@ const SideBar = (props) => {
       <button className={`sidebar__button sidebar__buttonBottom`}>
         Send Quote
       </button>
-      <button className={`sidebar__button sidebar__buttonBottom`}>
+
+      <Link
+        to='/jobs/quotes/123id/edit'
+        className={`sidebar__button sidebar__buttonBottom`}
+      >
         Edit Quote
-      </button>
+      </Link>
       <button
         className={`sidebar__button sidebar__buttonBottom sidebar__button sidebar__buttonBottomDanger`}
       >
