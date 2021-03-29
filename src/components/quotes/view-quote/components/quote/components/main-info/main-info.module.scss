@@ -1,0 +1,67 @@
+.maininfo {
+  min-width: 35rem;
+  border-bottom: 1px solid var(--border-color-gray);
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+
+  &__details {
+    &__name {
+      font-size: 1.5rem;
+      color: var(--color-black);
+      font-weight: normal;
+    }
+
+    &__number {
+      margin: 0.8rem 0;
+      font-size: 0.9rem;
+      color: var(--color-black);
+
+      &__label {
+        color: var(--text-color-gray);
+        margin-right: 1rem;
+      }
+    }
+
+    &__contactcompany {
+      font-size: 0.9rem;
+      margin-bottom: 0.8rem;
+      font-weight: bold;
+      color: var(--color-black);
+    }
+
+    &__status {
+      font-size: 0.9rem;
+      color: var(--color-black);
+      &__color {
+        width: 0.7rem;
+        height: 0.7rem;
+        background-color: var(--quote-color-draft);
+        display: inline-block;
+        transform: rotate(45deg);
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
+  &__price {
+    width: 7.2rem;
+    height: 3.5rem;
+    color: #fff;
+    background-color: var(--text-color-gray);
+    font-size: 2.5rem;
+    position: relative;
+    padding: 0.5rem;
+
+    &__link {
+      position: absolute;
+      bottom: -1.5rem;
+      font-size: 1rem;
+      text-decoration: none;
+      color: var(--color-red);
+      font-weight: bold;
+      display: block;
+      margin-left: 1rem;
+    }
+  }
+}

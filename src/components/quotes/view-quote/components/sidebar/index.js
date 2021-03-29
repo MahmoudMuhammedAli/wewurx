@@ -2,23 +2,30 @@ import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import Styles from "./sidebar.module.scss";
 
-const SideBar = (props) => {
+const SideBar = ({ id }) => {
   return (
     <div className='sidebar'>
       <Link to='/jobs/quotes' className='sidebar__link'>
         <i className='fa fa-angle-left '></i> Quotes
       </Link>
-      <NavLink to='/jobs/quotes/123id/view' className={`sidebar__button`}>
+      <NavLink
+        activeClassName='sidebar__button--active'
+        to={`/jobs/quotes/${id}/view`}
+        className={`sidebar__button`}
+        exact
+      >
         Quote
       </NavLink>
       <NavLink
-        to='/jobs/quotes/123id/view/cost-items'
+        activeClassName='sidebar__button--active'
+        to={`/jobs/quotes/${id}/view/cost-items`}
         className={`sidebar__button`}
       >
         Cost Items
       </NavLink>
       <NavLink
-        to='/jobs/quotes/123id/view/files-and-notes'
+        activeClassName='sidebar__button--active'
+        to={`/jobs/quotes/${id}/view/files-and-notes`}
         className={`sidebar__button`}
       >
         Files And Notes
@@ -45,7 +52,7 @@ const SideBar = (props) => {
       </button>
 
       <Link
-        to='/jobs/quotes/123id/edit'
+        to={`/jobs/quotes/${id}/edit`}
         className={`sidebar__button sidebar__buttonBottom`}
       >
         Edit Quote
