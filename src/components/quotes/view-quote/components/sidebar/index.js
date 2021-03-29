@@ -8,17 +8,17 @@ const SideBar = (props) => {
       <Link to='/jobs/quotes' className='sidebar__link'>
         <i className='fa fa-angle-left '></i> Quotes
       </Link>
-      <NavLink to='/jobs/quotes/view/123id' className={`sidebar__button`}>
+      <NavLink to='/jobs/quotes/123id/view' className={`sidebar__button`}>
         Quote
       </NavLink>
       <NavLink
-        to='/jobs/quotes/view/123id/cost-items'
+        to='/jobs/quotes/123id/view/cost-items'
         className={`sidebar__button`}
       >
         Cost Items
       </NavLink>
       <NavLink
-        to='/jobs/quotes/view/123id/files-and-notes'
+        to='/jobs/quotes/123id/view/files-and-notes'
         className={`sidebar__button`}
       >
         Files And Notes
