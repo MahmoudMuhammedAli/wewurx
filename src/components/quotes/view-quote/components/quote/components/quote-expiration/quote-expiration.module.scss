@@ -1,0 +1,26 @@
+.timinginfo {
+  border-bottom: 1px solid var(--border-color-gray);
+  padding: 1.5rem 0;
+
+  &__label {
+    font-weight: normal;
+    font-size: 0.9rem;
+    color: var(--text-color-gray);
+    margin-bottom: 0.3rem;
+  }
+  &__date {
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: var(--color-black);
+    margin: 0.5rem 0;
+  }
+
+  &__duration {
+    margin: 1rem 0;
+    &__content {
+      font-weight: bold;
+      color: var(--color-black);
+      font-size: 0.9rem;
+    }
+  }
+}

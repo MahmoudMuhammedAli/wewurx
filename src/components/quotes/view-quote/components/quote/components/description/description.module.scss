@@ -1,0 +1,30 @@
+.description {
+  border-bottom: 1px solid var(--border-color-gray);
+  padding: 1rem 0;
+
+  &__heading {
+    font-weight: normal;
+    color: var(--color-black);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  &__content {
+    margin-bottom: 1rem;
+    color: var(--color-black);
+    font-size: 0.9rem;
+  }
+
+  &__duedatelabel {
+    margin-bottom: 0.3rem;
+    font-size: 0.8rem;
+    color: var(--text-color-gray);
+    font-weight: normal;
+  }
+
+  &__date {
+    color: var(--color-black);
+    font-size: 0.9rem;
+  }
+}
