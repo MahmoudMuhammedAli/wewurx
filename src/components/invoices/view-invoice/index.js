@@ -12,13 +12,20 @@ const InvoiceView = (props) => {
     <div className={Styles.view}>
       <SideBar id={id} />
       <Switch>
-        <Route path='/jobs/invoices/view/:id/' exact component={MainInfo} />
-        <Route path='/jobs/invoices/view/:id/costitems' component={CostItems} />
         <Route
-          path='/jobs/invoices/view/:id/filesandnotes'
+          path='/system/jobs/invoices/view/:id/'
+          exact
+          component={MainInfo}
+        />
+        <Route
+          path='/system/jobs/invoices/view/:id/costitems'
+          component={CostItems}
+        />
+        <Route
+          path='/system/jobs/invoices/view/:id/filesandnotes'
           component={FilesAndNotes}
         />
-        <Redirect to='/jobs/invoices/view/id' />
+        <Redirect to='/system/jobs/invoices/view/id' />
       </Switch>
     </div>
   );

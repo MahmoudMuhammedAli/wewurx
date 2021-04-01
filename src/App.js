@@ -8,30 +8,23 @@ import {
 import "./App.scss";
 import "./items.scss";
 import "font-awesome/css/font-awesome.min.css";
-import Jobs from "./pages/jobs";
-import Contacts from "./pages/contacts";
-import Settings from "./pages/settings";
-import Documents from "./pages/documents";
-import SideBar from "./components/shared/sidebar";
-import InfoBar from "./components/shared/infobar";
 
-import TermsAndConditions from "./pages/consitionsandterms";
+import LandingPage from "./pages/landing-page";
+import System from "./pages/system";
 
 function App() {
   return (
-    <div className='App'>
+    <div className=''>
       <Router>
-        <SideBar />
-        <InfoBar />
         <Switch>
-          <Route path='/jobs' component={Jobs} />
-          <Route path='/contacts' component={Contacts} />
-          <Route path='/documents' component={Documents} />
-          <Route path='/settings' component={Settings} />
-          <Route path='/conditionsandterms' component={TermsAndConditions} />
-          <Redirect to='/jobs' />
+          <Route path='/' exact component={LandingPage} />
+          <Route path='/system' component={System} />
         </Switch>
       </Router>
+
+      {/* <Router>
+    
+      </Router> */}
     </div>
   );
 }

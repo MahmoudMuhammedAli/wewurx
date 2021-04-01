@@ -29,7 +29,7 @@ const MemberInfo = (props) => {
         React, Typescript, CSS, Node,MongoDB
       </div>
       <Link
-        to='/settings/staffmembers/managementuser/1p09183er'
+        to='/system/settings/staffmembers/managementuser/1p09183er'
         className={Styles.bar__button}
       >
         View

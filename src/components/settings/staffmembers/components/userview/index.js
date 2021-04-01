@@ -27,7 +27,7 @@ const UserView = (props) => {
       <div>
         <Switch>
           <Route
-            path='/settings/staffmembers/managementuser/:id/basicinfo'
+            path='/system/settings/staffmembers/managementuser/:id/basicinfo'
             exact
           >
             <h4 className={Styles.userview__heading}>Staff members</h4>
@@ -56,15 +56,15 @@ const UserView = (props) => {
             </div>
           </Route>{" "}
           <Route
-            path='/settings/staffmembers/managementuser/:id/notes'
+            path='/system/settings/staffmembers/managementuser/:id/notes'
             component={FilesAndNotes}
           />
           <Route
-            path='/settings/staffmembers/managementuser/:id/workinghours'
+            path='/system/settings/staffmembers/managementuser/:id/workinghours'
             component={WorkingHours}
           />
           <Redirect
-            to={`/settings/staffmembers/managementuser/${props.match.params.id}/basicinfo`}
+            to={`/system/settings/staffmembers/managementuser/${props.match.params.id}/basicinfo`}
           />
         </Switch>
       </div>

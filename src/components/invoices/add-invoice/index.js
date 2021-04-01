@@ -12,10 +12,13 @@ const AddInvoice = (props) => {
       <SideBar />
       <div className={Styles.addinvoice__components}>
         <Switch>
-          <Route path='/jobs/invoices/add' exact component={MainInfo} />
-          <Route path='/jobs/invoices/add/costitems' component={CostItems} />
+          <Route path='/system/jobs/invoices/add' exact component={MainInfo} />
           <Route
-            path='/jobs/invoices/add/filesandnotes'
+            path='/system/jobs/invoices/add/costitems'
+            component={CostItems}
+          />
+          <Route
+            path='/system/jobs/invoices/add/filesandnotes'
             component={FilesAndNotes}
           />
         </Switch>

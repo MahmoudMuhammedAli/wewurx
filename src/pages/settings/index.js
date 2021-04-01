@@ -17,31 +17,37 @@ const Settings = (props) => {
     <div className={`${Styles.settings}`}>
       <TopBar />
       <Switch>
-        <Route path='/settings/company'>
+        <Route path='/system/settings/company'>
           <SideBar />
           <Switch>
             <Route
-              path='/settings/company/companyinfo'
+              path='/system/settings/company/companyinfo'
               exact
               component={CompanyInfo}
             />
-            <Route path='/settings/company/billing' component={Billing} />
             <Route
-              path='/settings/company/quotesandinvoices'
+              path='/system/settings/company/billing'
+              component={Billing}
+            />
+            <Route
+              path='/system/settings/company/quotesandinvoices'
               component={QuotesAndInvoices}
             />
             <Route
-              path='/settings/company/subscription'
+              path='/system/settings/company/subscription'
               component={Subscription}
             />
-            <Redirect to='/settings/company/companyinfo' />
+            <Redirect to='/system/settings/company/companyinfo' />
           </Switch>
         </Route>
-        <Route path='/settings/staffmembers' component={StaffMembers} />
-        <Route path='/settings/jobtemplates' component={JobTemplates} />
-        <Route path='/settings/connectcalender' component={ConnectCalender} />
-        <Route path='/settings/integrations' component={Integrations} />
-        <Redirect to='/settings/company' />
+        <Route path='/system/settings/staffmembers' component={StaffMembers} />
+        <Route path='/system/settings/jobtemplates' component={JobTemplates} />
+        <Route
+          path='/system/settings/connectcalender'
+          component={ConnectCalender}
+        />
+        <Route path='/system/settings/integrations' component={Integrations} />
+        <Redirect to='/system/settings/company' />
       </Switch>
     </div>
   );

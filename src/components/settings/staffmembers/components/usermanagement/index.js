@@ -31,10 +31,6 @@ const UserManagement = (props) => {
       <MemberInfo />
       <MemberInfo />
       <MemberInfo />
-      <MemberInfo />
-      <MemberInfo />
-      <MemberInfo />
-      <MemberInfo />
     </div>
   );
 };

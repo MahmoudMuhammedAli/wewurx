@@ -40,7 +40,7 @@ const QuoteItem = (props) => {
       </div>
       <div className='item__viewbutton'>
         <Link
-          to='/jobs/quotes/123id/view'
+          to='/system/jobs/quotes/123id/view'
           className='item__button item__viewbutton__button'
         >
           view

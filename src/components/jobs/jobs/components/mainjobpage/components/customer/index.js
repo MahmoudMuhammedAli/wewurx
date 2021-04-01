@@ -45,7 +45,10 @@ const Customer = ({
       <div className={Styles.customer__schedule}>{scheduled}</div>
       <div className={Styles.customer__assign}>{assignedTo}</div>
 
-      <Link to='/jobs/view/230238982' className={Styles.customer__button}>
+      <Link
+        to='/system/jobs/view/230238982'
+        className={Styles.customer__button}
+      >
         View
       </Link>
     </div>

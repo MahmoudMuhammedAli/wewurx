@@ -5,12 +5,12 @@ import Styles from "./sidebar.module.scss";
 const SideBar = ({ id }) => {
   return (
     <div className='sidebar'>
-      <Link to='/jobs/quotes' className='sidebar__link'>
+      <Link to='/system/jobs/quotes' className='sidebar__link'>
         <i className='fa fa-angle-left '></i> Quotes
       </Link>
       <NavLink
         activeClassName='sidebar__button--active'
-        to={`/jobs/quotes/${id}/view`}
+        to={`/system/jobs/quotes/${id}/view`}
         className={`sidebar__button`}
         exact
       >
@@ -18,14 +18,14 @@ const SideBar = ({ id }) => {
       </NavLink>
       <NavLink
         activeClassName='sidebar__button--active'
-        to={`/jobs/quotes/${id}/view/cost-items`}
+        to={`/system/jobs/quotes/${id}/view/cost-items`}
         className={`sidebar__button`}
       >
         Cost Items
       </NavLink>
       <NavLink
         activeClassName='sidebar__button--active'
-        to={`/jobs/quotes/${id}/view/files-and-notes`}
+        to={`/system/jobs/quotes/${id}/view/files-and-notes`}
         className={`sidebar__button`}
       >
         Files And Notes
@@ -52,7 +52,7 @@ const SideBar = ({ id }) => {
       </button>
 
       <Link
-        to={`/jobs/quotes/${id}/edit`}
+        to={`/system/jobs/quotes/${id}/edit`}
         className={`sidebar__button sidebar__buttonBottom`}
       >
         Edit Quote

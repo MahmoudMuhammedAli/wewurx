@@ -17,4 +17,20 @@
     justify-content: flex-end;
     align-items: center;
   }
+
+  &__auth {
+    margin-left: 1rem;
+
+    &__btn {
+      background-color: transparent;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    &__signupbtn {
+      margin-right: 0.5rem;
+    }
+  }
 }

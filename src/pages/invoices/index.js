@@ -9,10 +9,10 @@ const Invoices = (props) => {
   return (
     <div className={`${Styles.invoices} page`}>
       <Switch>
-        <Route path='/jobs/invoices' component={MainPage} exact />
-        <Route path='/jobs/invoices/add' component={AddInvoice} />
-        <Route path='/jobs/invoices/view/:id' component={InvoiceView} />
-        <Redirect to='/jobs/invoices' />
+        <Route path='/system/jobs/invoices' component={MainPage} exact />
+        <Route path='/system/jobs/invoices/add' component={AddInvoice} />
+        <Route path='/system/jobs/invoices/view/:id' component={InvoiceView} />
+        <Redirect to='/system/jobs/invoices' />
       </Switch>
     </div>
   );

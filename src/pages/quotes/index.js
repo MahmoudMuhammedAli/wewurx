@@ -10,12 +10,11 @@ const Quotes = (props) => {
   return (
     <div className={`${Styles.quotes} page`}>
       <Switch>
-        <Route path='/jobs/quotes' exact component={MainPage} />
-        <Route path='/jobs/quotes/add' component={AddQuote} />
-        <Route path='/jobs/quotes/:id/view' component={ViewQuote} />
-        <Route path='/jobs/quotes/:id/edit' component={EditQuote} />
-
-        <Redirect to='/jobs/quotes' />
+        <Route path='/system/jobs/quotes' exact component={MainPage} />
+        <Route path='/system/jobs/quotes/add' component={AddQuote} />
+        <Route path='/system/jobs/quotes/:id/view' component={ViewQuote} />
+        <Route path='/system/jobs/quotes/:id/edit' component={EditQuote} />
+        <Redirect to='/system/jobs/quotes' />
       </Switch>
     </div>
   );

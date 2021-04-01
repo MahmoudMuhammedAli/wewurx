@@ -1,0 +1,23 @@
+.system {
+  display: grid;
+  grid-template-columns: 6rem 93%;
+  grid-template-rows: 3.5rem 97%;
+}
+
+.searchinputwrapper {
+  border: 1px solid var(--border-color-gray);
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+
+  &__input {
+    border: none;
+    outline: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+  }
+
+  i {
+    color: var(--color-red);
+    cursor: pointer;
+  }
+}

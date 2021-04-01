@@ -14,13 +14,13 @@ const SideBar = (props) => {
   console.log(currentPage, "from current page");
   return (
     <aside className={Styles.sidebar}>
-      <Link to='/jobs/invoices' className={`${Styles.sidebar__link}`}>
+      <Link to='/system/jobs/invoices' className={`${Styles.sidebar__link}`}>
         {" "}
         <i className='fa fa-arrow-circle-o-left fa-lg'></i>
         <span>Invoices</span>
       </Link>
       <Link
-        to={`/jobs/invoices/view/${id}/`}
+        to={`/system/jobs/invoices/view/${id}/`}
         className={`${Styles.sidebar__button}`}
         activeClassName={Styles.sidebar__buttonActive}
         exact
@@ -28,14 +28,14 @@ const SideBar = (props) => {
         Invoices
       </Link>
       <Link
-        to={`/jobs/invoices/view/${id}/costitems`}
+        to={`/system/jobs/invoices/view/${id}/costitems`}
         className={`${Styles.sidebar__button}`}
         activeClassName={Styles.sidebar__buttonActive}
       >
         Cost items &amp; Payments
       </Link>
       <Link
-        to={`/jobs/invoices/view/${id}/filesandnotes`}
+        to={`/system/jobs/invoices/view/${id}/filesandnotes`}
         className={`${Styles.sidebar__button}`}
         activeClassName={Styles.sidebar__buttonActive}
       >

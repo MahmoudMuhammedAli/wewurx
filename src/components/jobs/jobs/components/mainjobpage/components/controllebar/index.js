@@ -54,7 +54,7 @@ const ControllBar = (props) => {
         </button>
         <Link
           className={`${Styles.controlbar__actions__addjob} ${Styles.controlbar__actions__button}`}
-          to='/jobs/add'
+          to='/system/jobs/add'
         >
           <i className='fa fa-plus fa-lg'></i> Add Job
         </Link>

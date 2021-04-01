@@ -10,19 +10,19 @@ const StaffMembers = (props) => {
     <div className={Styles.staffmembers}>
       <Switch>
         <Route
-          path='/settings/staffmembers/usermanagement'
+          path='/system/settings/staffmembers/usermanagement'
           component={UserManagement}
         />
         <Route
-          path='/settings/staffmembers/managementuser'
+          path='/system/settings/staffmembers/managementuser'
           exact
           component={ManagementUser}
         />
         <Route
-          path='/settings/staffmembers/managementuser/:id'
+          path='/system/settings/staffmembers/managementuser/:id'
           component={UserView}
         />
-        <Redirect to='/settings/staffmembers/usermanagement' />
+        <Redirect to='/system/settings/staffmembers/usermanagement' />
       </Switch>
     </div>
   );

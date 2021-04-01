@@ -16,16 +16,16 @@ const ViewQuote = ({
       {" "}
       <SideBar id={id} />
       <Switch>
-        <Route path={`/jobs/quotes/:id/view/`} exact component={Quote} />
+        <Route path={`/system/jobs/quotes/:id/view/`} exact component={Quote} />
         <Route
-          path={`/jobs/quotes/:id/view/cost-items`}
+          path={`/system/jobs/quotes/:id/view/cost-items`}
           component={CostItems}
         />
         <Route
-          path={`/jobs/quotes/:id/view/files-and-notes`}
+          path={`/system/jobs/quotes/:id/view/files-and-notes`}
           component={FilesAndNotes}
         />
-        <Redirect to={`/jobs/quotes/:id/view/`} />
+        <Redirect to={`/system/jobs/quotes/:id/view/`} />
       </Switch>
     </div>
   );

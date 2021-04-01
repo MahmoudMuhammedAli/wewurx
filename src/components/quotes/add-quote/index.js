@@ -10,10 +10,13 @@ const AddQuote = (props) => {
   return (
     <div className={Styles.addquote}>
       <SideBar />
-      <Route path='/jobs/quotes/add' exact component={Quote} />
-      <Route path='/jobs/quotes/add/costitems' component={CostItems} />
-      <Route path='/jobs/quotes/add/filesandnotes' component={FilesAndNotes} />
-      <Redirect to='/jobs/quotes/add' />
+      <Route path='/system/jobs/quotes/add' exact component={Quote} />
+      <Route path='/system/jobs/quotes/add/costitems' component={CostItems} />
+      <Route
+        path='/system/jobs/quotes/add/filesandnotes'
+        component={FilesAndNotes}
+      />
+      <Redirect to='/system/jobs/quotes/add' />
     </div>
   );
 };

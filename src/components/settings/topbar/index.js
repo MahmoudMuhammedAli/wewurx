@@ -8,35 +8,35 @@ const TopBar = (props) => {
       <NavLink
         activeClassName={`${Styles.topbar__activelink} `}
         className={`${Styles.topbar__link}`}
-        to='/settings/company'
+        to='/system/settings/company'
       >
         Company
       </NavLink>
       <NavLink
         activeClassName={`${Styles.topbar__activelink} `}
         className={`${Styles.topbar__link}`}
-        to='/settings/staffmembers'
+        to='/system/settings/staffmembers'
       >
         Staff Members
       </NavLink>
       <NavLink
         activeClassName={`${Styles.topbar__activelink} `}
         className={`${Styles.topbar__link}`}
-        to='/settings/jobtemplates'
+        to='/system/settings/jobtemplates'
       >
         Work
       </NavLink>
       <NavLink
         activeClassName={`${Styles.topbar__activelink} `}
         className={`${Styles.topbar__link}`}
-        to='/settings/connectcalender'
+        to='/system/settings/connectcalender'
       >
         Connect calender
       </NavLink>
       <NavLink
         activeClassName={`${Styles.topbar__activelink} `}
         className={`${Styles.topbar__link}`}
-        to='/settings/integrations'
+        to='/system/settings/integrations'
       >
         Integrations
       </NavLink>

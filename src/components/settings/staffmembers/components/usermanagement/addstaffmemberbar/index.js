@@ -8,7 +8,7 @@ const AddStaffMemberBar = (props) => {
     <div className={Styles.bar}>
       <Link
         className={Styles.bar__addstaffbutton}
-        to='/settings/staffmembers/managementuser'
+        to='/system/settings/staffmembers/managementuser'
       >
         {" "}
         <i className='fa fa-plus'></i> Add staff member

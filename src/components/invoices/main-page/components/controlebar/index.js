@@ -25,7 +25,7 @@ const ControleBar = (props) => {
       <div className={Styles.bar__left}>
         <Field name='action' component={renderSelector(actions)} />
         <button className={Styles.bar__apply}>Apply</button>
-        <Link to='/jobs/invoices/add' className={Styles.bar__addinvoice}>
+        <Link to='/system/jobs/invoices/add' className={Styles.bar__addinvoice}>
           <i className='fa fa-plus'></i> Add Invoice
         </Link>
       </div>

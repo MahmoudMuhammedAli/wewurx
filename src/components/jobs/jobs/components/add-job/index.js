@@ -13,12 +13,15 @@ const SecondaryJobPage = (props) => {
     <div className={Styles.secondaryJobPage}>
       <SideBar />
       <Switch>
-        <Route path='/jobs/add/costitems' component={CostItems} />
-        <Route path='/jobs/add/jobprojects' component={JobProjects} />
-        <Route path='/jobs/add/filesandnotes' component={FilesAndNotes} />
-        <Route path='/jobs/add/forms' component={Forms} />
-        <Route path='/jobs/add/' exact component={AddJob} />
-        <Redirect to='/jobs/add/' />
+        <Route path='/system/jobs/add/costitems' component={CostItems} />
+        <Route path='/system/jobs/add/jobprojects' component={JobProjects} />
+        <Route
+          path='/system/jobs/add/filesandnotes'
+          component={FilesAndNotes}
+        />
+        <Route path='/system/jobs/add/forms' component={Forms} />
+        <Route path='/system/jobs/add/' exact component={AddJob} />
+        <Redirect to='/system/jobs/add/' />
       </Switch>
     </div>
   );

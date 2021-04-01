@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import AddContact from "../../components/contacts/addcontact";
 import MainContact from "../../components/contacts/maincontact";
 import ViewContact from "../../components/contacts/viewcontact";
-import { Link } from "react-router-dom";
+import { Link, Switch } from "react-router-dom";
 import Styles from "./contacts.module.scss";
 import EditContact from "../../components/contacts/editcontact";
 
@@ -40,7 +40,7 @@ const Contacts = (props) => {
     <div className={`${Styles.contacts} `}>
       <div className={`${Styles.bar}`}>
         <Link
-          to='/contacts'
+          to='system/contacts'
           onClick={hanldeLinkClick}
           className={`${Styles.bar__link}`}
         >

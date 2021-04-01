@@ -15,13 +15,22 @@ const JobViewPage = (props) => {
       <SideBar />
 
       <Switch>
-        <Route path='/jobs/view/:id' exact component={JobView} />
-        <Route path='/jobs/view/:id/costitems' component={CostItems} />
-        <Route path='/jobs/view/:id/jobprojects' component={JobProjects} />
-        <Route path='/jobs/view/:id/filesandnotes' component={FilesAndNotes} />
-        <Route path='/jobs/view/:id/forms' component={Forms} />
-        <Route path='/jobs/view/:id/jobactivity' component={JobActivity} />
-        <Redirect to='/jobs/view/:id' />
+        <Route path='/system/jobs/view/:id' exact component={JobView} />
+        <Route path='/system/jobs/view/:id/costitems' component={CostItems} />
+        <Route
+          path='/system/jobs/view/:id/jobprojects'
+          component={JobProjects}
+        />
+        <Route
+          path='/system/jobs/view/:id/filesandnotes'
+          component={FilesAndNotes}
+        />
+        <Route path='/system/jobs/view/:id/forms' component={Forms} />
+        <Route
+          path='/system/jobs/view/:id/jobactivity'
+          component={JobActivity}
+        />
+        <Redirect to='/system/jobs/view/:id' />
       </Switch>
     </div>
   );

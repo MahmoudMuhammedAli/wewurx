@@ -36,7 +36,7 @@ const Item = (props) => {
       </div>
       <div className='item__viewbutton'>
         <Link
-          to='invoices/view/id'
+          to='/system/jobs/invoices/view/id'
           className='item__button item__viewbutton__button'
         >
           view

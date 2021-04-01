@@ -5,27 +5,33 @@ import { NavLink as Link } from "react-router-dom";
 const SideBar = (props) => {
   return (
     <div className={`sidebar ${CustomStyles.sidebar}`}>
-      <Link to='/' className={`sidebar__link ${CustomStyles.sidebar__link}`}>
+      <Link
+        to='/system'
+        className={`sidebar__link ${CustomStyles.sidebar__link}`}
+      >
         {" "}
         <i className='fa fa-angle-left fa-lg'></i>
         <span>Job</span>
       </Link>
-      <Link className={`sidebar__button`} to='/jobs/view/id/'>
+      <Link className={`sidebar__button`} to='/system/jobs/view/id/'>
         Job
       </Link>
-      <Link to='/jobs/view/id/costitems' className={`sidebar__button`}>
+      <Link to='/system/jobs/view/id/costitems' className={`sidebar__button`}>
         Cost Items
       </Link>
-      <Link to='/jobs/view/id/projectjobs' className={`sidebar__button`}>
+      <Link to='/system/jobs/view/id/projectjobs' className={`sidebar__button`}>
         Project Jobs
       </Link>
-      <Link className={`sidebar__button`} to='/jobs/view/id/forms'>
+      <Link className={`sidebar__button`} to='/system/jobs/view/id/forms'>
         Forms
       </Link>
-      <Link className={`sidebar__button`} to='/jobs/view/id/filesandnotes'>
+      <Link
+        className={`sidebar__button`}
+        to='/system/jobs/view/id/filesandnotes'
+      >
         Files and notes
       </Link>
-      <Link className={`sidebar__button`} to='/jobs/view/id/jobActivity'>
+      <Link className={`sidebar__button`} to='/system/jobs/view/id/jobActivity'>
         Job activity
       </Link>
       <Link

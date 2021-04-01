@@ -4,17 +4,20 @@ import { Link, NavLink } from "react-router-dom";
 const SideBar = (props) => {
   return (
     <div className='sidebar'>
-      <Link to='/jobs/quotes' className='sidebar__link'>
+      <Link to='/system/jobs/quotes' className='sidebar__link'>
         <i className='fa fa-angle-left '></i> Quotes
       </Link>
-      <NavLink to='/jobs/quotes/add' className={`sidebar__button`}>
+      <NavLink to='/system/jobs/quotes/add' className={`sidebar__button`}>
         Quote
       </NavLink>
-      <NavLink to='/jobs/quotes/add/costitems' className={`sidebar__button`}>
+      <NavLink
+        to='/system/jobs/quotes/add/costitems'
+        className={`sidebar__button`}
+      >
         Cost Items
       </NavLink>
       <NavLink
-        to='/jobs/quotes/add/filesandnotes'
+        to='/system/jobs/quotes/add/filesandnotes'
         className={`sidebar__button`}
       >
         Files And Notes

@@ -9,19 +9,19 @@ const SideBar = ({ staffMemberID, location }) => {
       <ul className={Styles.sidebar__links}>
         <li className={Styles.sidebar__links__link}>
           <NavLink
-            to={`/settings/staffmembers/managementuser/${staffMemberID}/basicinfo`}
+            to={`/system/settings/staffmembers/managementuser/${staffMemberID}/basicinfo`}
             activeClassName={Styles.sidebar__active}
           >
             Details
           </NavLink>
           <NavLink
-            to={`/settings/staffmembers/managementuser/${staffMemberID}/notes`}
+            to={`/system/settings/staffmembers/managementuser/${staffMemberID}/notes`}
             activeClassName={Styles.sidebar__active}
           >
             Files and notes
           </NavLink>
           <NavLink
-            to={`/settings/staffmembers/managementuser/${staffMemberID}/workinghours`}
+            to={`/system/settings/staffmembers/managementuser/${staffMemberID}/workinghours`}
             activeClassName={Styles.sidebar__active}
           >
             Working hours
@@ -29,7 +29,7 @@ const SideBar = ({ staffMemberID, location }) => {
         </li>
       </ul>
       {location.pathname ===
-      `/settings/staffmembers/managementuser/${staffMemberID}/basicinfo` ? (
+      `/system/settings/staffmembers/managementuser/${staffMemberID}/basicinfo` ? (
         <>
           {" "}
           <button className={Styles.sidebar__button}> Save</button>
@@ -39,7 +39,7 @@ const SideBar = ({ staffMemberID, location }) => {
         ""
       )}
       {location.pathname ===
-      `/settings/staffmembers/managementuser/${staffMemberID}/notes` ? (
+      `/system/settings/staffmembers/managementuser/${staffMemberID}/notes` ? (
         <button className={Styles.sidebar__button}>
           {" "}
           <i className='fa fa-plus '></i>Add Files

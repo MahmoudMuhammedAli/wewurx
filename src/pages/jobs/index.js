@@ -14,14 +14,14 @@ const Jobs = (props) => {
     <div className={`${Styles.jobs}`}>
       <div className={`${Styles.bar}`}>
         <Link
-          to='/jobs/quotes'
+          to='/system/jobs/quotes'
           className={`${Styles.bar__link}`}
           activeClassName={Styles.bar__linkActive}
         >
           Quotes
         </Link>
         <Link
-          to='/jobs'
+          to='/system/jobs'
           className={`${Styles.bar__link} ${Styles.bar__link}`}
           activeClassName={Styles.bar__linkActive}
           exact
@@ -29,27 +29,28 @@ const Jobs = (props) => {
           Jobs
         </Link>
         <Link
-          to='/jobs/invoices'
+          to='/system/jobs/invoices'
           className={`${Styles.bar__link}`}
           activeClassName={Styles.bar__linkActive}
         >
           Invoices
         </Link>
         <Link
-          to='/jobs/purchases'
+          to='/system/jobs/purchases'
           className={`${Styles.bar__link}`}
           activeClassName={Styles.bar__linkActive}
         >
           Purchases
         </Link>
       </div>
-      <Switch></Switch>
-      <JobsComponent />
-      <Route path='/jobs/quotes' component={Quotes} />
-      <Route path='/jobs/invoices' component={Invoices} />
-      <Route path='/jobs/purchases' component={Purchases} />
-      <Route path='/jobs/view/:id' component={ViewJob} />
-      <Redirect to='/jobs' />
+      <Switch>
+        <Route path='/system/jobs/quotes' component={Quotes} />
+        <Route path='/system/jobs/invoices' component={Invoices} />
+        <Route path='/system/jobs/purchases' component={Purchases} />
+        <Route path='/system/jobs/view/:id' component={ViewJob} />
+        <Route path='/system/jobs/' component={JobsComponent} />
+        <Redirect to='/system/jobs' />
+      </Switch>
     </div>
   );
 };

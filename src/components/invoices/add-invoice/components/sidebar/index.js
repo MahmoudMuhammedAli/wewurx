@@ -6,13 +6,13 @@ import { NavLink as Link } from "react-router-dom";
 const SideBar = (props) => {
   return (
     <aside className={Styles.sidebar}>
-      <Link to='/jobs/invoices' className={`${Styles.sidebar__link}`}>
+      <Link to='/system/jobs/invoices' className={`${Styles.sidebar__link}`}>
         {" "}
         <i className='fa fa-arrow-circle-o-left fa-lg'></i>
         <span>Invoices</span>
       </Link>
       <Link
-        to='/jobs/invoices/add'
+        to='/system/jobs/invoices/add'
         className={`${Styles.sidebar__button}`}
         activeClassName={Styles.sidebar__buttonActive}
         exact
@@ -20,14 +20,14 @@ const SideBar = (props) => {
         Invoices
       </Link>
       <Link
-        to='/jobs/invoices/add/costitems'
+        to='/system/jobs/invoices/add/costitems'
         className={`${Styles.sidebar__button}`}
         activeClassName={Styles.sidebar__buttonActive}
       >
         Cost items &amp; Payments
       </Link>
       <Link
-        to='/jobs/invoices/add/filesandnotes'
+        to='/system/jobs/invoices/add/filesandnotes'
         className={`${Styles.sidebar__button}`}
         activeClassName={Styles.sidebar__buttonActive}
       >
