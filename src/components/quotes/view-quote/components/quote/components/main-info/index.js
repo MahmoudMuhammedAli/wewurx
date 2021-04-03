@@ -1,21 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import QuoteMainInfo from "../../../../../../shared/quote-maininfo";
 import Styles from "./main-info.module.scss";
 
 const MainInfo = ({ id }) => {
   return (
     <div className={Styles.maininfo}>
       <div className={Styles.maininfo__details}>
-        <h2 className={Styles.maininfo__details__name}>quote name</h2>
-        <p className={Styles.maininfo__details__number}>
-          <span className={Styles.maininfo__details__number__label}>
-            Quote Number
-          </span>
-          SCO3
-        </p>
-        <p className={Styles.maininfo__details__contactcompany}>
-          Contact Company name
-        </p>
+        <QuoteMainInfo />
         <p className={Styles.maininfo__details__status}>
           <span className={Styles.maininfo__details__status__color}></span>Draft
         </p>
