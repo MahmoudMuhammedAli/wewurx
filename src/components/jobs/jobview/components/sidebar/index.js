@@ -36,23 +36,25 @@ const SideBar = (props) => {
       </Link>
       <Link
         to='/invoices'
-        className={`sidebar__buttonBottom ${CustomStyles.sidebar__link}`}
+        className={`sidebar__button--bottom ${CustomStyles.sidebar__link}`}
       >
         Go to Invoices
       </Link>
       <Link
-        className={`sidebar__buttonBottom ${CustomStyles.sidebar__link}`}
+        className={`sidebar__button--bottom ${CustomStyles.sidebar__link}`}
         to='/job/view/id'
       >
         Job Report
       </Link>
       <Link
-        className={`sidebar__buttonBottom ${CustomStyles.sidebar__link}`}
+        className={`sidebar__button--bottom ${CustomStyles.sidebar__link}`}
         to='/job/view/id'
       >
         Convert to Quote
       </Link>
-      <button className={`sidebar__buttonBottom ${CustomStyles.sidebar__link}`}>
+      <button
+        className={`sidebar__button--bottom ${CustomStyles.sidebar__link}`}
+      >
         Delete
       </button>
     </div>

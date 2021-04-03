@@ -19,6 +19,7 @@ const AddFiles = (props) => {
 
   const { invoiceInputFilesValues } = state.sendInvoiceFiles;
 
+  console.log(invoiceInputFilesValues, "from invoice input files values");
   const readFile = (event, name) => {
     var reader = new FileReader();
 

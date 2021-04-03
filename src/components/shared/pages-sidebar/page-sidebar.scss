@@ -45,7 +45,7 @@
       background-color: #f2f2f2;
     }
 
-    &Bottom {
+    &--bottom {
       border: none;
       background-color: #f46f22;
       border-radius: 5px;
@@ -59,13 +59,24 @@
       &:hover {
         background-color: #f46f22;
       }
+    }
 
-      &Danger {
+    &--danger {
+      background-color: #e35024;
+
+      &:hover {
         background-color: #e35024;
+      }
+    }
+    &--withplusicon {
+      position: relative;
 
-        &:hover {
-          background-color: #e35024;
-        }
+      i {
+        position: absolute;
+        left: 0.5rem;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 2rem;
       }
     }
   }

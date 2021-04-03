@@ -27,8 +27,10 @@ const SideBar = (props) => {
       <Link to='/system/jobs/add/forms' className='sidebar__button'>
         Forms
       </Link>
-      <button className='sidebar__buttonBottom sidebar__button'>Save</button>
-      <button className='sidebar__buttonBottom sidebar__button'>Cancel</button>
+      <button className='sidebar__button--bottom sidebar__button'>Save</button>
+      <button className='sidebar__button--bottom sidebar__button'>
+        Cancel
+      </button>
     </aside>
   );
 };
