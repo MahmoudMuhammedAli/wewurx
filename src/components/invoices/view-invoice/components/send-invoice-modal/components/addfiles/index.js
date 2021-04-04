@@ -10,7 +10,6 @@ import {
 
 const AddFiles = (props) => {
   const state = useSelector((state) => state);
-  const [currentInput, setCurrentInput] = useState(1);
   const [imagesSources, setImageSources] = useState([]);
   const InputFilesArray = [];
 
@@ -19,20 +18,21 @@ const AddFiles = (props) => {
 
   const { invoiceInputFilesValues } = state.sendInvoiceFiles;
 
-  console.log(invoiceInputFilesValues, "from invoice input files values");
   const readFile = (event, name) => {
     var reader = new FileReader();
 
     reader.onload = function (e) {
-      setImageSources((srcs) => [
-        ...srcs,
-        { name, src: e.target.result, fileName: event.target.files[0].name },
-      ]);
+      setImageSources((srcs) => {
+        return [
+          ...srcs,
+          { name, src: e.target.result, fileName: event.target.files[0].name },
+        ];
+      });
     };
 
     reader.readAsDataURL(event.target.files[0]);
   };
-
+  console.log(imagesSources, "from images sources!");
   const mapInputFiles = () => {
     for (let i = 1; i <= numberOfInvoiceInputFiles; i++) {
       const handleInputChange = (e) => {
@@ -55,10 +55,9 @@ const AddFiles = (props) => {
 
   mapInputFiles();
 
-  const handleButtonClick = () => {
-    document.getElementById(`inputFile${currentInput}`).click();
+  const handleAddFileButtonClick = () => {
+    document.getElementById(`inputFile${numberOfInvoiceInputFiles}`).click();
     props.increaseNumberOfInvoiceInputFiles();
-    setCurrentInput((num) => num + 1);
   };
 
   const handleImageClick = (fileName) => {
@@ -103,7 +102,10 @@ const AddFiles = (props) => {
     <div className={Styles.addfiles}>
       {InputFilesArray}
       {renderImages()}
-      <button className={Styles.addfiles__btn} onClick={handleButtonClick}>
+      <button
+        className={Styles.addfiles__btn}
+        onClick={handleAddFileButtonClick}
+      >
         + Add files{" "}
       </button>
     </div>

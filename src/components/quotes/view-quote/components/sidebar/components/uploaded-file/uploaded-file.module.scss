@@ -1,0 +1,39 @@
+.uploadedfile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+
+  &__image {
+    display: flex;
+    align-items: center;
+
+    img {
+      background-color: greenyellow;
+      width: 3rem;
+      height: 2rem;
+      margin-right: 0.5rem;
+    }
+    p {
+      font-size: 0.7rem;
+      color: var(--text-color-gray);
+      word-break: break-all;
+      width: 6.8rem;
+    }
+  }
+
+  &__input {
+    border: 1px solid var(--border-color-gray);
+    padding: 0.5rem;
+    border-radius: 4px;
+    outline: none;
+    font-size: 1rem;
+  }
+
+  i {
+    font-size: 1.5rem;
+    color: var(--text-color-gray);
+    cursor: pointer;
+    border-radius: 3px;
+  }
+}

@@ -7,8 +7,10 @@ import {
   INCREASE_NUMBER_OF_USERS_BY_ONE,
   ADD_STAFF_MEMBER_START_DATE,
   INCREASE_NUMBER_OF_INVOICE_INPUT_FILES,
-  REMOVE_INVOICE_FILE,
   ADD_INVOICE_FILE,
+  REMOVE_INVOICE_FILE,
+  ADD_QUOTE_FILE,
+  REMOVE_QUOTE_FILE,
 } from "./actionsTypes";
 
 // ============= Start   addCustomer  form Action Creators ==============
@@ -80,5 +82,22 @@ export const addInvoiceFile = (name, file) => {
   return {
     type: ADD_INVOICE_FILE,
     payload: { name, file },
+  };
+};
+
+// ============= Start Quote Upload Files action Creators =====================
+// --------------------------------------------------------------------
+
+export const addQuoteFile = (inputName, fileName, file, src) => {
+  return {
+    type: ADD_QUOTE_FILE,
+    payload: { inputName, fileName, file, src },
+  };
+};
+
+export const removeQuoteFile = (name) => {
+  return {
+    type: REMOVE_QUOTE_FILE,
+    payload: name,
   };
 };
