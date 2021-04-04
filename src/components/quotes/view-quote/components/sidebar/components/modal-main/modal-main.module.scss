@@ -1,0 +1,39 @@
+.main {
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+  }
+
+  &__btn {
+    background-color: var(--color-red);
+    outline: none;
+    cursor: pointer;
+    text-align: right;
+    position: relative;
+    color: #fff;
+    border: none;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    width: 10rem;
+    height: 2rem;
+    padding-right: 1rem;
+    text-align: right;
+
+    i {
+      position: absolute;
+      font-size: 2rem;
+      left: 0.5rem;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__closebtn {
+    outline: none;
+    border: none;
+    color: var(--color-red);
+    background-color: #fff;
+    cursor: pointer;
+  }
+}

@@ -32,7 +32,7 @@ const AddFiles = (props) => {
 
     reader.readAsDataURL(event.target.files[0]);
   };
-  console.log(imagesSources, "from images sources!");
+
   const mapInputFiles = () => {
     for (let i = 1; i <= numberOfInvoiceInputFiles; i++) {
       const handleInputChange = (e) => {
