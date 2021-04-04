@@ -11,6 +11,7 @@ import {
   REMOVE_INVOICE_FILE,
   ADD_QUOTE_FILE,
   REMOVE_QUOTE_FILE,
+  CHANGE_QUOTE_FILE_DESCRIPTION,
 } from "./actionsTypes";
 
 // ============= Start   addCustomer  form Action Creators ==============
@@ -99,5 +100,12 @@ export const removeQuoteFile = (name) => {
   return {
     type: REMOVE_QUOTE_FILE,
     payload: name,
+  };
+};
+
+export const changeQuoteFileDescription = (inputName, value) => {
+  return {
+    type: CHANGE_QUOTE_FILE_DESCRIPTION,
+    payload: { inputName, value },
   };
 };
