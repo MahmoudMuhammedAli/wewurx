@@ -1,0 +1,22 @@
+.file {
+  display: inline-block;
+  width: 7rem;
+  vertical-align: top;
+  height: 9rem;
+  overflow: hidden;
+  text-align: center;
+  margin-right: 0.3rem;
+
+  img {
+    width: 7rem;
+    height: 7rem;
+  }
+
+  p {
+    font-size: 0.75rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    height: 2rem;
+  }
+}

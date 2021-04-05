@@ -1,6 +1,6 @@
 import React from "react";
 import Styles from "./edit-note-modal.module.scss";
-import Modal from "../../../../../../shared/modal";
+import Modal from "../../modal";
 import EditNoteFields from "../edit-note-fields";
 
 const EditNoteModal = ({

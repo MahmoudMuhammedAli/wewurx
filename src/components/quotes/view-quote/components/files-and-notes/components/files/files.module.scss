@@ -1,0 +1,12 @@
+.files {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border-color-gray);
+  padding-bottom: 3rem;
+
+  &__heading {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: normal;
+    color: var(--color-black);
+  }
+}

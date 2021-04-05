@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Styles from "./files-and-notes.module.scss";
-import NoteBox from "./components/note-box";
-import AddNote from "./components/add-note";
-import FilterButtons from "./components/filter-buttons";
+import NoteBox from "../../../../shared/notes/note-box";
+import AddNote from "../../../../shared/notes/add-note";
+import FilterButtons from "../../../../shared/notes/filter-buttons";
 const FilesAndNotes = () => {
   return (
     <div className={Styles.files}>

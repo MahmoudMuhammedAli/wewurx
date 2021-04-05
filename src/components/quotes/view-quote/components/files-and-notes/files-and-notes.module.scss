@@ -1,0 +1,13 @@
+.filesandnotes {
+  min-width: 35rem;
+  &__notes {
+    padding-top: 1.5rem;
+
+    &__heading {
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+      color: var(--text-color-gray);
+      font-weight: normal;
+    }
+  }
+}
