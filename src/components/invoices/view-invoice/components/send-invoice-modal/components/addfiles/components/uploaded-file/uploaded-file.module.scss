@@ -1,0 +1,28 @@
+.imagesContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 0.5rem;
+
+  &__image {
+    &__name {
+      margin-left: 0.5rem;
+      color: var(--text-color-gray);
+      font-size: 0.9rem;
+    }
+  }
+}
+
+.removefilebutton {
+  background-color: #fff;
+  border: none;
+  outline: none;
+  width: 2rem;
+  height: 2rem;
+
+  i {
+    font-size: 1.5rem;
+    color: var(--text-color-gray);
+    cursor: pointer;
+  }
+}

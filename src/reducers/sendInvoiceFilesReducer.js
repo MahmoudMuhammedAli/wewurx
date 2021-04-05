@@ -1,38 +1,25 @@
-import {
-  ADD_INVOICE_FILE,
-  INCREASE_NUMBER_OF_INVOICE_INPUT_FILES,
-  REMOVE_INVOICE_FILE,
-} from "../actions/actionsTypes";
+import { ADD_INVOICE_FILE, REMOVE_INVOICE_FILE } from "../actions/actionsTypes";
 
-const initialState = {
-  numberOfInvoiceInputFiles: 1,
-  invoiceInputFilesValues: {
-    file1: "",
-  },
-};
+const initialState = [];
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case INCREASE_NUMBER_OF_INVOICE_INPUT_FILES:
-      return {
+    case ADD_INVOICE_FILE: {
+      const { inputName, file, src, fileName } = action.payload;
+      return [
         ...state,
-        numberOfInvoiceInputFiles: state.numberOfInvoiceInputFiles + 1,
-      };
-
-    case ADD_INVOICE_FILE:
-      return {
-        ...state,
-        invoiceInputFilesValues: {
-          ...state.invoiceInputFilesValues,
-          [action.payload.name]: action.payload.file,
+        {
+          inputName,
+          file,
+          src,
+          fileName,
+          description: "",
         },
-      };
+      ];
+    }
 
     case REMOVE_INVOICE_FILE:
-      const oldState = { ...state };
-      delete oldState[action.payload];
-      oldState.numberOfInvoiceInputFiles--;
-      return oldState;
+      return state.filter((file) => file.inputName !== action.payload);
 
     default:
       return state;

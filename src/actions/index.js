@@ -6,7 +6,6 @@ import {
   DECREASE_NUMBER_OF_USERS_BY_ONE,
   INCREASE_NUMBER_OF_USERS_BY_ONE,
   ADD_STAFF_MEMBER_START_DATE,
-  INCREASE_NUMBER_OF_INVOICE_INPUT_FILES,
   ADD_INVOICE_FILE,
   REMOVE_INVOICE_FILE,
   ADD_QUOTE_FILE,
@@ -66,23 +65,17 @@ export const addStaffMemberStartDate = (date) => (dispatch) => {
 // ============= Start Send Invoice   action Creators =====================
 // --------------------------------------------------------------------
 
-export const increaseNumberOfInvoiceInputFiles = () => {
-  return {
-    type: INCREASE_NUMBER_OF_INVOICE_INPUT_FILES,
-  };
-};
-
-export const removeInvoiceFile = (name) => {
+export const removeInvoiceFile = (inputName) => {
   return {
     type: REMOVE_INVOICE_FILE,
-    payload: name,
+    payload: inputName,
   };
 };
 
-export const addInvoiceFile = (name, file) => {
+export const addInvoiceFile = (inputName, fileName, file, src) => {
   return {
     type: ADD_INVOICE_FILE,
-    payload: { name, file },
+    payload: { fileName, inputName, file, src },
   };
 };
 
@@ -96,10 +89,10 @@ export const addQuoteFile = (inputName, fileName, file, src) => {
   };
 };
 
-export const removeQuoteFile = (name) => {
+export const removeQuoteFile = (inputName) => {
   return {
     type: REMOVE_QUOTE_FILE,
-    payload: name,
+    payload: inputName,
   };
 };
 
