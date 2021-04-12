@@ -2,9 +2,10 @@ import React from "react";
 import Styles from "./mainjobpage.module.scss";
 import StatusBar from "./components/statusfilterbar";
 import ControllBar from "./components/controllebar";
-import CustomerFilterBar from "./components/customerfilterbar";
-import Customer from "./components/customer";
+import JobHeading from "./components/job-heading";
+import Job from "./components/job-item";
 import FilterBar from "../../../../shared/filterbar";
+import JobsDirectory from "./components/jobs-directory";
 
 const MainJobPage = (props) => {
   const filters = [
@@ -62,9 +63,7 @@ const MainJobPage = (props) => {
       <FilterBar categories={filters} />
       <StatusBar />
       <ControllBar />
-      <CustomerFilterBar />
-      <Customer status="scheduled" />
-      <Customer status="pending" />
+      <JobsDirectory />
     </div>
   );
 };

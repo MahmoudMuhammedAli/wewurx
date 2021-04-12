@@ -1,0 +1,131 @@
+.job {
+  border-bottom: 1px solid #dcdede;
+  width: 68rem;
+  display: flex;
+  margin-left: 2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #dcdede;
+  color: #333;
+  word-break: break-all;
+  cursor: pointer;
+  &:hover {
+    background-color: rgb(235, 240, 239);
+  }
+  > div {
+    margin-right: 0.6rem;
+  }
+
+  &__checkbox {
+    margin-right: 0.5rem;
+  }
+
+  &__job {
+    width: 8rem;
+    position: relative;
+    margin-right: 0.5rem;
+    font-size: 0.8rem;
+    overflow: hidden;
+
+    &__names {
+      margin-bottom: 0.2rem;
+    }
+
+    &__name {
+      color: var(--color-black);
+      margin-bottom: 0.2rem;
+      font-weight: bold;
+    }
+
+    &__id {
+      color: var(--text-color-gray);
+    }
+  }
+  &__status {
+    min-width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+  }
+  &__invoice {
+    width: 3.5rem;
+    color: var(--text-color-gray);
+    font-weight: bold;
+  }
+  &__amount {
+    width: 5rem;
+    font-size: 0.82rem;
+    color: var(--color-black);
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  &__customer {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    width: 11rem;
+    font-size: 0.8rem;
+    &__red {
+      color: rgb(244, 111, 34);
+      font-weight: 600;
+    }
+    > div {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+  &__site {
+    width: 9rem;
+    font-size: 0.8rem;
+    word-break: break-all;
+    color: var(--color-black);
+  }
+  &__due {
+    width: 5rem;
+    color: var(--color-black);
+    font-size: 0.8rem;
+  }
+  &__schedule {
+    width: 6rem;
+    color: rgb(244, 111, 34);
+    font-size: 0.8rem;
+  }
+  &__assign {
+    width: 7rem;
+    font-size: 0.8rem;
+    color: var(--color-red);
+  }
+  &__button {
+    width: 5rem;
+    height: 2rem;
+    background: rgb(244, 111, 34);
+    color: #fff;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    &--reset {
+      background-color: #fff;
+      color: var(--color-red);
+      align-items: flex-start;
+    }
+  }
+
+  &--heading {
+    &:hover {
+      background-color: #fff;
+    }
+    > * {
+      font-size: 0.79rem;
+    }
+
+    &__status {
+      height: auto;
+    }
+  }
+}
