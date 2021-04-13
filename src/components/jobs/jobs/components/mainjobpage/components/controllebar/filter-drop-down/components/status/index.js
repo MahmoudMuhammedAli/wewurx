@@ -1,23 +1,24 @@
 import React from "react";
 import Styles from "./status.module.scss";
 import { reduxForm, Field } from "redux-form";
+import Priority from "../priority";
 
 const renderField = ({ input, type, label, id, color }) => {
   return (
     <div className={Styles.status__checkboxrow}>
-      <div className={` ${Styles.status__labelwrapper}`}>
-        <label
-          htmlFor={id}
-          style={{ backgroundColor: `var(${color}) ` }}
-        ></label>
-      </div>
       <div className={Styles.status__inputwrapper}>
         <input
-          {...input}
-          type={type}
-          id={id}
           className={Styles.status__inputwrapper__input}
+          id={id}
+          type={type}
+          {...input}
         />
+        <div className={` ${Styles.status__labelwrapper}`}>
+          <label
+            htmlFor={id}
+            style={{ backgroundColor: `var(${color}) ` }}
+          ></label>
+        </div>
         <label htmlFor={id}>{label}</label>
       </div>
     </div>
@@ -26,12 +27,15 @@ const renderField = ({ input, type, label, id, color }) => {
 
 const Status = ({ change }) => {
   const changeAllFieldValue = (value) => {
-    change("draft", value);
-    change("draftCompleted", value);
-    change("sent", value);
+    change("pending", value);
+    change("scheduled", value);
+    change("travelling", value);
+    change("inProgress", value);
+    change("completed", value);
     change("onHold", value);
-    change("rejected", value);
-    change("accepted", value);
+    change("attention", value);
+    change("cancelled", value);
+    change("external", value);
   };
   const checkAllFields = () => {
     changeAllFieldValue(true);
@@ -50,73 +54,94 @@ const Status = ({ change }) => {
   };
   return (
     <div className={Styles.status}>
-      <h4 className={Styles.status__heading}>Status</h4>
-      <div>
-        <div
-          className={`${Styles.status__labelwrapperUnColored} ${Styles.status__labelwrapper}`}
-        >
-          <Field
-            component='input'
-            type='checkbox'
-            id='all'
-            name='all'
-            onChange={handleAllChange}
-          />
+      <div className={Styles.status__status}>
+        <h4 className={Styles.status__heading}>Status</h4>
+        <div>
+          <div
+            className={`${Styles.status__labelwrapperUnColored} ${Styles.status__labelwrapper}`}
+          >
+            <Field
+              component='input'
+              type='checkbox'
+              id='all'
+              name='all'
+              onChange={handleAllChange}
+              className={Styles.status__labelwrapper__checkbox}
+            />
+          </div>
+          <div className={Styles.status__inputwrapper}>
+            <label htmlFor='all'>All</label>
+          </div>
         </div>
-        <div className={Styles.status__inputwrapper}>
-          <label htmlFor='all'>All</label>
-        </div>
+        <Field
+          component={renderField}
+          type='checkbox'
+          label='Pending'
+          id='jobFilterPending'
+          color='--color-pending'
+          name='pending'
+        />
+        <Field
+          component={renderField}
+          type='checkbox'
+          label='Scheduled'
+          id='jobFilterScheduled'
+          color='--color-scheduled'
+          name='scheduled'
+        />
+        <Field
+          component={renderField}
+          type='checkbox'
+          label='In progress'
+          id='jobQuoteInProgress'
+          color='--color-inProgress'
+          name='inProgress'
+        />
+        <Field
+          component={renderField}
+          type='checkbox'
+          label='Completed'
+          id='jobQuoteCompleted'
+          color='--color-completed'
+          name='completed'
+        />
+        <Field
+          component={renderField}
+          type='checkbox'
+          label='On hold'
+          id='jobQuoteOnHold'
+          color='--color-onHold'
+          name='onHold'
+        />
+        <Field
+          component={renderField}
+          type='checkbox'
+          label='Attention'
+          id='jobQuoteAttention'
+          color='--color-attention'
+          name='attention'
+        />
+        <Field
+          component={renderField}
+          type='checkbox'
+          label='Cancelled'
+          id='jobQuoteCancelled'
+          color='--color-cancelled'
+          name='cancelled'
+        />
+        <Field
+          component={renderField}
+          type='checkbox'
+          label='External'
+          id='jobQuoteExternal'
+          color='--color-external'
+          name='external'
+        />
       </div>
-      <Field
-        component={renderField}
-        type='checkbox'
-        label='Draft'
-        id='draftedQuotes'
-        color='--quote-color-draft'
-        name='draft'
-      />
-      <Field
-        component={renderField}
-        type='checkbox'
-        label='DraftCompleted'
-        id='drafteCompletedQuotes'
-        color='--quote-color-draft-completed'
-        name='draftCompleted'
-      />
-      <Field
-        component={renderField}
-        type='checkbox'
-        label='Sent'
-        id='sentQuotes'
-        color='--quote-color-sent'
-        name='sent'
-      />
-      <Field
-        component={renderField}
-        type='checkbox'
-        label='On-Hold'
-        id='onHoldQuotes'
-        color='--quote-color-onHold'
-        name='onHold'
-      />
-      <Field
-        component={renderField}
-        type='checkbox'
-        label='Rejected'
-        id='rejectedQuotes'
-        color='--quote-color-rejected'
-        name='rejected'
-      />
-      <Field
-        component={renderField}
-        type='checkbox'
-        label='Accepted'
-        id='acceptedQuotes'
-        color='--quote-color-accepted'
-        name='accepted'
-      />
+
+      <Priority />
     </div>
   );
 };
 
-export default reduxForm({ form: "quoteStatusFilter" })(Status);
+export default reduxForm({ form: "jobStatusFilter" })(Status);

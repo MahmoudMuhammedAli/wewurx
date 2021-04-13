@@ -38,9 +38,55 @@ const Bar = ({ setPage }) => {
         </li>
         <li
           className={Styles.bar__navs__navitem}
+          onClick={(e) => handleNavLink(e, "fieldWorker")}
+        >
+          <button className={Styles.bar__navs__navitem__button}>
+            Field Worker
+          </button>
+        </li>
+        <li
+          className={Styles.bar__navs__navitem}
+          onClick={(e) => handleNavLink(e, "teams")}
+        >
+          <button className={Styles.bar__navs__navitem__button}>Teams</button>
+        </li>
+        <li
+          className={Styles.bar__navs__navitem}
+          onClick={(e) => handleNavLink(e, "staffSkills")}
+        >
+          <button className={Styles.bar__navs__navitem__button}>
+            Staff skills
+          </button>
+        </li>
+        <li
+          className={Styles.bar__navs__navitem}
           onClick={(e) => handleNavLink(e, "date")}
         >
           <button className={Styles.bar__navs__navitem__button}>Date</button>
+        </li>
+        <li
+          className={Styles.bar__navs__navitem}
+          onClick={(e) => handleNavLink(e, "jobType")}
+        >
+          <button className={Styles.bar__navs__navitem__button}>
+            Job type
+          </button>
+        </li>
+        <li
+          className={Styles.bar__navs__navitem}
+          onClick={(e) => handleNavLink(e, "invoiceStatus")}
+        >
+          <button className={Styles.bar__navs__navitem__button}>
+            Invoice Status
+          </button>
+        </li>
+        <li
+          className={Styles.bar__navs__navitem}
+          onClick={(e) => handleNavLink(e, "customField")}
+        >
+          <button className={Styles.bar__navs__navitem__button}>
+            Custom field
+          </button>
         </li>
         <li
           className={Styles.bar__navs__navitem}
@@ -50,6 +96,21 @@ const Bar = ({ setPage }) => {
             Due Date
           </button>
         </li>
+        <li
+          className={Styles.bar__navs__navitem}
+          onClick={(e) => handleNavLink(e, "assests")}
+        >
+          <button className={Styles.bar__navs__navitem__button}>Assests</button>
+        </li>
+        <li
+          className={Styles.bar__navs__navitem}
+          onClick={(e) => handleNavLink(e, "contracts")}
+        >
+          <button className={Styles.bar__navs__navitem__button}>
+            Contracts
+          </button>
+        </li>
+
         {/* <li
           className={Styles.bar__navs__navitem}
           onClick={(e) => handleNavLink(e, "asset")}

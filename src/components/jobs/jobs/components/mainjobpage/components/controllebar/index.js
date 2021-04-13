@@ -41,12 +41,15 @@ const renderJobsActions = ({ input, meta: { touched, error } }) => (
 
 const ControllBar = (props) => {
   const [isDropDownOpened, setIsDropDownOpened] = useState(false);
+  const handleDropDownButtonClick = () => {
+    setIsDropDownOpened(true);
+  };
   return (
     <div className={`${Styles.controlbar}`}>
       <div className={`${Styles.controlbar__actions}`}>
         <button
           className={Styles.controlbar__dropdownbtn}
-          onClick={() => setIsDropDownOpened(true)}
+          onClick={handleDropDownButtonClick}
         >
           Filters <i className='fa fa-arrow-circle-down'></i>
         </button>

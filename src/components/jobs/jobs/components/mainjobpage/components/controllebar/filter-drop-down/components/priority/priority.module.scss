@@ -1,7 +1,4 @@
-.status {
-  &__status {
-    margin-bottom: 2rem;
-  }
+.priority {
   &__heading {
     font-weight: normal;
     font-size: 0.9rem;
@@ -16,13 +13,6 @@
     width: 1.5rem;
     display: inline-flex;
     justify-content: center;
-    label {
-      width: 0.9rem;
-      height: 0.9rem;
-      border-radius: 50%;
-      display: inline-block;
-      margin-right: 0.5rem;
-    }
     &__checkbox {
       margin-right: 0.6rem;
     }

@@ -9,10 +9,10 @@
     list-style: none;
 
     &__navitem {
-      padding: 0.6rem 0.4rem;
+      padding: 0.8rem 0.5rem;
       border-bottom: 1px solid var(--border-color-gray);
       cursor: pointer;
-      width: 8rem;
+      width: 10rem;
       &:first-of-type {
         border-top: 1px solid var(--border-color-gray);
       }
@@ -20,7 +20,7 @@
         background-color: transparent;
         border: none;
         outline: none;
-        font-size: 1rem;
+        font-size: 0.9rem;
       }
       &Active {
         background-color: var(--text-color-gray);
