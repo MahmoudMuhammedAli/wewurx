@@ -1,0 +1,37 @@
+.footer {
+  &__savepreset {
+    &__button {
+      background-color: #fff;
+      outline: none;
+      border: none;
+      color: var(--color-red);
+      width: 9rem;
+      text-align: center;
+      margin-bottom: 0.5rem;
+      cursor: pointer;
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+    }
+    &__input {
+      border: 1px solid var(--border-color-gray);
+      outline: none;
+      margin-bottom: 1rem;
+      border-radius: 3px;
+      padding: 0.3rem 0.5rem;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+
+    button {
+      outline: none;
+      border: none;
+      background-color: #fff;
+      color: var(--color-red);
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+  }
+}

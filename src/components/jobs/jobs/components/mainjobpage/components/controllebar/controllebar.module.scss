@@ -6,7 +6,17 @@
   align-items: center;
   padding: 1rem;
   margin-left: 2rem;
+  position: relative;
 
+  &__dropdownbtn {
+    border: none;
+    outline: none;
+    background-color: var(--color-red);
+    color: #fff;
+    padding: 0.3rem 0.5rem;
+    cursor: pointer;
+    margin-right: 0.5rem;
+  }
   &__actions {
     display: flex;
     justify-content: space-between;

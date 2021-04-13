@@ -1,0 +1,52 @@
+.header {
+  &__header {
+    margin-bottom: 1rem;
+  }
+
+  &__filtersbutton {
+    position: absolute;
+    left: 0.5rem;
+    top: 1rem;
+    background-color: var(--color-red);
+    color: #fff;
+    font-size: 0.9rem;
+    outline: none;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  &__presets {
+    display: inline-block;
+    margin-left: 4rem;
+    margin-top: 0.5rem;
+
+    &__label {
+      font-size: 0.9rem;
+      color: var(--text-color-gray);
+    }
+
+    &__select {
+      border: 1px solid var(--border-color-gray);
+      outline: none;
+      padding: 0.4rem 0.3rem;
+      border-radius: 3px;
+      display: block;
+      background-color: #fff;
+      width: 10rem;
+      cursor: pointer;
+    }
+  }
+
+  &__cancelbutton {
+    position: absolute;
+    right: 0.5rem;
+    top: 0.5rem;
+    background-color: #fff;
+    outline: none;
+    border: none;
+    color: var(--color-red);
+    cursor: pointer;
+  }
+}

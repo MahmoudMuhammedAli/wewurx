@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import Styles from "./controllebar.module.scss";
 import { reduxForm, Field } from "redux-form";
 import { Link } from "react-router-dom";
+import FilterDropDown from "./filter-drop-down";
 
 const renderField = ({
   input,
@@ -39,13 +40,19 @@ const renderJobsActions = ({ input, meta: { touched, error } }) => (
 );
 
 const ControllBar = (props) => {
-  const handleSubmit = (values) => {};
+  const [isDropDownOpened, setIsDropDownOpened] = useState(false);
   return (
-    <form
-      onSubmit={props.handleSubmit(handleSubmit)}
-      className={`${Styles.controlbar}`}
-    >
+    <div className={`${Styles.controlbar}`}>
       <div className={`${Styles.controlbar__actions}`}>
+        <button
+          className={Styles.controlbar__dropdownbtn}
+          onClick={() => setIsDropDownOpened(true)}
+        >
+          Filters <i className='fa fa-arrow-circle-down'></i>
+        </button>
+        {isDropDownOpened ? (
+          <FilterDropDown setIsDropDownOpened={setIsDropDownOpened} />
+        ) : null}
         <Field component={renderJobsActions} name='action' />
         <button
           className={`${Styles.controlbar__actions__apply} ${Styles.controlbar__actions__button}`}
@@ -60,7 +67,7 @@ const ControllBar = (props) => {
         </Link>
       </div>
       <Field component={renderField} name='search' placeholder='Keyword' />
-    </form>
+    </div>
   );
 };
 
