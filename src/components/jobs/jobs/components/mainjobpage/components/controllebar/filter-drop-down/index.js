@@ -12,6 +12,7 @@ import Bar from "./components/bar";
 import Footer from "./components/footer";
 import Header from "./components/header";
 import Priority from "./components/priority";
+import FieldWorker from "./components/field-worker";
 
 const FilterDropDown = ({ setIsDropDownOpened }) => {
   const [page, setPage] = useState({ status: true });
@@ -21,12 +22,13 @@ const FilterDropDown = ({ setIsDropDownOpened }) => {
   }, []);
   const renderComponent = () => {
     if (page.status) return <Status />;
+    if (page.customer) return <Customer />;
+    if (page.site) return <Site />;
+    if (page.fieldWorker) return <FieldWorker />;
     if (page.dueDate) return <DueDate />;
     if (page.date) return <DatePage />;
-    if (page.customer) return <Customer />;
     if (page.customeField) return <CustomField />;
     if (page.asset) return <Assets />;
-    if (page.site) return <Site />;
   };
   return (
     <div className={Styles.dropdown} ref={dropdownRef}>

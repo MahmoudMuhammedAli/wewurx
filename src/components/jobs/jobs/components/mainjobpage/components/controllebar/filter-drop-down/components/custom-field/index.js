@@ -1,8 +1,9 @@
 import React from "react";
+import { Field, reduxForm } from "redux-form";
 import Styles from "./custom-field.module.scss";
 
 const customeField = (props) => {
-  return <div className={Styles.customefield}>Custom Field Page</div>;
+  return <div className={Styles.customefield}></div>;
 };
 
-export default customeField;
+export default reduxForm({ form: "jobCustomFieldFilter" })(customeField);
