@@ -11,8 +11,8 @@ import Site from "./components/site";
 import Bar from "./components/bar";
 import Footer from "./components/footer";
 import Header from "./components/header";
-import Priority from "./components/priority";
 import FieldWorker from "./components/field-worker";
+import Teams from "./components/team";
 
 const FilterDropDown = ({ setIsDropDownOpened }) => {
   const [page, setPage] = useState({ status: true });
@@ -25,6 +25,7 @@ const FilterDropDown = ({ setIsDropDownOpened }) => {
     if (page.customer) return <Customer />;
     if (page.site) return <Site />;
     if (page.fieldWorker) return <FieldWorker />;
+    if (page.teams) return <Teams />;
     if (page.dueDate) return <DueDate />;
     if (page.date) return <DatePage />;
     if (page.customeField) return <CustomField />;
