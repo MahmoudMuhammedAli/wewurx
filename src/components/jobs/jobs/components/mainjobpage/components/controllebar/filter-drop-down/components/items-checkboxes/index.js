@@ -1,19 +1,19 @@
 import React from "react";
 import { Field, reduxForm } from "redux-form";
-import Styles from "./persons-checkboxes.module.scss";
+import Styles from "./items-checkboxes.module.scss";
 
-const PersonsCheckboxes = ({ change, persons }) => {
+const ItemsCheckboxes = ({ change, items }) => {
   const renderCustomers = (customers) => {
     return (
       <>
         {" "}
         {customers.map(({ id, firstName, lastName }) => {
           return (
-            <label className={Styles.persons__inputcontainer} key={id}>
-              <div className={Styles.persons__inputwrapper}>
+            <label className={Styles.items__inputcontainer} key={id}>
+              <div className={Styles.items__inputwrapper}>
                 <Field name={id} type='checkbox' component='input' />
               </div>
-              <span className={Styles.persons__inputwrapper__name}>
+              <span className={Styles.items__inputwrapper__name}>
                 {firstName} {lastName}
               </span>
             </label>
@@ -24,7 +24,7 @@ const PersonsCheckboxes = ({ change, persons }) => {
   };
 
   const changeAllFields = (value) => {
-    persons.forEach(({ id }) => {
+    items.forEach(({ id }) => {
       change(id, value);
     });
   };
@@ -46,10 +46,10 @@ const PersonsCheckboxes = ({ change, persons }) => {
     unCheckAllFields();
   };
   return (
-    <div className={Styles.persons}>
+    <div className={Styles.items}>
       {" "}
-      <label className={Styles.persons__inputcontainer}>
-        <div className={Styles.persons__inputwrapper}>
+      <label className={Styles.items__inputcontainer}>
+        <div className={Styles.items__inputwrapper}>
           <Field
             name='all'
             type='checkbox'
@@ -57,11 +57,11 @@ const PersonsCheckboxes = ({ change, persons }) => {
             onChange={(e) => handleAllChange(e)}
           />
         </div>
-        <span className={Styles.persons__inputwrapper__name}>All</span>
+        <span className={Styles.items__inputwrapper__name}>All</span>
       </label>
-      {renderCustomers(persons)}
+      {renderCustomers(items)}
     </div>
   );
 };
 
-export default reduxForm({ form: "personsCheckboxes" })(PersonsCheckboxes);
+export default reduxForm({ form: "itemsCheckBoxes" })(ItemsCheckboxes);

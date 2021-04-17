@@ -1,7 +1,7 @@
 import React from "react";
 import Styles from "./site.module.scss";
 import { reduxForm, Field } from "redux-form";
-import PersonsCheckboxes from "../persons-checkboxes";
+import PersonsCheckboxes from "../items-checkboxes";
 import SearchInput from "../search-input";
 
 const Site = ({ change }) => {

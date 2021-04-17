@@ -1,13 +1,13 @@
 import React from "react";
-import PersonsCheckboxes from "../persons-checkboxes";
+import Heading from "../heading";
+import PersonsCheckboxes from "../items-checkboxes";
 import SearchInput from "../search-input";
-import Styles from "./team.module.scss";
 
 const Teams = (props) => {
   return (
-    <div className={Styles.teams}>
+    <div>
       <SearchInput />
-      <h3 className={Styles.teams__heading}>Team</h3>
+      <Heading>Team</Heading>
       <PersonsCheckboxes persons={[]} />
     </div>
   );

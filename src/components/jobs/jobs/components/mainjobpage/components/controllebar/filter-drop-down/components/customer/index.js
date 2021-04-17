@@ -2,7 +2,7 @@ import React from "react";
 import Styles from "./customer.module.scss";
 import { Field, reduxForm } from "redux-form";
 import SearchInput from "../search-input";
-import PersonsCheckboxes from "../persons-checkboxes";
+import PersonsCheckboxes from "../items-checkboxes";
 
 const Customer = ({ change }) => {
   const persons = [

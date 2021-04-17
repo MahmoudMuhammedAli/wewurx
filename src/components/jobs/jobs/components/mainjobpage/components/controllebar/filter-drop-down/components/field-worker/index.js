@@ -1,8 +1,8 @@
 import React from "react";
 import { Field, reduxForm } from "redux-form";
-import PersonsCheckboxes from "../persons-checkboxes";
+import Heading from "../heading";
+import PersonsCheckboxes from "../items-checkboxes";
 import SearchInput from "../search-input";
-import Styles from "./field-worker.module.scss";
 
 const FieldWorker = ({ change }) => {
   const workers = [
@@ -10,10 +10,9 @@ const FieldWorker = ({ change }) => {
     { firstName: "secondfname secondlname", lastName: "", id: "id2" },
   ];
   return (
-    <div className={Styles.fieldworker}>
+    <div>
       <SearchInput />
-      <h3 className={Styles.fieldworker__heading}>Person</h3>
-      <PersonsCheckboxes persons={workers} />
+      <Heading>Person</Heading> <PersonsCheckboxes persons={workers} />
     </div>
   );
 };
