@@ -20,7 +20,9 @@ const Bar = ({ setPage }) => {
           className={`${Styles.bar__navs__navitem} ${Styles.bar__navs__navitemActive}`}
           onClick={(e) => handleNavLink(e, "status")}
         >
-          <button className={Styles.bar__navs__navitem__button}>Status</button>
+          <button className={Styles.bar__navs__navitem__button}>
+            Status &#38; Priority
+          </button>
         </li>
         <li
           className={Styles.bar__navs__navitem}
@@ -96,20 +98,20 @@ const Bar = ({ setPage }) => {
             Due Date
           </button>
         </li>
-        <li
+        {/* <li
           className={Styles.bar__navs__navitem}
           onClick={(e) => handleNavLink(e, "assests")}
         >
           <button className={Styles.bar__navs__navitem__button}>Assests</button>
-        </li>
-        <li
+        </li> */}
+        {/* <li
           className={Styles.bar__navs__navitem}
           onClick={(e) => handleNavLink(e, "contracts")}
         >
           <button className={Styles.bar__navs__navitem__button}>
             Contracts
           </button>
-        </li>
+        </li> */}
 
         {/* <li
           className={Styles.bar__navs__navitem}
