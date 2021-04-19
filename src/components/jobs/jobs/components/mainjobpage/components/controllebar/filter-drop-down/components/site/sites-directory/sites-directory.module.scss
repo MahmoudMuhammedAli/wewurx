@@ -1,0 +1,10 @@
+.directory {
+  margin-top: 1rem;
+  &__item {
+    &__heading {
+      font-weight: normal;
+      font-size: 0.85rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+}
