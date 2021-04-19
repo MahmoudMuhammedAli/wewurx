@@ -12,7 +12,7 @@ const FieldWorker = ({ change }) => {
   return (
     <div>
       <SearchInput />
-      <Heading>Person</Heading> <PersonsCheckboxes persons={workers} />
+      <Heading>Person</Heading> <PersonsCheckboxes items={workers} />
     </div>
   );
 };

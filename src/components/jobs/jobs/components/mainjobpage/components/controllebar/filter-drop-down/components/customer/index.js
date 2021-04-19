@@ -25,7 +25,7 @@ const Customer = ({ change }) => {
 
   return (
     <div className={Styles.customer}>
-      <SearchInput /> <PersonsCheckboxes persons={persons} />
+      <SearchInput /> <PersonsCheckboxes items={persons} />
     </div>
   );
 };

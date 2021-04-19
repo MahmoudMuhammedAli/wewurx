@@ -8,7 +8,7 @@ const Teams = (props) => {
     <div>
       <SearchInput />
       <Heading>Team</Heading>
-      <PersonsCheckboxes persons={[]} />
+      <PersonsCheckboxes items={[]} />
     </div>
   );
 };

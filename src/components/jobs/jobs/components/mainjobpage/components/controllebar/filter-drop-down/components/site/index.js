@@ -26,7 +26,7 @@ const Site = ({ change }) => {
   return (
     <div className={Styles.site}>
       <SearchInput />
-      <PersonsCheckboxes persons={persons} />
+      <PersonsCheckboxes items={persons} />
     </div>
   );
 };

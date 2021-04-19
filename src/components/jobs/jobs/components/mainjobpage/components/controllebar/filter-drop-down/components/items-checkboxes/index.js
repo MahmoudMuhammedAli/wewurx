@@ -1,26 +1,18 @@
 import React from "react";
 import { Field, reduxForm } from "redux-form";
 import Styles from "./items-checkboxes.module.scss";
+import CheckBoxWithLabel from "../checkbox-with-label";
 
-const ItemsCheckboxes = ({ change, items }) => {
+const PersonsCheckboxes = ({ change, items }) => {
   const renderCustomers = (customers) => {
-    return (
-      <>
-        {" "}
-        {customers.map(({ id, firstName, lastName }) => {
-          return (
-            <label className={Styles.items__inputcontainer} key={id}>
-              <div className={Styles.items__inputwrapper}>
-                <Field name={id} type='checkbox' component='input' />
-              </div>
-              <span className={Styles.items__inputwrapper__name}>
-                {firstName} {lastName}
-              </span>
-            </label>
-          );
-        })}
-      </>
-    );
+    return customers.map(({ id, firstName, lastName }) => (
+      <CheckBoxWithLabel
+        label={firstName + lastName}
+        name={id}
+        id={id}
+        key={id}
+      />
+    ));
   };
 
   const changeAllFields = (value) => {
@@ -64,4 +56,4 @@ const ItemsCheckboxes = ({ change, items }) => {
   );
 };
 
-export default reduxForm({ form: "itemsCheckBoxes" })(ItemsCheckboxes);
+export default reduxForm({ form: "itemsCheckboxes" })(PersonsCheckboxes);

@@ -1,0 +1,13 @@
+.jobtype {
+  width: 100%;
+  &__heading {
+    border-bottom: 1px solid var(--border-color-gray);
+    label {
+      margin-bottom: 0.2rem;
+    }
+  }
+
+  &__types {
+    margin-top: 0.5rem;
+  }
+}

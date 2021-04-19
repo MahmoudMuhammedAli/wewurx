@@ -14,6 +14,7 @@ import Header from "./components/header";
 import FieldWorker from "./components/field-worker";
 import Teams from "./components/team";
 import StaffSkills from "./components/staff-skills";
+import JobType from "./components/job-type";
 
 const FilterDropDown = ({ setIsDropDownOpened }) => {
   const [page, setPage] = useState({ status: true });
@@ -30,6 +31,7 @@ const FilterDropDown = ({ setIsDropDownOpened }) => {
     if (page.staffSkills) return <StaffSkills />;
     if (page.dueDate) return <DueDate />;
     if (page.date) return <DatePage />;
+    if (page.jobType) return <JobType />;
     if (page.customeField) return <CustomField />;
     if (page.asset) return <Assets />;
   };
