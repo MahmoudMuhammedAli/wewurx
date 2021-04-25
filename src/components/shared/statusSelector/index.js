@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import Styles from "./statusSelector.module.scss";
 
-const StatusSelector = ({ onStatusChange }) => {
+const StatusSelector = ({ onStatusChange, width }) => {
   const statusList = [
     { name: "Pending", value: "pending" },
     { name: "Scheduled", value: "scheduled" },
@@ -19,13 +19,18 @@ const StatusSelector = ({ onStatusChange }) => {
 
   const openStatusSelect = () => {
     setIsStatusSelectOpen(true);
-    statusSelect.current.style.cssText =
-      "height:17rem; border:1px solid var(--border-color-gray); padding: 0.2rem";
+    statusSelect.current.style.transform = "scale(1)";
+    setTimeout(() => {
+      statusSelect.current.style.height = "16rem";
+    }, 0);
     // after .3s i should remove the border and the padding
   };
   const closeStatusSelect = () => {
     setIsStatusSelectOpen(false);
-    statusSelect.current.style.cssText = "height:0; border:0; padding: 0";
+    statusSelect.current.style.height = "0";
+    setTimeout(() => {
+      statusSelect.current.style.transform = "scale(0)";
+    }, 250);
   };
   // ref for the selected item to attach an event listener on it
   const selectedRef = useRef(null);
@@ -75,20 +80,30 @@ const StatusSelector = ({ onStatusChange }) => {
   return (
     <div className={Styles.select}>
       {/*  for render the selected status*/}
-      <div className={Styles.select__selected} ref={selectedRef}>
-        <span
-          className={Styles.select__selected__circle}
-          style={{ backgroundColor: `var(--color-${selectedStatus.value})` }}
-        ></span>
-        <span className={Styles.select__selected__text}>
-          {selectedStatus.name}
-        </span>
+      <div
+        className={Styles.select__selected}
+        ref={selectedRef}
+        style={width ? { width } : {}}
+      >
+        <div>
+          <span
+            className={Styles.select__selected__circle}
+            style={{ backgroundColor: `var(--color-${selectedStatus.value})` }}
+          ></span>
+          <span className={Styles.select__selected__text}>
+            {selectedStatus.name}
+          </span>
+        </div>
 
         <i
-          className={`fa fa-arrow-down fa-lg ${Styles.select__selected__icon}`}
+          className={`fa fa-arrow-circle-down fa-lg ${Styles.select__selected__icon}`}
         ></i>
       </div>
-      <div ref={statusSelect} className={Styles.select__statusselect}>
+      <div
+        ref={statusSelect}
+        className={Styles.select__statusselect}
+        style={width ? { width } : {}}
+      >
         {renderStatusList()}
       </div>
     </div>

@@ -11,6 +11,7 @@
   &__selected {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     &__circle {
       width: 0.8rem;
       height: 0.8rem;
@@ -24,9 +25,8 @@
     }
 
     &__icon {
-      font-size: 0.8rem;
+      font-size: 0.9rem;
       color: var(--text-color-gray);
-      margin-top: 0.5rem;
     }
   }
 
@@ -41,8 +41,10 @@
     z-index: 1000;
     background-color: #fff;
     margin-top: 1rem;
-    transition: height 0.3s linear, border-width 0.3s linear;
-
+    transition: height 0.3s linear, border-width 0.1s linear;
+    border: 1px solid var(--border-color-gray);
+    padding: 0.5rem;
+    transform: scale(0);
     &__item {
       margin-bottom: 0.7rem;
       cursor: pointer;

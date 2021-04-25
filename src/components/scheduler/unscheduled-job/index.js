@@ -20,7 +20,6 @@ const UnScheduledJob = ({
 
     //clicking the document outside the element itself to close any opened dropdowns
     document.getElementsByTagName("body")[0].click();
-
     setIsDropDownOpened(true);
   };
   const handleItemClick = (e) => {
