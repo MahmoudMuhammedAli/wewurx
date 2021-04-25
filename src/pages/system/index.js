@@ -9,6 +9,7 @@ import InfoBar from "../../components/shared/infobar";
 import { Route, Switch, Redirect } from "react-router-dom";
 
 import TermsAndConditions from "../../pages/consitionsandterms";
+import Scheduler from "../scheduler";
 
 const System = (props) => {
   return (
@@ -24,6 +25,7 @@ const System = (props) => {
           path='/system/conditionsandterms'
           component={TermsAndConditions}
         />
+        <Route path='/system/schedule' component={Scheduler} />
         <Redirect to='/system/jobs' />
       </Switch>
     </div>

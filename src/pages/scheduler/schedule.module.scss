@@ -1,0 +1,22 @@
+.schedule {
+  &__heading {
+    background-color: var(--color-red);
+    padding-top: 0.4rem;
+    padding-left: 5rem;
+    &__btn {
+      background-color: #fff;
+      border: none;
+      outline: none;
+      color: var(--color-red);
+      padding: 0.2rem;
+      height: 2rem;
+      width: 9rem;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+  }
+
+  &__main {
+    padding: 2rem 0 0 2rem;
+  }
+}

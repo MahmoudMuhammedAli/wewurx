@@ -1,0 +1,40 @@
+.unscheduled {
+  border: 1px solid var(--border-color-gray);
+  border-radius: 3px;
+  display: inline-flex;
+  padding: 0.5rem;
+  color: var(--color-red);
+  flex-direction: column;
+  cursor: pointer;
+  font-size: 0.9rem;
+  min-height: 3.35rem;
+  margin-right: 0.5rem;
+
+  &Wrapper {
+    display: inline-flex;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+
+    &__name {
+      color: var(--color-black);
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    margin-top: 0.2rem;
+
+    &__duration {
+      font-weight: bold;
+      margin-right: 0.5rem;
+      font-size: 0.8rem;
+    }
+    &__customername {
+      font-size: 0.85rem;
+    }
+  }
+}

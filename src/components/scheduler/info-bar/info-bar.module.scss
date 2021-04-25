@@ -1,0 +1,49 @@
+.infobar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  color: var(--color-red);
+
+  &__unscheduled {
+    display: inline-block;
+    margin-right: 3rem;
+    color: var(--text-color-gray);
+    font-size: 0.9rem;
+    &__number {
+      font-size: 2rem;
+      color: var(--color-red);
+      margin-right: 0.5rem;
+    }
+  }
+  &__select {
+    border: none;
+    outline: none;
+    color: var(--color-red);
+    background-color: #fff;
+    cursor: pointer;
+    margin-right: 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  &__openbtn {
+    outline: none;
+    background-color: #fff;
+    border: none;
+    color: var(--color-red);
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+
+  &__checkboxes {
+    &__label {
+      display: inline-flex;
+      align-items: center;
+      font-size: 0.9rem;
+      margin-right: 1rem;
+
+      input {
+        margin-left: 0.4rem;
+      }
+    }
+  }
+}
