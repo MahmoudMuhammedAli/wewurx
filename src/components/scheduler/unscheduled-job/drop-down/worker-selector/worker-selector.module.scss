@@ -1,0 +1,29 @@
+.workerselector {
+  padding-left: 0.5rem;
+
+  &__heading {
+    font-size: 0.85rem;
+    color: var(--text-color-gray);
+    margin-bottom: 0.5rem;
+    font-weight: normal;
+  }
+
+  &__inputwrapper {
+    border: 1px solid var(--border-color-gray);
+    border-radius: 3px;
+    width: 11rem;
+    cursor: text;
+
+    i {
+      color: var(--text-color-gray);
+    }
+  }
+
+  &__input {
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    padding: 0.2rem 0 0.2rem 0.4rem;
+    font-weight: bold;
+  }
+}

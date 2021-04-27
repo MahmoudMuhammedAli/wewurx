@@ -74,7 +74,11 @@ const UnScheduledJob = ({
       </div>
 
       {isDropDownOpened ? (
-        <DropDown top={topRef.current} left={leftRef.current} />
+        <DropDown
+          top={topRef.current}
+          left={leftRef.current}
+          setIsDropDownOpened={setIsDropDownOpened}
+        />
       ) : (
         " "
       )}

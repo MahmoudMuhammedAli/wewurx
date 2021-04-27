@@ -1,0 +1,15 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3rem;
+  padding: 0 0.5rem 0;
+  &__btn {
+    border: none;
+    outline: none;
+    color: var(--color-red);
+    font-size: 0.9rem;
+    background-color: #fff;
+    cursor: pointer;
+  }
+}

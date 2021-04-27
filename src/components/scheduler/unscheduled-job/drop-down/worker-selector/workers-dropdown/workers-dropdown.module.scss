@@ -1,0 +1,22 @@
+.dropdown {
+  border: 1px solid var(--border-color-gray);
+  border-radius: 4px;
+  width: 13.5rem;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.1s linear, transform 50ms linear;
+  transform: scaleY(0);
+  transform-origin: top;
+  &__closebtn {
+    display: block;
+    margin-left: auto;
+    margin-right: 0.5rem;
+    margin-bottom: 0.7rem;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    color: var(--color-red);
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,17 @@
+.worker {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  cursor: default;
+  color: var(--color-black);
+
+  &__name {
+    margin-left: 0.5rem;
+    font-weight: bold;
+    font-size: 0.9rem;
+  }
+  &:hover {
+    background-color: #808080;
+    color: #fff;
+  }
+}

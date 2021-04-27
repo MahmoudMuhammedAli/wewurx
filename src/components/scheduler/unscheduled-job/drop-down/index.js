@@ -2,9 +2,10 @@ import React, { useEffect } from "react";
 import ReactDOM from "react-dom";
 import StatusSelector from "../../../shared/statusSelector";
 import Styles from "./drop-down.module.scss";
+import Footer from "./footer";
 import WorkerSelector from "./worker-selector";
 
-const DropDown = ({ top, left }) => {
+const DropDown = ({ top, left, setIsDropDownOpened }) => {
   const handleDropdownClick = (e) => {
     e.stopPropagation();
   };
@@ -36,7 +37,7 @@ const DropDown = ({ top, left }) => {
       <div className={Styles.dropdown__workerselector}>
         <WorkerSelector />
       </div>
-      <footer></footer>
+      <Footer setIsDropDownOpened={setIsDropDownOpened} />
     </div>
   );
 
