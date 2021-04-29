@@ -1,0 +1,39 @@
+.selector {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  margin-right: 1rem;
+
+  &__item {
+    padding: 3px;
+    background-color: #fff;
+    &Active {
+      background-color: var(--color-red);
+
+      button {
+        color: #fff;
+      }
+    }
+    &:first-of-type {
+      border-radius: 4px 0 0 4px;
+      border: 1px solid var(--border-color-gray);
+    }
+    &:nth-last-of-type(2) {
+      border-left: 1px solid var(--border-color-gray);
+    }
+    &:last-of-type {
+      border-radius: 0 4px 4px 0;
+      border: 1px solid var(--border-color-gray);
+    }
+  }
+
+  &__btn {
+    border: none;
+    outline: none;
+    color: var(--text-color-gray);
+    background-color: transparent;
+    font-size: 0.9rem;
+    padding: 0.3rem 0.5rem;
+    cursor: pointer;
+  }
+}

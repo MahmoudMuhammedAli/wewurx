@@ -1,0 +1,21 @@
+.navigator {
+  margin: 0 1rem 0 1rem;
+
+  &__btn {
+    outline: none;
+    border: 1px solid var(--border-color-gray);
+    background-color: #fff;
+    border-radius: 4px;
+    color: var(--text-color-gray);
+    padding: calc(0.3rem + 3px) calc(0.5rem + 3px);
+    cursor: pointer;
+  }
+  &__arrow {
+    font-size: 1rem;
+  }
+  &__today {
+    margin: 0 0.5rem;
+    font-size: 0.9rem;
+    padding: calc(0.3rem + 3px) 1rem;
+  }
+}

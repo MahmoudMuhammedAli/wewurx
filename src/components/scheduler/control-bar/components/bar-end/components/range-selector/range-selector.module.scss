@@ -1,0 +1,25 @@
+.selector {
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+  color: var(--text-color-gray);
+  font-size: 0.9rem;
+
+  > span {
+    display: inline-block;
+    margin-right: 0.5rem;
+  }
+  &__select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: "";
+    background-color: #fff;
+    padding: calc(0.3rem + 3px) calc(0.5rem + 3px);
+    color: var(--text-color-gray);
+    cursor: pointer;
+    outline: none;
+    border: 1px solid var(--border-color-gray);
+    border-radius: 3px;
+  }
+}
