@@ -11,6 +11,7 @@ import {
   ADD_QUOTE_FILE,
   REMOVE_QUOTE_FILE,
   CHANGE_QUOTE_FILE_DESCRIPTION,
+  CHANGE_SCHEDULER_VIEW,
 } from "./actionsTypes";
 
 // ============= Start   addCustomer  form Action Creators ==============
@@ -100,5 +101,15 @@ export const changeQuoteFileDescription = (inputName, value) => {
   return {
     type: CHANGE_QUOTE_FILE_DESCRIPTION,
     payload: { inputName, value },
+  };
+};
+
+// ============= Start actions for Scheduler View =====================
+// --------------------------------------------------------------------
+
+export const changeSchedulerView = (view) => {
+  return {
+    type: CHANGE_SCHEDULER_VIEW,
+    payload: view,
   };
 };

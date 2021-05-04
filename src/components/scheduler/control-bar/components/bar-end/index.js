@@ -4,7 +4,7 @@ import LayoutSelector from "./components/layout-selector";
 import RangeNavigator from "./components/range-navigator";
 import RangeSelector from "./components/range-selector";
 
-const BarEnd = (props) => {
+const BarEnd = () => {
   return (
     <div className={Styles.barend}>
       <RangeSelector />

@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import ControlBar from "../../components/scheduler/control-bar";
 import InfoBar from "../../components/scheduler/info-bar";
 import UnScheduledJobDdirectory from "../../components/scheduler/unscheduled-job-directory";
+import View from "../../components/scheduler/view/index";
 import Styles from "./schedule.module.scss";
 
 const Scheduler = (props) => {
@@ -14,6 +15,7 @@ const Scheduler = (props) => {
         <InfoBar />
         <UnScheduledJobDdirectory />
         <ControlBar />
+        <View />
       </main>
     </div>
   );
